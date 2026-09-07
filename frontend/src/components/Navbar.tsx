@@ -15,7 +15,7 @@ export default function Navbar() {
                         href="/"
                         className="flex items-center gap-2 text-2xl font-serif tracking-widest text-primary font-bold"
                     >
-                        <span>✨</span> TAROT MÍSTICO
+                        <span>✨</span> Anita Tarot
                     </Link>
 
                     {/* Menú Escritorio */}

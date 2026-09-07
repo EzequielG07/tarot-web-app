@@ -14,3 +14,9 @@
     --color-bg-card: #020617; /* Fondo de tarjetas/navbar (Slate 950) */
     --color-border-accent: rgba(245, 158, 11, 0.2); /* Bordes atenuados */
 }
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+}
