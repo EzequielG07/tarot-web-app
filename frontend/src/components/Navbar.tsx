@@ -23,14 +23,29 @@ export default function Navbar() {
                         <Link href="/" className="hover:text-primary transition-colors">
                             Inicio
                         </Link>
-                        <Link href="/#nosotros" className="hover:text-primary transition-colors">
-                            Sobre Mí
+                        <Link href="/#lectures" className="hover:text-primary transition-colors">
+                            Lecturas
+                        </Link>
+                        <Link href="/#services" className="hover:text-primary transition-colors">
+                            Servicios Energéticos
+                        </Link>
+                        <Link href="/#aboutme" className="hover:text-primary transition-colors">
+                            Sobre Anita
+                        </Link>
+                        <Link href="/#frequency" className="hover:text-primary transition-colors">
+                            Frecuencia Sacerdotista
+                        </Link>
+                        <Link href="/#blog" className="hover:text-primary transition-colors">
+                            Blog
+                        </Link>
+                        <Link href="/#contact" className="hover:text-primary transition-colors">
+                            Contacto
                         </Link>
                         <Link
-                            href="/login"
+                            href="/schedule"
                             className="px-4 py-2 border border-border-accent rounded-md text-secondary hover:bg-primary/10 hover:text-primary transition-colors"
                         >
-                            Ingresar
+                            Agendar Consulta →
                         </Link>
                     </div>
 
@@ -74,18 +89,53 @@ export default function Navbar() {
                         Inicio
                     </Link>
                     <Link
-                        href="/#nosotros"
+                        href="/#lectures"
                         className="block py-2 text-secondary hover:text-primary"
                         onClick={() => setIsOpen(false)}
                     >
-                        Sobre Mí
+                        Lecturas
                     </Link>
                     <Link
-                        href="/login"
+                        href="/#services"
+                        className="block py-2 text-secondary hover:text-primary"
+                        onClick={() => setIsOpen(false)}
+                    >
+                        Servicios Energéticos
+                    </Link>
+                    <Link
+                        href="/#aboutme"
+                        className="block py-2 text-secondary hover:text-primary"
+                        onClick={() => setIsOpen(false)}
+                    >
+                        Sobre Anita
+                    </Link>
+                    <Link
+                        href="/#frequency"
+                        className="block py-2 text-secondary hover:text-primary"
+                        onClick={() => setIsOpen(false)}
+                    >
+                        Frecuencia Sacerdotista
+                    </Link>
+                    <Link
+                        href="/#blog"
+                        className="block py-2 text-secondary hover:text-primary"
+                        onClick={() => setIsOpen(false)}
+                    >
+                        Blog
+                    </Link>
+                    <Link
+                        href="/#contact"
+                        className="block py-2 text-secondary hover:text-primary"
+                        onClick={() => setIsOpen(false)}
+                    >
+                        Contacto
+                    </Link>
+                    <Link
+                        href="/schedule"
                         className="block w-full text-center mt-4 px-4 py-2 border border-border-accent text-secondary hover:text-primary rounded-md"
                         onClick={() => setIsOpen(false)}
                     >
-                        Ingresar
+                        Agendar Consulta →
                     </Link>
                 </div>
             )}
