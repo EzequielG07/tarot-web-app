@@ -1,17 +1,23 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Cormorant_Garamond, Roboto } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
-const geistSans = Geist({
-    variable: '--font-geist-sans',
+// Configuración de fuente Serif para Títulos (representa Capricho / Serif mística)
+const cormorant = Cormorant_Garamond({
+    weight: ['600', '700'],
     subsets: ['latin'],
+    variable: '--font-capricho',
+    display: 'swap',
 });
 
-const geistMono = Geist_Mono({
-    variable: '--font-geist-mono',
+// Configuración de Roboto para UI general, botones, lectura, navbar y footer
+const roboto = Roboto({
+    weight: ['400', '500', '700'],
     subsets: ['latin'],
+    variable: '--font-roboto',
+    display: 'swap',
 });
 
 export const metadata: Metadata = {
@@ -23,7 +29,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     return (
         <html lang="es">
             <body
-                className={`${geistSans.variable} ${geistMono.variable} antialiased bg-slate-900 text-slate-100 flex flex-col min-h-screen`}
+                className={`${cormorant.variable} ${roboto.variable} font-sans bg-bg-main text-text-dark flex flex-col min-h-screen antialiased`}
             >
                 <Navbar />
                 <main className="flex-grow">{children}</main>

@@ -5,14 +5,29 @@
     --font-serif: var(--font-geist-sans), serif;
     --font-sans: var(--font-geist-mono), sans-serif;
 
-    /* Paleta de Colores Mística / Personalizable */
-    --color-primary: #f59e0b; /* Dorado principal (ej: botones, títulos) */
-    --color-primary-hover: #d97706; /* Dorado oscuro para estados hover */
-    --color-secondary: #fef3c7; /* Dorado suave / texto secundario de contraste */
+    /* Estructura Principal */
+    --color-bg-main: #fae0a7; /* Fondo general cálido */
+    --color-bg-card: #021221; /* Navbar y Footer */
+    --color-border-accent: rgba(2, 18, 33, 0.15); /* Bordes adaptados al contraste */
+    --color-text-dark: #2f2f31; /* Texto principal para fondos claros */
+    --color-text-light: #bec1c6; /* Texto secundario para fondos oscuros */
 
-    --color-bg-main: #0f172a; /* Fondo oscuro principal (Slate 900) */
-    --color-bg-card: #020617; /* Fondo de tarjetas/navbar (Slate 950) */
-    --color-border-accent: rgba(245, 158, 11, 0.2); /* Bordes atenuados */
+    /* Botones */
+    --color-btn-light: #f6dfa9; /* Botón claro */
+    --color-btn-light-hover: #edd190; /* Hover botón claro */
+    --color-btn-dark: #081120; /* Botón oscuro */
+    --color-btn-dark-hover: #030810; /* Hover botón oscuro */
+
+    /* Áreas Temáticas */
+    --color-area-servicios: #f5f2ed; /* Fondo área Nuestros Servicios */
+    --color-area-libro: #e6e7fb; /* Fondo área Mi Libro */
+
+    /* Tarjetas de Servicios (Tarot/Místico) */
+    --color-card-amor: #fde3ec;
+    --color-card-dinero: #e1f3e5;
+    --color-card-decisiones: #faefdd;
+    --color-card-energia: #eae5f9;
+    --color-card-autoconocimiento: #e3f1fc;
 }
 
 @layer base {
