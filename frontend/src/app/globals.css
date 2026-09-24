@@ -6,7 +6,7 @@
     --font-sans: var(--font-geist-mono), sans-serif;
 
     /* Estructura Principal */
-    --color-bg-main: #fae0a7; /* Fondo general cálido */
+    --color-bg-main: #e8e8e8; /* Fondo general cálido */
     --color-bg-card: #021221; /* Navbar y Footer */
     --color-border-accent: rgba(2, 18, 33, 0.15); /* Bordes adaptados al contraste */
     --color-text-dark: #2f2f31; /* Texto principal para fondos claros */

@@ -5,7 +5,7 @@ import EggBook from '@/components/EggBook';
 import Contact from '@/components/Contact';
 import Inquiries from '@/components/Inquiries';
 import Register from '@/components/Register';
-import Blog from '@/components/Blog';
+import { BlogContainer } from '@/components/BlogContainer';
 
 export default function Home() {
     return (
@@ -14,7 +14,7 @@ export default function Home() {
             <EggBook />
             <Inquiries />
             <Services />
-            <Blog />
+            <BlogContainer />
             <AboutMe />
             <Contact />
             <Register />
