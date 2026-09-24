@@ -19,7 +19,7 @@ export default function Footer() {
 
                     {/* Columna 2: Anita Tarotista (2/12) */}
                     <div className="lg:col-span-2 flex flex-col p-6 space-y-3 h-full lg:border-r border-gray-500/40">
-                        <h3 className="text-sm font-semibold uppercase tracking-wider text-text-light mb-1">
+                        <h3 className="text-sm font-semibold uppercase tracking-wider text-text-light mb-2">
                             Anita Tarotista
                         </h3>
                         <Link href="/" className="text-sm hover:text-btn-light transition-colors">
@@ -35,7 +35,7 @@ export default function Footer() {
 
                     {/* Columna 3: Frecuencia Sacerdotista (2/12) */}
                     <div className="lg:col-span-2 flex flex-col p-6 space-y-3 h-full lg:border-r border-gray-500/40">
-                        <h3 className="text-sm font-semibold uppercase tracking-wider text-text-light mb-1">
+                        <h3 className="text-sm font-semibold uppercase tracking-wider text-text-light mb-2">
                             Frecuencia Sacerdotista
                         </h3>
                         <Link href="/#aboutme" className="text-sm hover:text-btn-light transition-colors">
@@ -48,7 +48,7 @@ export default function Footer() {
 
                     {/* Columna 4: Información (2/12) */}
                     <div className="lg:col-span-2 flex flex-col p-6 space-y-3 h-full lg:border-r border-gray-500/40">
-                        <h3 className="text-sm font-semibold uppercase tracking-wider text-text-light mb-1">
+                        <h3 className="text-sm font-semibold uppercase tracking-wider text-text-light mb-2">
                             Información
                         </h3>
                         <Link href="/#contact" className="text-sm hover:text-btn-light transition-colors">
@@ -61,7 +61,7 @@ export default function Footer() {
 
                     {/* Columna 5: Redes + Botón Agendar (3/12 - Ancho extra) */}
                     <div className="lg:col-span-3 flex flex-col justify-start p-6 space-y-3 h-full">
-                        <h3 className="text-sm font-semibold uppercase tracking-wider text-text-light mb-1 text-center lg:text-left">
+                        <h3 className="text-sm font-semibold uppercase tracking-wider text-text-light mb-2 text-center lg:text-left">
                             Seguinos en:
                         </h3>
 
@@ -69,7 +69,7 @@ export default function Footer() {
                             {/* Íconos de Redes */}
                             <div className="flex items-center gap-1.5 text-text-light/70 shrink-0">
                                 <a
-                                    href="[https://www.instagram.com](https://www.instagram.com)"
+                                    href="https://www.instagram.com"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="p-1 hover:text-btn-light transition-colors duration-200"
@@ -91,27 +91,19 @@ export default function Footer() {
                                 </a>
 
                                 <a
-                                    href="[https://www.facebook.com](https://www.facebook.com)"
+                                    href="https://www.facebook.com"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="p-1 hover:text-btn-light transition-colors duration-200"
                                     aria-label="Facebook"
                                 >
-                                    <svg
-                                        className="h-5 w-5"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        strokeWidth="2"
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                                    <svg className="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                                        <path d="M14 13.5h2.5l1-4H14v-2c0-1.03.22-1.5 1.5-1.5H18V2.14c-.52-.07-1.62-.14-2.76-.14-3.26 0-5.24 1.83-5.24 5.5v2H7v4h3V22h4v-8.5z" />
                                     </svg>
                                 </a>
 
                                 <a
-                                    href="[https://www.tiktok.com](https://www.tiktok.com)"
+                                    href="https://www.tiktok.com"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="p-1 hover:text-btn-light transition-colors duration-200"
@@ -123,7 +115,7 @@ export default function Footer() {
                                 </a>
 
                                 <a
-                                    href="[https://www.youtube.com](https://www.youtube.com)"
+                                    href="https://www.youtube.com"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="p-1 hover:text-btn-light transition-colors duration-200"
@@ -160,7 +152,21 @@ export default function Footer() {
             <div className="border-t border-gray-500/40 py-6 px-6 sm:px-10 lg:px-12 text-xs text-text-light/60">
                 <div className="flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
                     <p>© {new Date().getFullYear()} Anita Tarot. Todos los derechos reservados.</p>
-                    <p>Serra, Argentina</p>
+                    <div className="flex p-1 text-text-light/70">
+                        <svg
+                            className="h-5 w-5 mr-1"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            viewBox="0 0 24 24"
+                        >
+                            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z" />
+                            <circle cx="12" cy="10" r="3" />
+                        </svg>
+                        <p>Serra, Argentina</p>
+                    </div>
                 </div>
             </div>
         </footer>
