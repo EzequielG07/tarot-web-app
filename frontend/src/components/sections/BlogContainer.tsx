@@ -1,6 +1,6 @@
 // MiSeccionPadre.tsx
-import { BlogMainContent } from './BlogMainContent';
-import { BlogSidebar } from './BlogSidebar';
+import { BlogMainContent } from '../sections/BlogMainContent';
+import { BlogSidebar } from '../sections/BlogSidebar';
 
 export const BlogContainer = () => {
     return (
