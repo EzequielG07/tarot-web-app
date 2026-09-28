@@ -1,11 +1,11 @@
 import Hero from '@/components/Hero';
-import AboutMe from '@/components/AboutMe';
 import EggBook from '@/components/EggBook';
-import Contact from '@/components/Contact';
-import Register from '@/components/Register';
 import { InquiriesContainer } from '@/components/sections/InquiriesContainer';
 import { ServicesContainer } from '@/components/sections/ServicesContainer';
 import { BlogContainer } from '@/components/sections/BlogContainer';
+import { AboutMeContainer } from '@/components/sections/AboutMeContainer';
+import { ContactFormSection } from '@/components/sections/ContactFormSection';
+import { FrecuenciaRegister } from '@/components/sections/FrecuenciaRegister';
 
 export default function Home() {
     return (
@@ -15,9 +15,9 @@ export default function Home() {
             <InquiriesContainer />
             <ServicesContainer />
             <BlogContainer />
-            <AboutMe />
-            <Contact />
-            <Register />
+            <AboutMeContainer />
+            <ContactFormSection />
+            <FrecuenciaRegister />
         </div>
     );
 }

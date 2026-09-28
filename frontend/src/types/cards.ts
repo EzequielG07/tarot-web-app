@@ -7,4 +7,5 @@ export interface CardData {
     titulo: string;
     descripcionCorta: string;
     contenidoExpandido: ReactNode;
+    bgClass?: string; // 👈 Prop opcional para personalizar el fondo
 }

@@ -1,4 +1,6 @@
-export const SERVICIOS_DATA = [
+import { CardData } from '@/types/cards';
+
+export const SERVICIOS_DATA: CardData[] = [
     {
         id: 'tarot-lecturas',
         logoSrc: '/images/logos/carta-de-tarot.png',

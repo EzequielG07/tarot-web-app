@@ -24,6 +24,7 @@ export const ServicesCards = () => {
                         titulo={item.titulo}
                         descripcionCorta={item.descripcionCorta}
                         contenidoExpandido={<p className="text-xs text-text-dark/90">{item.contenidoExpandido}</p>}
+                        bgClass={item.bgClass}
                     />
                 ))}
             </div>

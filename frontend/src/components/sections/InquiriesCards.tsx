@@ -8,9 +8,7 @@ export const InquiriesCards = () => {
         <div className="w-full min-h-[470px] flex flex-col justify-start">
             {/* Título arriba con margen inferior fijo */}
             <div className="m-6">
-                <h2 className="text-2xl font-serif font-bold uppercase text-text-dark">
-                    Nuestros Servicios Destacados
-                </h2>
+                <h2 className="text-2xl font-serif font-bold uppercase text-text-dark">Tu clase de consulta?</h2>
             </div>
 
             {/* Grilla con posición fija (items-start y sin mt-auto dinámico) */}
@@ -24,6 +22,7 @@ export const InquiriesCards = () => {
                         titulo={item.titulo}
                         descripcionCorta={item.descripcionCorta}
                         contenidoExpandido={<p className="text-xs text-text-dark/90">{item.contenidoExpandido}</p>}
+                        bgClass={item.bgClass}
                     />
                 ))}
             </div>
