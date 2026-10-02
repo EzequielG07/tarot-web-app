@@ -5,7 +5,7 @@ import { SERVICIOS_DATA } from '@/data/serviciosData';
 
 export const ServicesCards = () => {
     return (
-        <div className="w-full min-h-[470px] flex flex-col justify-start">
+        <div className="w-full min-h-[470px] flex flex-col justify-start border-2 border-violet-500 p-4 rounded-xl">
             {/* Título arriba con margen inferior fijo */}
             <div className="m-6">
                 <h2 className="text-2xl font-serif font-bold uppercase text-text-dark">
