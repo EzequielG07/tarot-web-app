@@ -2,9 +2,13 @@
 
 'use client';
 
-import { useState } from 'react';
 import Image from 'next/image';
 import { CardData } from '@/types/cards';
+
+export interface CardExpandibleProps extends CardData {
+    estaAbierto?: boolean;
+    onToggle?: () => void;
+}
 
 export const CardExpandible = ({
     id,
@@ -12,16 +16,15 @@ export const CardExpandible = ({
     logoAlt,
     titulo,
     descripcionCorta,
-    contenidoExpandido,
-    bgClass = 'bg-card-servicios', // Valor por defecto
-}: CardData) => {
-    const [estaAbierto, setEstaAbierto] = useState(false);
-
+    bgClass = 'bg-card-servicios',
+    estaAbierto = false,
+    onToggle,
+}: CardExpandibleProps) => {
     return (
         <div
             id={`card-${id}`}
-            className={`w-full max-w-[220px] mx-auto ${bgClass} rounded-2xl p-5 flex flex-col justify-between text-center transition-all duration-700 ease-in-out ${
-                estaAbierto ? 'h-auto' : 'h-[380px]'
+            className={`w-full max-w-[220px] mx-auto ${bgClass} rounded-2xl p-5 flex flex-col justify-between text-center h-[380px] transition-all duration-300 ${
+                estaAbierto ? 'ring-2 ring-text-dark/40 shadow-lg scale-[1.02]' : 'hover:shadow-md'
             }`}
         >
             {/* Bloque superior */}
@@ -46,25 +49,15 @@ export const CardExpandible = ({
             {/* Bloque inferior */}
             <div className="w-full flex flex-col items-center mt-auto pt-2 flex-shrink-0">
                 <button
-                    onClick={() => setEstaAbierto(!estaAbierto)}
+                    onClick={onToggle}
                     aria-expanded={estaAbierto}
-                    aria-controls={`content-${id}`}
+                    aria-controls={`panel-detalle-${id}`}
                     className="text-[11px] font-bold uppercase text-text-dark hover:text-text-dark/80 transition-colors cursor-pointer py-1"
                 >
                     {estaAbierto ? 'Ocultar detalles ↑' : 'Ver detalles ↓'}
                 </button>
-
-                <div
-                    id={`content-${id}`}
-                    className={`grid transition-all duration-700 ease-in-out w-full text-left ${
-                        estaAbierto
-                            ? 'grid-rows-[1fr] opacity-100 mt-3 pt-3 border-t border-gray-500/10'
-                            : 'grid-rows-[0fr] opacity-0 mt-0 pt-0 border-t-0'
-                    }`}
-                >
-                    <div className="overflow-hidden">{contenidoExpandido}</div>
-                </div>
             </div>
         </div>
     );
 };
+
