@@ -22,7 +22,7 @@ export const AboutMeContent = () => {
                 <div className="space-y-3">
                     <p className="text-xs font-medium font-serif uppercase text-text-dark/80">Sobre Mí</p>
 
-                    <h2 className="text-lg sm:text-xl lg:text-2xl font-serif font-bold tracking-wide uppercase text-text-dark">
+                    <h2 className="text-lg sm:text-xl lg:text-2xl font-bodoni tracking-wide uppercase text-text-dark">
                         Mi camino a través del Tarot y la Guía Espiritual
                     </h2>
 

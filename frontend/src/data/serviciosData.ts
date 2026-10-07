@@ -3,8 +3,8 @@ import { CardData } from '@/types/cards';
 export const SERVICIOS_DATA: CardData[] = [
     {
         id: 'tarot-lecturas',
-        logoSrc: '/images/logos/carta-de-tarot.png',
-        logoAlt: 'Icono Tarot Evolutivo',
+        logoSrc: '/images/logos/carta-lectura.png',
+        logoAlt: 'Icono Tarot Lecturas',
         titulo: 'Lecturas',
         descripcionCorta: 'Tarot, Oráculo, Péndulo, Tecnicas y otras herramientas.',
         contenidoExpandido:
@@ -13,8 +13,8 @@ export const SERVICIOS_DATA: CardData[] = [
     // Más ítems...
     {
         id: 'tarot-energetico',
-        logoSrc: '/images/logos/carta-de-tarot.png',
-        logoAlt: 'Icono Tarot Evolutivo',
+        logoSrc: '/images/logos/carta-claridad.png',
+        logoAlt: 'Icono Tarot Claridad',
         titulo: 'Diagnóstico Energético',
         descripcionCorta: 'Limpieza, armonización y aline energético.',
         contenidoExpandido:
@@ -23,8 +23,8 @@ export const SERVICIOS_DATA: CardData[] = [
 
     {
         id: 'tarot-reiki',
-        logoSrc: '/images/logos/carta-de-tarot.png',
-        logoAlt: 'Icono Tarot Evolutivo',
+        logoSrc: '/images/logos/carta-limpieza.png',
+        logoAlt: 'Icono Tarot Limpieza',
         titulo: 'Armonización Reiki',
         descripcionCorta: 'Equilibrio de armonias plenamente a nivel energético.',
         contenidoExpandido:
@@ -33,8 +33,8 @@ export const SERVICIOS_DATA: CardData[] = [
 
     {
         id: 'tarot-limpieza',
-        logoSrc: '/images/logos/carta-de-tarot.png',
-        logoAlt: 'Icono Tarot Evolutivo',
+        logoSrc: '/images/logos/carta-destrabe.png',
+        logoAlt: 'Icono Tarot Destrabe',
         titulo: 'Limpieza y Protección',
         descripcionCorta: 'Limpieza, armonización y alineamiento energético.',
         contenidoExpandido:

@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import { Cormorant_Garamond, Roboto } from 'next/font/google';
+import localFont from 'next/font/local';
 import './globals.css';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
+// import Navbar from '@/components/Navbar';
+// import Footer from '@/components/Footer';
 
 // Configuración de fuente Serif para Títulos (representa Capricho / Serif mística)
 const cormorant = Cormorant_Garamond({
@@ -20,20 +21,26 @@ const roboto = Roboto({
     display: 'swap',
 });
 
+const bodoniSmallcaps = localFont({
+    src: './fonts/Bodoni 72 Smallcaps Book.ttf',
+    variable: '--font-bodoni-smallcaps',
+    display: 'swap',
+});
+
 export const metadata: Metadata = {
     title: 'Tarot Místico',
     description: 'Lecturas de Tarot y Recursos Espirituales',
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+    children,
+}: {
+    children: React.ReactNode;
+}) {
     return (
-        <html lang="es">
-            <body
-                className={`${cormorant.variable} ${roboto.variable} font-sans bg-bg-main text-text-dark flex flex-col min-h-screen antialiased`}
-            >
-                <Navbar />
-                <main className="flex-grow">{children}</main>
-                <Footer />
+        <html lang="es" className={`${bodoniSmallcaps.variable}`}>
+            <body className="bg-bg-main text-text-light antialiased">
+                {children}
             </body>
         </html>
     );

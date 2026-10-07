@@ -4,23 +4,35 @@
     /* Configuración de Fuentes */
     --font-serif: var(--font-geist-sans), serif;
     --font-sans: var(--font-geist-mono), sans-serif;
+    --font-bodoni: var(--font-bodoni-smallcaps), serif;
 
     /* Estructura Principal */
-    --color-bg-main: #e8e8e8; /* Fondo general cálido */
-    --color-bg-card: #021221; /* Navbar y Footer */
-    --color-border-accent: rgba(2, 18, 33, 0.15); /* Bordes adaptados al contraste */
-    --color-text-dark: #2f2f31; /* Texto principal para fondos claros */
-    --color-text-light: #bec1c6; /* Texto secundario para fondos oscuros */
+    --color-bg-main: #e8e8e8;
+    /* Fondo general cálido */
+    --color-bg-card: #021221;
+    /* Navbar y Footer */
+    --color-border-accent: rgba(2, 18, 33, 0.15);
+    /* Bordes adaptados al contraste */
+    --color-text-dark: #2f2f31;
+    /* Texto principal para fondos claros */
+    --color-text-light: #bec1c6;
+    /* Texto secundario para fondos oscuros */
 
     /* Botones */
-    --color-btn-light: #f6dfa9; /* Botón claro */
-    --color-btn-light-hover: #edd190; /* Hover botón claro */
-    --color-btn-dark: #081120; /* Botón oscuro */
-    --color-btn-dark-hover: #030810; /* Hover botón oscuro */
+    --color-btn-light: #f6dfa9;
+    /* Botón claro */
+    --color-btn-light-hover: #edd190;
+    /* Hover botón claro */
+    --color-btn-dark: #081120;
+    /* Botón oscuro */
+    --color-btn-dark-hover: #030810;
+    /* Hover botón oscuro */
 
     /* Áreas Temáticas */
-    --color-area-servicios: #f5f2ed; /* Fondo área Nuestros Servicios */
-    --color-area-libro: #c8bce7; /* Fondo área Mi Libro */
+    --color-area-servicios: #f5f2ed;
+    /* Fondo área Nuestros Servicios */
+    --color-area-libro: #c8bce7;
+    /* Fondo área Mi Libro */
 
     /* Tarjetas de Servicios (Tarot/Místico) */
     --color-card-amor: #fde3ec;

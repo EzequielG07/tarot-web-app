@@ -3,8 +3,8 @@ import { CardData } from '@/types/cards';
 export const RECURSOS_DATA: CardData[] = [
     {
         id: 'tarot-amor',
-        logoSrc: '/images/logos/carta-de-tarot.png',
-        logoAlt: 'Icono Tarot Evolutivo',
+        logoSrc: '/images/logos/carta-amor.png',
+        logoAlt: 'Icono Tarot Amor',
         titulo: 'Lecturas',
         descripcionCorta: 'Saná vínculos, atrae el amor y armorizá tus relaciones.',
         contenidoExpandido:
@@ -14,8 +14,8 @@ export const RECURSOS_DATA: CardData[] = [
     // Más ítems...
     {
         id: 'tarot-trabajo',
-        logoSrc: '/images/logos/carta-de-tarot.png',
-        logoAlt: 'Icono Tarot Evolutivo',
+        logoSrc: '/images/logos/carta-trabajo.png',
+        logoAlt: 'Icono Tarot Trabajo',
         titulo: 'Diagnóstico Energético',
         descripcionCorta: 'Abri caminos, potencia tus oportunidades y alineate con tu ser',
         contenidoExpandido:
@@ -25,8 +25,8 @@ export const RECURSOS_DATA: CardData[] = [
 
     {
         id: 'tarot-decisiones',
-        logoSrc: '/images/logos/carta-de-tarot.png',
-        logoAlt: 'Icono Tarot Evolutivo',
+        logoSrc: '/images/logos/carta-desiciones.png',
+        logoAlt: 'Icono Tarot Decisiones',
         titulo: 'Armonización Reiki',
         descripcionCorta: 'Obtené claridad en tus preguntas y elegí con confianza.',
         contenidoExpandido:
@@ -36,8 +36,8 @@ export const RECURSOS_DATA: CardData[] = [
 
     {
         id: 'tarot-energia',
-        logoSrc: '/images/logos/carta-de-tarot.png',
-        logoAlt: 'Icono Tarot Evolutivo',
+        logoSrc: '/images/logos/carta-energia.png',
+        logoAlt: 'Icono Tarot Energia',
         titulo: 'Limpieza y Protección',
         descripcionCorta: 'Equilibrá tu energía, sana tu campo energetico y elegi tu vibración',
         contenidoExpandido:
@@ -47,8 +47,8 @@ export const RECURSOS_DATA: CardData[] = [
 
     {
         id: 'tarot-autoconocimiento',
-        logoSrc: '/images/logos/carta-de-tarot.png',
-        logoAlt: 'Icono Tarot Evolutivo',
+        logoSrc: '/images/logos/carta-autoconocimiento.png',
+        logoAlt: 'Icono Tarot Autoconocimiento',
         titulo: 'Limpieza y Protección',
         descripcionCorta: 'Comprendé a ti mismo y expandi tu potencial',
         contenidoExpandido:
