@@ -22,18 +22,18 @@ export const BlogSidebar = () => {
 
                 {/* Texto descriptivo */}
                 <p className="text-lg sm:text-xl font-serif text-text-light">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui unde ut quibusdam consequuntur cumque
-                    eos velit eligendi vero mollitia. Quisquam perferendis ea repellat harum placeat quasi porro neque
-                    quas sapiente.
+                    El conocimiento que despierta cuando decidís mirar más allá de lo evidente.
                 </p>
-
+                <p className="text-lg sm:text-xl font-serif text-text-light">
+                    Un espacio creado por Anita Tarotista para explorar parapsicología, energía, intuición, rituales, autoconocimiento y espiritualidad práctica.
+                </p>
                 {/* Botón/Link */}
                 <div className="pt-2">
                     <Link
                         href="/schedule"
                         className="inline-block px-5 py-2.5 rounded-full text-btn-dark bg-btn-light hover:bg-btn-light-hover transition-colors uppercase font-bold text-xs shrink-0"
                     >
-                        Entrar en Frecuencia →
+                        Explorar Frecuencia Sacerdotisa →
                     </Link>
                 </div>
             </div>
