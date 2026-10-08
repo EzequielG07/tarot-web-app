@@ -7,17 +7,14 @@ export const InquiriesMainContent = () => {
 
             <div className="lg:col-span-6 w-full space-y-6 relative z-10 flex flex-col justify-between">
                 <div className="space-y-6">
-                    <p className="text-xs sm:text-sm font-medium font-serif uppercase">Que esta pasando en tu vida?</p>
-
-                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold tracking-wide uppercase">
-                        Sentís que hay algo que no terminás de comprender?
+                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold tracking-wide">
+                        ¿QUÉ ESTÁ PASANDO EN TU VIDA?
                     </h2>
 
                     <p className="text-lg sm:text-xl font-serif">
-                        Estás en un momento de transición, con muchas preguntes internas. Este es un momento de mirar
-                        adentro, conectar con tu intuición y recibir la guía que necesitás.
+                        A veces sentimos que algo necesita cambiar, aunque todavía no sepamos bien qué. Si estás atravesando un momento de transición o tenés preguntas que te cuesta ordenar, podemos mirar juntas qué está pasando y encontrar un poco más de claridad.
                         <br />
-                        El Tarot y la energía pueden ayudarte a encontrar claridad y tomar decisiones con más seguridad.
+                        El tarot y el trabajo energético pueden acompañarte a conectar con tu intuición y tomar decisiones con más confianza.
                     </p>
                 </div>
 
@@ -26,7 +23,7 @@ export const InquiriesMainContent = () => {
                         href="/schedule"
                         className="inline-block px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors uppercase font-bold text-xs shrink-0"
                     >
-                        Eligí tu consulta →
+                        ELEGÍ CÓMO PUEDO ACOMPAÑARTE →
                     </Link>
                 </div>
             </div>
