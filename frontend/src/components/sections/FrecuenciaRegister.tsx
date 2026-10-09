@@ -27,7 +27,7 @@ export const FrecuenciaRegister = () => {
                         Forma Parte de
                     </p>
 
-                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold uppercase text-text-light tracking-wide leading-tight">
+                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bodoni font-bold uppercase text-text-light tracking-wide leading-tight">
                         FRECUENCIA SACERDOTISA
                     </h2>
 

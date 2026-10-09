@@ -20,7 +20,7 @@ export const ServicesCards = () => {
         <div className="w-full min-h-[470px] flex flex-col justify-start border-2 border-violet-500 p-4 rounded-xl">
             {/* Título arriba con margen inferior fijo */}
             <div className="m-6">
-                <h2 className="text-2xl font-serif font-bold text-text-dark">
+                <h2 className="text-2xl font-bodoni font-bold text-text-dark">
                     ELEGÍ TU EXPERIENCIA según lo que estás viviendo y encontrá el espacio adecuado para vos.
                 </h2>
             </div>

@@ -34,7 +34,7 @@ export const CardExpandible = ({
                 </div>
 
                 <div className="min-h-[48px] flex items-center justify-center my-1">
-                    <h3 className="text-base font-serif font-bold text-text-dark uppercase leading-snug line-clamp-2">
+                    <h3 className="text-base font-bodoni font-bold text-text-dark uppercase leading-snug line-clamp-2">
                         {titulo}
                     </h3>
                 </div>

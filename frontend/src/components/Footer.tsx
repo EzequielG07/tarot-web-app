@@ -1,6 +1,31 @@
+'use client';
+
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 export default function Footer() {
+    const [isFaqOpen, setIsFaqOpen] = useState(false);
+
+    useEffect(() => {
+        const handleKeyDown = (e: KeyboardEvent) => {
+            if (e.key === 'Escape') {
+                setIsFaqOpen(false);
+            }
+        };
+
+        if (isFaqOpen) {
+            document.body.style.overflow = 'hidden';
+            window.addEventListener('keydown', handleKeyDown);
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+
+        return () => {
+            document.body.style.overflow = 'unset';
+            window.removeEventListener('keydown', handleKeyDown);
+        };
+    }, [isFaqOpen]);
+
     return (
         <footer className="bg-bg-card text-text-light border-t border-border-accent font-sans">
             {/* Contenedor Principal de 12 Columnas */}
@@ -14,7 +39,9 @@ export default function Footer() {
                         >
                             <span>✨</span> Anita Tarot
                         </Link>
-                        <p className="text-xs text-text-light/70 max-w-xs">Carta - Energía - Transformación</p>
+                        <p className="text-xs text-text-light/70 max-w-xs">Maestra Parapsicóloga</p>
+                        <p className="text-xs text-text-light/70 max-w-xs">Psíquica · Vidente · Reiki Master</p>
+
                     </div>
 
                     {/* Columna 2: Anita Tarotista (2/12) */}
@@ -22,15 +49,10 @@ export default function Footer() {
                         <h3 className="text-sm font-semibold uppercase tracking-wider text-text-light mb-2">
                             Anita Tarotista
                         </h3>
-                        <Link href="/" className="text-sm hover:text-btn-light transition-colors">
-                            Sobre Anita
-                        </Link>
-                        <Link href="/#lectures" className="text-sm hover:text-btn-light transition-colors">
-                            Servicios Energéticos
-                        </Link>
-                        <Link href="/#services" className="text-sm hover:text-btn-light transition-colors">
-                            Sobre Anita
-                        </Link>
+                        <p className="text-sm hover:text-btn-light transition-colors">Maestra Parapsicóloga</p>
+                        <p className="text-sm hover:text-btn-light transition-colors">Psíquica · Vidente · Reiki Master</p>
+                        <p className="text-sm hover:text-btn-light transition-colors">20 años de experiencia · Tarot</p>
+                        <p className="text-sm hover:text-btn-light transition-colors">Videncia Natural · Parapsicología · Energía</p>
                     </div>
 
                     {/* Columna 3: Frecuencia Sacerdotista (2/12) */}
@@ -51,9 +73,13 @@ export default function Footer() {
                         <h3 className="text-sm font-semibold uppercase tracking-wider text-text-light mb-2">
                             Información
                         </h3>
-                        <Link href="/#contact" className="text-sm hover:text-btn-light transition-colors">
-                            Blog - Contacto - Preguntas Frecuentes
-                        </Link>
+                        <button
+                            type="button"
+                            onClick={() => setIsFaqOpen(true)}
+                            className="text-sm text-left hover:text-btn-light transition-colors cursor-pointer"
+                        >
+                            Preguntas Frecuentes
+                        </button>
                         <Link href="/faq" className="text-sm hover:text-btn-light transition-colors">
                             Términos y condiciones - Política de Privacidad
                         </Link>
@@ -169,6 +195,118 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
+
+            {/* Modal: Preguntas Frecuentes / ¿Cómo reservo mi sesión? */}
+            {isFaqOpen && (
+                <div
+                    className="fixed inset-0 z-50 flex items-center justify-center p-3.5 sm:p-5 md:p-6 bg-black/80 backdrop-blur-sm transition-opacity duration-300 overflow-y-auto"
+                    role="dialog"
+                    aria-modal="true"
+                    aria-labelledby="faq-modal-title"
+                    onClick={() => setIsFaqOpen(false)}
+                >
+                    <div
+                        className="relative w-full max-w-lg md:max-w-xl bg-bg-card border border-border-accent/80 text-text-light rounded-2xl sm:rounded-3xl p-5 sm:p-7 md:p-8 shadow-2xl shadow-black/80 overflow-hidden my-auto transition-transform duration-300"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        {/* Resplandor decorativo (contenido gracias a overflow-hidden) */}
+                        <div className="absolute -top-20 -right-20 w-44 h-44 bg-btn-light/10 rounded-full blur-3xl pointer-events-none" />
+                        <div className="absolute -bottom-20 -left-20 w-44 h-44 bg-btn-light/10 rounded-full blur-3xl pointer-events-none" />
+
+                        {/* Botón Cerrar */}
+                        <button
+                            type="button"
+                            onClick={() => setIsFaqOpen(false)}
+                            aria-label="Cerrar modal"
+                            className="absolute top-3.5 right-3.5 sm:top-5 sm:right-5 p-2 text-text-light/70 hover:text-btn-light rounded-full bg-white/5 hover:bg-white/10 transition-all cursor-pointer z-10"
+                        >
+                            <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+
+                        {/* Cabecera del Modal */}
+                        <div className="text-center mb-4 sm:mb-5 px-4 sm:px-6">
+                            <span className="inline-block text-lg sm:text-xl mb-1">✨</span>
+                            <h2
+                                id="faq-modal-title"
+                                className="text-lg sm:text-xl md:text-2xl font-serif font-bold tracking-wider sm:tracking-widest text-btn-light uppercase leading-snug"
+                            >
+                                ¿CÓMO RESERVO MI SESIÓN?
+                            </h2>
+                            <div className="w-12 sm:w-16 h-0.5 bg-btn-light/40 mx-auto mt-2 rounded-full" />
+                        </div>
+
+                        {/* Pasos */}
+                        <div className="space-y-2.5 sm:space-y-3 text-left">
+                            {/* Paso 01 */}
+                            <div className="p-3 sm:p-3.5 md:p-4 rounded-xl sm:rounded-2xl bg-white/[0.03] border border-white/5 hover:border-btn-light/30 transition-colors">
+                                <h3 className="font-semibold text-btn-light text-xs sm:text-sm md:text-base tracking-wide flex items-center gap-2">
+                                    <span>01 ·</span> Completá el formulario
+                                </h3>
+                                <p className="mt-0.5 sm:mt-1 text-xs sm:text-sm text-text-light/85 pl-6 sm:pl-7 leading-relaxed">
+                                    Contame brevemente qué necesitás trabajar.
+                                </p>
+                            </div>
+
+                            {/* Paso 02 */}
+                            <div className="p-3 sm:p-3.5 md:p-4 rounded-xl sm:rounded-2xl bg-white/[0.03] border border-white/5 hover:border-btn-light/30 transition-colors">
+                                <h3 className="font-semibold text-btn-light text-xs sm:text-sm md:text-base tracking-wide flex items-center gap-2">
+                                    <span>02 ·</span> Coordinamos tu cita
+                                </h3>
+                                <p className="mt-0.5 sm:mt-1 text-xs sm:text-sm text-text-light/85 pl-6 sm:pl-7 leading-relaxed">
+                                    Me pondré en contacto para confirmar modalidad, día y horario.
+                                </p>
+                            </div>
+
+                            {/* Paso 03 */}
+                            <div className="p-3 sm:p-3.5 md:p-4 rounded-xl sm:rounded-2xl bg-white/[0.03] border border-white/5 hover:border-btn-light/30 transition-colors">
+                                <h3 className="font-semibold text-btn-light text-xs sm:text-sm md:text-base tracking-wide flex items-center gap-2">
+                                    <span>03 ·</span> Realizá el pago
+                                </h3>
+                                <p className="mt-0.5 sm:mt-1 text-xs sm:text-sm text-text-light/85 pl-6 sm:pl-7 leading-relaxed">
+                                    El pago confirma y reserva tu turno.
+                                </p>
+                            </div>
+
+                            {/* Paso 04 */}
+                            <div className="p-3 sm:p-3.5 md:p-4 rounded-xl sm:rounded-2xl bg-white/[0.03] border border-white/5 hover:border-btn-light/30 transition-colors">
+                                <h3 className="font-semibold text-btn-light text-xs sm:text-sm md:text-base tracking-wide flex items-center gap-2">
+                                    <span>04 ·</span> Prepará tu espacio
+                                </h3>
+                                <p className="mt-0.5 sm:mt-1 text-xs sm:text-sm text-text-light/85 pl-6 sm:pl-7 leading-relaxed">
+                                    Unos minutos antes, buscá un lugar cómodo, tranquilo y privado donde puedas expresarte con libertad.
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* Mensaje Final */}
+                        <div className="mt-4 sm:mt-5 p-3 sm:p-3.5 rounded-xl sm:rounded-2xl bg-btn-light/10 border border-btn-light/20 text-center">
+                            <p className="text-btn-light font-medium text-xs sm:text-sm md:text-base">
+                                ✨ Y listo. Tu espacio está reservado.
+                            </p>
+                        </div>
+
+                        {/* Botón de acción */}
+                        <div className="mt-4 sm:mt-6 flex flex-col sm:flex-row items-center justify-center gap-2.5 sm:gap-3">
+                            <Link
+                                href="/schedule"
+                                onClick={() => setIsFaqOpen(false)}
+                                className="w-full sm:w-auto px-5 sm:px-6 py-2.5 rounded-full bg-btn-light text-text-dark hover:bg-btn-light-hover transition-colors uppercase font-bold text-xs text-center shrink-0"
+                            >
+                                Agendar Consulta →
+                            </Link>
+                            <button
+                                type="button"
+                                onClick={() => setIsFaqOpen(false)}
+                                className="w-full sm:w-auto px-5 sm:px-6 py-2.5 rounded-full bg-white/5 hover:bg-white/10 text-text-light/80 hover:text-text-light transition-colors uppercase font-semibold text-xs cursor-pointer shrink-0"
+                            >
+                                Cerrar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            )}
         </footer>
     );
 }

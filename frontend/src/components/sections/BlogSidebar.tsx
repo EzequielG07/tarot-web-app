@@ -16,7 +16,7 @@ export const BlogSidebar = () => {
             {/* Contenedor interno centrado vertical y horizontalmente */}
             <div className="mt-5 w-full space-y-6 relative z-10 flex flex-col items-center justify-center max-w-sm flex-1 my-auto">
                 {/* Título de la sección */}
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold tracking-wide uppercase text-text-light">
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bodoni font-bold tracking-wide uppercase text-text-light">
                     Frecuencia Sacerdotista
                 </h2>
 

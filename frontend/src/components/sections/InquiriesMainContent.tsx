@@ -7,7 +7,7 @@ export const InquiriesMainContent = () => {
 
             <div className="lg:col-span-6 w-full space-y-6 relative z-10 flex flex-col justify-between">
                 <div className="space-y-6">
-                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold tracking-wide">
+                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bodoni font-bold tracking-wide">
                         ¿QUÉ ESTÁ PASANDO EN TU VIDA?
                     </h2>
 

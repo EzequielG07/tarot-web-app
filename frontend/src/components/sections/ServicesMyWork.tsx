@@ -16,7 +16,7 @@ export const ServicesMyWork = () => {
                 <div className="space-y-6">
                     <p className="text-xs sm:text-sm font-medium font-serif uppercase">La mirada de Anita</p>
 
-                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold tracking-wide uppercase">
+                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bodoni font-bold tracking-wide uppercase">
                         Una Perspectiva Diferente sobre lo que te está Sucediendo
                     </h2>
 

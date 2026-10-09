@@ -25,7 +25,7 @@ export const BlogMainContent = () => {
                     <p className="text-xs sm:text-sm font-medium font-serif uppercase">
                         Tu primera consulta o una mirada integral
                     </p>
-                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold tracking-wide">
+                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bodoni font-bold tracking-wide">
                         SESIÓN INTEGRAL DE CLARIDAD
                     </h2>
                     <p className="text-lg sm:text-xl font-serif">

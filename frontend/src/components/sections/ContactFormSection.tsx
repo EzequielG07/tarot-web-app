@@ -26,7 +26,7 @@ export const ContactFormSection = () => {
                 <div className="lg:col-span-6 w-full p-6 sm:p-8 rounded-2xl border border-white/10 shadow-xl space-y-6">
                     <div className="space-y-2">
                         <p className="text-xs font-medium font-serif uppercase text-text-light/80">Contacto</p>
-                        <h2 className="text-2xl sm:text-3xl font-serif font-bold uppercase text-text-light">
+                        <h2 className="text-2xl sm:text-3xl font-bodoni font-bold uppercase text-text-light">
                             Enviame tu consulta
                         </h2>
                     </div>

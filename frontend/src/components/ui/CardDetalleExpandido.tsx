@@ -27,7 +27,7 @@ export const CardDetalleExpandido = ({
                         className={`w-full ${tarjetaActiva.bgClass || 'bg-card-servicios'
                             } rounded-2xl p-6 sm:p-8 flex flex-col items-center text-center shadow-md transition-colors duration-500`}
                     >
-                        <h3 className="text-xl font-serif font-bold text-text-dark uppercase mb-4 tracking-wide">
+                        <h3 className="text-xl font-bodoni font-bold text-text-dark uppercase mb-4 tracking-wide">
                             {tarjetaActiva.titulo}
                         </h3>
 

@@ -21,7 +21,7 @@ export const InquiriesCards = () => {
         <div className="w-full min-h-[470px] flex flex-col justify-start">
             {/* Título arriba con margen inferior fijo */}
             <div className="m-6">
-                <h2 className="text-2xl font-serif font-bold text-text-dark">¿NO SABÉS QUÉ NECESITÁS?</h2>
+                <h2 className="text-2xl font-bodoni font-bold text-text-dark">¿NO SABÉS QUÉ NECESITÁS?</h2>
                 <p className="text-lg sm:text-xl font-serif text-text-dark">
                     No hace falta que sepas qué servicio elegir. Contame qué estás viviendo y te voy a orientar hacia el abordaje más adecuado para vos.</p>
                 <div className="pt-2">

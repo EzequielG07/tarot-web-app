@@ -26,7 +26,7 @@ export const AboutMeBook = () => {
                 {/* Texto (7 sub-cols -> 66.7%) */}
                 <div className="sm:col-span-7 w-full flex flex-col justify-center space-y-2">
                     <div className="space-y-2">
-                        <h3 className="text-base sm:text-xl lg:text-2xl font-serif font-bold uppercase text-text-dark">
+                        <h3 className="text-base sm:text-xl lg:text-2xl font-bodoni font-bold uppercase text-text-dark">
                             El Viaje del Loco
                         </h3>
 

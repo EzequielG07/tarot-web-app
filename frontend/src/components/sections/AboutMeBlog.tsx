@@ -9,7 +9,7 @@ export const AboutMeBlog = () => {
             {/* Encabezado: Título y Subtítulo */}
             <div className="w-full space-y-1">
                 <p className="text-xs font-medium font-serif uppercase text-text-dark/80">Desde mi Frecuencia</p>
-                <h3 className="text-sm sm:text-base lg:text-lg font-serif font-bold uppercase text-text-dark leading-snug">
+                <h3 className="text-sm sm:text-base lg:text-lg font-bodoni font-bold uppercase text-text-dark leading-snug">
                     Rituales, tips y mensajes para tu camino de sanación
                 </h3>
             </div>
