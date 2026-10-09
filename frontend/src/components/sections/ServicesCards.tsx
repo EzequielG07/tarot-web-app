@@ -2,31 +2,26 @@
 
 'use client';
 
-import { useState } from 'react';
 import { CardExpandible } from '@/components/ui/CardExpandible';
-import { CardDetalleExpandido } from '@/components/ui/CardDetalleExpandido';
 import { SERVICIOS_DATA } from '@/data/serviciosData';
 
-export const ServicesCards = () => {
-    const [selectedCardId, setSelectedCardId] = useState<string | null>(null);
+interface ServicesCardsProps {
+    selectedCardId: string | null;
+    onToggle: (id: string) => void;
+}
 
-    const selectedCard = SERVICIOS_DATA.find((item) => item.id === selectedCardId) || null;
-
-    const handleToggle = (id: string) => {
-        setSelectedCardId((prev) => (prev === id ? null : id));
-    };
-
+export const ServicesCards = ({ selectedCardId, onToggle }: ServicesCardsProps) => {
     return (
-        <div className="w-full min-h-[470px] flex flex-col justify-start border-2 border-violet-500 p-4 rounded-xl">
-            {/* Título arriba con margen inferior fijo */}
-            <div className="m-6">
-                <h2 className="text-2xl font-bodoni font-bold text-text-dark">
+        <div className="w-full h-full flex flex-col justify-start rounded-2xl p-4 sm:p-6 border-2 border-dashed border-emerald-500/60">
+            {/* Título arriba con margen responsive */}
+            <div className="mb-6 space-y-3">
+                <h2 className="text-2xl sm:text-3xl font-bodoni font-bold text-text-dark">
                     ELEGÍ TU EXPERIENCIA según lo que estás viviendo y encontrá el espacio adecuado para vos.
                 </h2>
             </div>
 
-            {/* Grilla con posición fija */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 items-start">
+            {/* Grilla responsive de tarjetas */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4 gap-4 items-stretch justify-items-center">
                 {SERVICIOS_DATA.map((item) => (
                     <CardExpandible
                         key={item.id}
@@ -38,16 +33,10 @@ export const ServicesCards = () => {
                         contenidoExpandido={item.contenidoExpandido}
                         bgClass={item.bgClass}
                         estaAbierto={selectedCardId === item.id}
-                        onToggle={() => handleToggle(item.id)}
+                        onToggle={() => onToggle(item.id)}
                     />
                 ))}
             </div>
-
-            {/* Contenedor expandible a lo ancho de la pantalla/sección */}
-            <CardDetalleExpandido
-                tarjetaActiva={selectedCard}
-                onCerrar={() => setSelectedCardId(null)}
-            />
         </div>
     );
 };

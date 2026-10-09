@@ -23,7 +23,7 @@ export const CardExpandible = ({
     return (
         <div
             id={`card-${id}`}
-            className={`w-full max-w-[220px] mx-auto ${bgClass} rounded-2xl p-5 flex flex-col justify-between text-center h-[380px] transition-all duration-300 ${
+            className={`scroll-mt-28 w-full max-w-[220px] mx-auto ${bgClass} rounded-2xl p-5 flex flex-col justify-between text-center h-[380px] transition-all duration-300 ${
                 estaAbierto ? 'ring-2 ring-text-dark/40 shadow-lg scale-[1.02]' : 'hover:shadow-md'
             }`}
         >

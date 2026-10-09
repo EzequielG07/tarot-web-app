@@ -3,8 +3,8 @@ import Link from 'next/link';
 
 export const ServicesMyWork = () => {
     return (
-        <div className="relative w-full h-[470px] bg-bg-card rounded-2xl p-6 overflow-hidden flex flex-col justify-between justify-center text-left">
-            {/* Imagen de fondo exclusiva para BlogSidebar */}
+        <div className="relative w-full h-full bg-bg-card rounded-2xl p-6 sm:p-8 overflow-hidden flex flex-col justify-start text-left border-2 border-dashed border-sky-500/60">
+            {/* Imagen de fondo exclusiva */}
             <Image
                 src="/images/backgrounds/services-bg.png"
                 alt="Fondo Frecuencia Sacerdotista"
@@ -12,16 +12,16 @@ export const ServicesMyWork = () => {
                 priority
                 className="object-cover object-center z-0 pointer-events-none"
             />
-            <div className="lg:col-span-6 w-full space-y-6 relative z-10 flex flex-col justify-between">
-                <div className="space-y-6">
-                    <p className="text-xs sm:text-sm font-medium font-serif uppercase">La mirada de Anita</p>
+            <div className="w-full space-y-6 relative z-10 flex flex-col justify-start">
+                <div className="space-y-4 sm:space-y-6">
+                    <p className="text-xs sm:text-sm font-medium font-serif uppercase text-text-light/80">La mirada de Anita</p>
 
-                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bodoni font-bold tracking-wide uppercase">
+                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bodoni font-bold tracking-wide uppercase text-text-light">
                         Una Perspectiva Diferente sobre lo que te está Sucediendo
                     </h2>
 
-                    <p className="text-lg sm:text-xl font-serif">
-                        Mi trabajo no consiste en date respuestas predeterminadas. <br />
+                    <p className="text-base sm:text-lg lg:text-xl font-serif text-text-light/90 leading-relaxed">
+                        Mi trabajo no consiste en date respuestas predeterminadas. <br className="my-2" />
                         Consiste en ayudarte a observar aquello que hoy necesitas comprender, desde una perspectiva
                         diferente.
                     </p>

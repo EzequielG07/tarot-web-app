@@ -2,28 +2,26 @@
 
 'use client';
 
-import { useState } from 'react';
 import { CardExpandible } from '@/components/ui/CardExpandible';
-import { CardDetalleExpandido } from '@/components/ui/CardDetalleExpandido';
 import { RECURSOS_DATA } from '@/data/recursosData';
 import Link from 'next/link';
 
-export const InquiriesCards = () => {
-    const [selectedCardId, setSelectedCardId] = useState<string | null>(null);
+interface InquiriesCardsProps {
+    selectedCardId: string | null;
+    onToggle: (id: string) => void;
+}
 
-    const selectedCard = RECURSOS_DATA.find((item) => item.id === selectedCardId) || null;
-
-    const handleToggle = (id: string) => {
-        setSelectedCardId((prev) => (prev === id ? null : id));
-    };
-
+export const InquiriesCards = ({ selectedCardId, onToggle }: InquiriesCardsProps) => {
     return (
-        <div className="w-full min-h-[470px] flex flex-col justify-start">
-            {/* Título arriba con margen inferior fijo */}
-            <div className="m-6">
-                <h2 className="text-2xl font-bodoni font-bold text-text-dark">¿NO SABÉS QUÉ NECESITÁS?</h2>
-                <p className="text-lg sm:text-xl font-serif text-text-dark">
-                    No hace falta que sepas qué servicio elegir. Contame qué estás viviendo y te voy a orientar hacia el abordaje más adecuado para vos.</p>
+        <div className="w-full h-full flex flex-col justify-start rounded-2xl p-4 sm:p-6 border-2 border-dashed border-emerald-500/60">
+            {/* Título arriba con margen responsive */}
+            <div className="mb-6 space-y-3">
+                <h2 className="text-2xl sm:text-3xl font-bodoni font-bold text-text-dark">
+                    ¿NO SABÉS QUÉ NECESITÁS?
+                </h2>
+                <p className="text-base sm:text-lg font-serif text-text-dark/90 leading-relaxed">
+                    No hace falta que sepas qué servicio elegir. Contame qué estás viviendo y te voy a orientar hacia el abordaje más adecuado para vos.
+                </p>
                 <div className="pt-2">
                     <Link
                         href="/schedule"
@@ -34,8 +32,8 @@ export const InquiriesCards = () => {
                 </div>
             </div>
 
-            {/* Grilla con posición fija */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 items-start">
+            {/* Grilla responsive de tarjetas */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-4 items-stretch justify-items-center">
                 {RECURSOS_DATA.map((item) => (
                     <CardExpandible
                         key={item.id}
@@ -47,16 +45,10 @@ export const InquiriesCards = () => {
                         contenidoExpandido={item.contenidoExpandido}
                         bgClass={item.bgClass}
                         estaAbierto={selectedCardId === item.id}
-                        onToggle={() => handleToggle(item.id)}
+                        onToggle={() => onToggle(item.id)}
                     />
                 ))}
             </div>
-
-            {/* Contenedor expandible a lo ancho de la pantalla/sección */}
-            <CardDetalleExpandido
-                tarjetaActiva={selectedCard}
-                onCerrar={() => setSelectedCardId(null)}
-            />
         </div>
     );
 };
