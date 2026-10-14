@@ -12,8 +12,8 @@ export default function Home() {
         <div className="min-h-screen bg-slate-900 text-slate-100 font-sans">
             <Hero />
             <EggBook />
-            <InquiriesContainer />
             <ServicesContainer />
+            <InquiriesContainer />
             <BlogContainer />
             <AboutMeContainer />
             <ContactFormSection />
