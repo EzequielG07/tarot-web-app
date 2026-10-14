@@ -1,17 +1,20 @@
-import Image from 'next/image';
 import Link from 'next/link';
 
 export const ServicesMyWork = () => {
     return (
         <div className="relative w-full h-full bg-bg-card rounded-2xl p-6 sm:p-8 overflow-hidden flex flex-col justify-start text-left border-2 border-dashed border-sky-500/60">
-            {/* Imagen de fondo exclusiva */}
-            <Image
-                src="/images/backgrounds/services-bg.png"
-                alt="Fondo Frecuencia Sacerdotista"
-                fill
-                priority
-                className="object-cover object-center z-0 pointer-events-none"
-            />
+            {/* Video de fondo */}
+            <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="auto"
+                className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+            >
+                <source src="/videos/backgrounds/mirada-bg.mp4" type="video/mp4" />
+                Tu navegador no soporta la reproducción de video.
+            </video>
             <div className="w-full space-y-6 relative z-10 flex flex-col justify-start">
                 <div className="space-y-4 sm:space-y-6">
                     <p className="text-xs sm:text-sm font-medium font-serif uppercase text-text-light/80">La mirada de Anita</p>
