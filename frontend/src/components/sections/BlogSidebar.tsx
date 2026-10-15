@@ -1,9 +1,34 @@
-import Image from 'next/image';
-import Link from 'next/link';
+'use client';
 
-export const BlogSidebar = () => {
+import { useState } from 'react';
+
+export interface BlogSidebarProps {
+    estaAbierto?: boolean;
+    onToggle?: () => void;
+}
+
+export const BlogSidebar = ({
+    estaAbierto: propEstaAbierto,
+    onToggle,
+}: BlogSidebarProps = {}) => {
+    const [internalOpen, setInternalOpen] = useState(false);
+    const estaAbierto = propEstaAbierto !== undefined ? propEstaAbierto : internalOpen;
+
+    const handleToggle = () => {
+        if (onToggle) {
+            onToggle();
+        } else {
+            setInternalOpen((prev) => !prev);
+        }
+    };
+
     return (
-        <div className="relative w-full h-full max-w-none flex flex-col items-center justify-center lg:border-l lg:border-gray-500/10 lg:pl-8 p-6 rounded-2xl overflow-hidden text-center">
+        <div
+            id="blog-sidebar"
+            className={`relative w-full h-full max-w-none flex flex-col items-center justify-center lg:border-l lg:border-gray-500/10 lg:pl-8 p-6 rounded-2xl overflow-hidden text-center transition-all duration-300 ${
+                estaAbierto ? 'ring-2 ring-amber-400/50 shadow-lg' : ''
+            }`}
+        >
             {/* Video de fondo */}
             <video
                 autoPlay
@@ -31,16 +56,20 @@ export const BlogSidebar = () => {
                 <p className="text-lg sm:text-xl font-serif text-text-light">
                     Un espacio creado por Anita Tarotista para explorar parapsicología, energía, intuición, rituales, autoconocimiento y espiritualidad práctica.
                 </p>
-                {/* Botón/Link */}
+                {/* Botón interactivo para desplegar detalle */}
                 <div className="pt-2">
-                    <Link
-                        href="/schedule"
-                        className="inline-block px-5 py-2.5 rounded-full text-btn-dark bg-btn-light hover:bg-btn-light-hover transition-colors uppercase font-bold text-xs shrink-0"
+                    <button
+                        type="button"
+                        onClick={handleToggle}
+                        aria-expanded={estaAbierto}
+                        aria-controls="panel-blog-sidebar-expandido"
+                        className="inline-block px-5 py-2.5 rounded-full text-btn-dark bg-btn-light hover:bg-btn-light-hover transition-all uppercase font-bold text-xs shrink-0 cursor-pointer shadow-sm hover:scale-105 active:scale-95"
                     >
-                        Explorar Frecuencia Sacerdotisa →
-                    </Link>
+                        {estaAbierto ? 'Ocultar Frecuencia Sacerdotisa ↑' : 'Explorar Frecuencia Sacerdotisa ↓'}
+                    </button>
                 </div>
             </div>
         </div>
     );
 };
+

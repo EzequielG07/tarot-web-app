@@ -2,10 +2,12 @@
 'use client';
 
 import Image from 'next/image';
-
 export const FrecuenciaRegister = () => {
     return (
-        <section className="relative w-full min-h-[320px] flex items-center overflow-hidden py-12 px-6 sm:px-12 lg:px-20 border-y border-white/10">
+        <section
+            id="frecuencia-register"
+            className="scroll-mt-20 relative w-full min-h-[320px] flex items-center overflow-hidden py-12 px-6 sm:px-12 lg:px-20 border-y border-white/10"
+        >
             {/* Video de fondo */}
             <video
                 autoPlay
