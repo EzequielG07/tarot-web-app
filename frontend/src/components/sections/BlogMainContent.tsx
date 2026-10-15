@@ -4,14 +4,18 @@ import Link from 'next/link';
 export const BlogMainContent = () => {
     return (
         <div className="relative w-full h-full max-w-none grid grid-cols-1 lg:grid-cols-5 gap-8 rounded-2xl overflow-hidden text-text-light p-6 border border-gray-500/10">
-            {/* Imagen de fondo única y exclusiva para BlogMainContent */}
-            <Image
-                src="/images/backgrounds/blog-bg.png"
-                alt="Fondo de la Sesión Integral"
-                fill
-                priority
-                className="object-cover object-center z-0 pointer-events-none"
-            />
+            {/* Video de fondo */}
+            <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="auto"
+                className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+            >
+                <source src="/videos/backgrounds/sesion-bg.mp4" type="video/mp4" />
+                Tu navegador no soporta la reproducción de video.
+            </video>
 
             {/* Capa de overlay opcional para asegurar legibilidad sobre el fondo */}
             <div className="absolute inset-0 bg-black/10 z-0 pointer-events-none" />

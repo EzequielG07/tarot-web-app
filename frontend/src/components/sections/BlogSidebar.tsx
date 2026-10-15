@@ -4,14 +4,18 @@ import Link from 'next/link';
 export const BlogSidebar = () => {
     return (
         <div className="relative w-full h-full max-w-none flex flex-col items-center justify-center lg:border-l lg:border-gray-500/10 lg:pl-8 p-6 rounded-2xl overflow-hidden text-center">
-            {/* Imagen de fondo exclusiva para BlogSidebar */}
-            <Image
-                src="/images/backgrounds/frequency-bg.png"
-                alt="Fondo Frecuencia Sacerdotista"
-                fill
-                priority
-                className="object-cover object-center z-0 pointer-events-none"
-            />
+            {/* Video de fondo */}
+            <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="auto"
+                className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+            >
+                <source src="/videos/backgrounds/frecuencia-bg.mp4" type="video/mp4" />
+                Tu navegador no soporta la reproducción de video.
+            </video>
 
             {/* Contenedor interno centrado vertical y horizontalmente */}
             <div className="mt-5 w-full space-y-6 relative z-10 flex flex-col items-center justify-center max-w-sm flex-1 my-auto">

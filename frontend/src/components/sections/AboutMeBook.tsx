@@ -14,9 +14,9 @@ export const AboutMeBook = () => {
             {/* Sub-grilla: 33.3% Portada / 66.7% Texto */}
             <div className="w-full grid grid-cols-1 sm:grid-cols-12 gap-4 items-center">
                 {/* Portada (5 sub-cols -> 33.3%) */}
-                <div className="sm:col-span-5 w-full aspect-[2/3] relative rounded-xl overflow-hidden shadow-xl border border-white/10">
+                <div className="sm:col-span-5 w-full aspect-[2/3] relative rounded-xl overflow-hidden">
                     <Image
-                        src="/images/about/portada-libro.jpg"
+                        src="/images/about/portada-libro.png"
                         alt="Portada de Libro Destacado"
                         fill
                         className="object-cover object-center"

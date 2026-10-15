@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -11,12 +12,10 @@ export default function Navbar() {
             <div className="max-w-[100%] mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-center gap-x-16 h-20 gap-x-4">
                     {/* Logo / Nombre */}
-                    <Link
-                        href="/"
-                        className="flex items-center gap-2 text-xl xl:text-2xl font-serif tracking-widest text-btn-light font-bold whitespace-nowrap shrink-0"
-                    >
-                        <span>✨</span> Anita Tarot
-                    </Link>
+                    <div className="flex justify-content gap-6">
+                        <Image src="/images/logos/logo-signo.png" alt="Logo" width={50} height={50} />
+                        <Image src="/images/logos/logo-anita.png" alt="Logo" width={100} height={50} />
+                    </div>
 
                     {/* Menú Escritorio */}
                     <div className="hidden xl:flex items-center gap-x-4 2xl:gap-x-6 text-xs xl:text-sm tracking-wider font-medium shrink-0">

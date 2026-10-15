@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
@@ -33,12 +34,11 @@ export default function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 items-stretch divide-y lg:divide-y-0 divide-gray-500/40">
                     {/* Columna 1: Logo (3/12) */}
                     <div className="lg:col-span-3 flex flex-col items-center lg:items-start p-6 text-center lg:text-left space-y-3 h-full lg:border-r border-gray-500/40">
-                        <Link
-                            href="/"
-                            className="flex items-center gap-2 text-2xl font-serif tracking-widest text-btn-light font-bold"
-                        >
-                            <span>✨</span> Anita Tarot
-                        </Link>
+                        {/* Logo / Nombre */}
+                        <div className="flex justify-content gap-6">
+                            <Image src="/images/logos/logo-signo.png" alt="Logo" width={50} height={50} />
+                            <Image src="/images/logos/logo-anita.png" alt="Logo" width={100} height={50} />
+                        </div>
                         <p className="text-xs text-text-light/70 max-w-xs">Maestra Parapsicóloga</p>
                         <p className="text-xs text-text-light/70 max-w-xs">Psíquica · Vidente · Reiki Master</p>
 

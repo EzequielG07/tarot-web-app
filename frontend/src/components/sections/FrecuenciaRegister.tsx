@@ -6,18 +6,18 @@ import Image from 'next/image';
 export const FrecuenciaRegister = () => {
     return (
         <section className="relative w-full min-h-[320px] flex items-center overflow-hidden py-12 px-6 sm:px-12 lg:px-20 border-y border-white/10">
-            {/* Imagen de fondo ocupando el 100% del ancho de la pantalla */}
-            <div className="absolute inset-0 w-full h-full">
-                <Image
-                    src="/images/backgrounds/register-bg.png" // Ruta de tu imagen
-                    alt="Fondo Frecuencia Sacerdotisa"
-                    fill
-                    className="object-cover object-center"
-                    priority
-                />
-                {/* Overlay sutil para legibilidad del texto */}
-                <div className="absolute inset-0 bg-black/40" />
-            </div>
+            {/* Video de fondo */}
+            <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="auto"
+                className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+            >
+                <source src="/videos/backgrounds/register-bg.mp4" type="video/mp4" />
+                Tu navegador no soporta la reproducción de video.
+            </video>
 
             {/* Contenedor interno del contenido (centrado y limitado en ancho para no pegarse a los bordes de la pantalla) */}
             <div className="relative z-10 w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
