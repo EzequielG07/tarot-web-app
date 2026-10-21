@@ -32,7 +32,7 @@ export const MoreReikiContent = () => {
                 <div className="space-y-2 pt-2 border-t border-stone-100">
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-2.5 bg-stone-50 rounded-xl border border-stone-200/50">
                         <span className="text-xs font-serif font-semibold text-text-dark/80">
-                            50 minutos · $50.000 · USD 50 · EUR 40
+                            50 minutos · $50.000 · USD 50
                         </span>
                         <Link
                             href="/schedule"
@@ -44,7 +44,7 @@ export const MoreReikiContent = () => {
 
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-2.5 bg-stone-50 rounded-xl border border-stone-200/50">
                         <span className="text-xs font-serif font-semibold text-text-dark/80">
-                            80 minutos · $65.000 · USD 70 · EUR 55
+                            80 minutos · $65.000 · USD 70
                         </span>
                         <Link
                             href="/schedule"
@@ -70,7 +70,7 @@ export const MoreReikiContent = () => {
                 <div className="bg-white/95 rounded-2xl p-5 sm:p-6 border border-stone-200/70 shadow-xs hover:shadow-md transition-all flex flex-col justify-between space-y-4">
                     <div className="space-y-2">
                         <h4 className="text-base sm:text-lg font-bodoni font-bold uppercase text-text-dark flex items-center gap-2">
-                            <span>✨</span> Alineación de Chakras y Armonización Vital
+                            Alineación de Chakras y Armonización Vital
                         </h4>
                         <p className="text-xs font-serif italic text-text-dark/70">
                             Cuando necesitás volver a encontrar tu centro.
@@ -86,7 +86,7 @@ export const MoreReikiContent = () => {
                     <div className="space-y-2 pt-2 border-t border-stone-100">
                         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-2.5 bg-stone-50 rounded-xl border border-stone-200/50">
                             <span className="text-xs font-serif font-semibold text-text-dark/80">
-                                50 minutos · $50.000 · USD 50 · EUR 40
+                                50 minutos · $50.000 · USD 50
                             </span>
                             <Link
                                 href="/schedule"
@@ -97,7 +97,7 @@ export const MoreReikiContent = () => {
                         </div>
                         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-2.5 bg-stone-50 rounded-xl border border-stone-200/50">
                             <span className="text-xs font-serif font-semibold text-text-dark/80">
-                                80 minutos · $65.000 · USD 70 · EUR 55
+                                80 minutos · $65.000 · USD 70
                             </span>
                             <Link
                                 href="/schedule"
@@ -113,7 +113,7 @@ export const MoreReikiContent = () => {
                 <div className="bg-white/95 rounded-2xl p-5 sm:p-6 border border-stone-200/70 shadow-xs hover:shadow-md transition-all flex flex-col justify-between space-y-4">
                     <div className="space-y-2">
                         <h4 className="text-base sm:text-lg font-bodoni font-bold uppercase text-text-dark flex items-center gap-2">
-                            <span>🌀</span> Karmic Reiki · Liberación de Lazos y Patrones
+                            Karmic Reiki · Liberación de Lazos y Patrones
                         </h4>
                         <p className="text-xs font-serif italic text-text-dark/70">
                             Para explorar aquello que parece repetirse una y otra vez.
@@ -129,7 +129,7 @@ export const MoreReikiContent = () => {
                     <div className="space-y-2 pt-2 border-t border-stone-100">
                         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-2.5 bg-stone-50 rounded-xl border border-stone-200/50">
                             <span className="text-xs font-serif font-semibold text-text-dark/80">
-                                50 minutos · $50.000 · USD 50 · EUR 40
+                                50 minutos · $50.000 · USD 50
                             </span>
                             <Link
                                 href="/schedule"
@@ -140,7 +140,7 @@ export const MoreReikiContent = () => {
                         </div>
                         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-2.5 bg-stone-50 rounded-xl border border-stone-200/50">
                             <span className="text-xs font-serif font-semibold text-text-dark/80">
-                                80 minutos · $65.000 · USD 70 · EUR 55
+                                80 minutos · $65.000 · USD 70
                             </span>
                             <Link
                                 href="/schedule"
@@ -156,7 +156,7 @@ export const MoreReikiContent = () => {
                 <div className="bg-white/95 rounded-2xl p-5 sm:p-6 border border-stone-200/70 shadow-xs hover:shadow-md transition-all flex flex-col justify-between space-y-4">
                     <div className="space-y-2">
                         <h4 className="text-base sm:text-lg font-bodoni font-bold uppercase text-text-dark flex items-center gap-2">
-                            <span>🤍</span> Karuna Reiki · Sanación desde la Compasión
+                            Karuna Reiki · Sanación desde la Compasión
                         </h4>
                         <p className="text-xs font-serif italic text-text-dark/70">
                             Un espacio para tratarte con más suavidad.
@@ -172,7 +172,7 @@ export const MoreReikiContent = () => {
                     <div className="space-y-2 pt-2 border-t border-stone-100">
                         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-2.5 bg-stone-50 rounded-xl border border-stone-200/50">
                             <span className="text-xs font-serif font-semibold text-text-dark/80">
-                                50 minutos · $50.000 · USD 50 · EUR 40
+                                50 minutos · $50.000 · USD 50
                             </span>
                             <Link
                                 href="/schedule"
@@ -183,7 +183,7 @@ export const MoreReikiContent = () => {
                         </div>
                         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-2.5 bg-stone-50 rounded-xl border border-stone-200/50">
                             <span className="text-xs font-serif font-semibold text-text-dark/80">
-                                80 minutos · $65.000 · USD 70 · EUR 55
+                                80 minutos · $65.000 · USD 70
                             </span>
                             <Link
                                 href="/schedule"
@@ -199,7 +199,7 @@ export const MoreReikiContent = () => {
                 <div className="bg-white/95 rounded-2xl p-5 sm:p-6 border border-stone-200/70 shadow-xs hover:shadow-md transition-all flex flex-col justify-between space-y-4">
                     <div className="space-y-2">
                         <h4 className="text-base sm:text-lg font-bodoni font-bold uppercase text-text-dark flex items-center gap-2">
-                            <span>🧘</span> Reiki Jin Kei Do · Sabiduría en Movimiento
+                            Reiki Jin Kei Do · Sabiduría en Movimiento
                         </h4>
                         <p className="text-xs font-serif italic text-text-dark/70">
                             Silenciar el ruido para volver a escucharte.
@@ -215,7 +215,7 @@ export const MoreReikiContent = () => {
                     <div className="space-y-2 pt-2 border-t border-stone-100">
                         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-2.5 bg-stone-50 rounded-xl border border-stone-200/50">
                             <span className="text-xs font-serif font-semibold text-text-dark/80">
-                                50 minutos · $50.000 · USD 50 · EUR 40
+                                50 minutos · $50.000 · USD 50
                             </span>
                             <Link
                                 href="/schedule"
@@ -226,7 +226,7 @@ export const MoreReikiContent = () => {
                         </div>
                         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-2.5 bg-stone-50 rounded-xl border border-stone-200/50">
                             <span className="text-xs font-serif font-semibold text-text-dark/80">
-                                80 minutos · $65.000 · USD 70 · EUR 55
+                                80 minutos · $65.000 · USD 70
                             </span>
                             <Link
                                 href="/schedule"
@@ -242,7 +242,7 @@ export const MoreReikiContent = () => {
                 <div className="bg-white/95 rounded-2xl p-5 sm:p-6 border border-stone-200/70 shadow-xs hover:shadow-md transition-all flex flex-col justify-between space-y-4">
                     <div className="space-y-2">
                         <h4 className="text-base sm:text-lg font-bodoni font-bold uppercase text-text-dark flex items-center gap-2">
-                            <span>🔥</span> Hará Reiki · Tu Centro de Poder Vital
+                            Hará Reiki · Tu Centro de Poder Vital
                         </h4>
                         <p className="text-xs font-serif italic text-text-dark/70">
                             Volvé a tu eje.
@@ -258,7 +258,7 @@ export const MoreReikiContent = () => {
                     <div className="space-y-2 pt-2 border-t border-stone-100">
                         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-2.5 bg-stone-50 rounded-xl border border-stone-200/50">
                             <span className="text-xs font-serif font-semibold text-text-dark/80">
-                                50 minutos · $50.000 · USD 50 · EUR 40
+                                50 minutos · $50.000 · USD 50
                             </span>
                             <Link
                                 href="/schedule"
@@ -269,7 +269,7 @@ export const MoreReikiContent = () => {
                         </div>
                         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-2.5 bg-stone-50 rounded-xl border border-stone-200/50">
                             <span className="text-xs font-serif font-semibold text-text-dark/80">
-                                80 minutos · $65.000 · USD 70 · EUR 55
+                                80 minutos · $65.000 · USD 70
                             </span>
                             <Link
                                 href="/schedule"
@@ -285,7 +285,7 @@ export const MoreReikiContent = () => {
                 <div className="bg-white/95 rounded-2xl p-5 sm:p-6 border border-stone-200/70 shadow-xs hover:shadow-md transition-all flex flex-col justify-between space-y-4">
                     <div className="space-y-2">
                         <h4 className="text-base sm:text-lg font-bodoni font-bold uppercase text-text-dark flex items-center gap-2">
-                            <span>🪽</span> Reiki con Arcángeles · Sintonía de Luz
+                            Reiki con Arcángeles · Sintonía de Luz
                         </h4>
                         <p className="text-xs font-serif italic text-text-dark/70">
                             Un espacio de calma, protección y conexión espiritual.
@@ -301,7 +301,7 @@ export const MoreReikiContent = () => {
                     <div className="space-y-2 pt-2 border-t border-stone-100">
                         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-2.5 bg-stone-50 rounded-xl border border-stone-200/50">
                             <span className="text-xs font-serif font-semibold text-text-dark/80">
-                                50 minutos · $50.000 · USD 50 · EUR 40
+                                50 minutos · $50.000 · USD 50
                             </span>
                             <Link
                                 href="/schedule"
@@ -312,7 +312,7 @@ export const MoreReikiContent = () => {
                         </div>
                         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-2.5 bg-stone-50 rounded-xl border border-stone-200/50">
                             <span className="text-xs font-serif font-semibold text-text-dark/80">
-                                80 minutos · $65.000 · USD 70 · EUR 55
+                                80 minutos · $65.000 · USD 70
                             </span>
                             <Link
                                 href="/schedule"
@@ -328,7 +328,7 @@ export const MoreReikiContent = () => {
                 <div className="bg-white/95 rounded-2xl p-5 sm:p-6 border border-stone-200/70 shadow-xs hover:shadow-md transition-all flex flex-col justify-between space-y-4">
                     <div className="space-y-2">
                         <h4 className="text-base sm:text-lg font-bodoni font-bold uppercase text-text-dark flex items-center gap-2">
-                            <span>👁️</span> Apertura del Tercer Ojo · Visión Interior
+                            Apertura del Tercer Ojo · Visión Interior
                         </h4>
                         <p className="text-xs font-serif italic text-text-dark/70">
                             Cuando querés escuchar con mayor claridad tu propia intuición.
@@ -343,7 +343,7 @@ export const MoreReikiContent = () => {
 
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-2 border-t border-stone-100">
                         <div className="text-xs font-serif font-semibold text-text-dark/80">
-                            50 minutos · $60.000 · USD 60 · EUR 57
+                            50 minutos · $60.000 · USD 60
                         </div>
                         <Link
                             href="/schedule"
@@ -358,7 +358,7 @@ export const MoreReikiContent = () => {
                 <div className="bg-white/95 rounded-2xl p-5 sm:p-6 border border-stone-200/70 shadow-xs hover:shadow-md transition-all flex flex-col justify-between space-y-4">
                     <div className="space-y-2">
                         <h4 className="text-base sm:text-lg font-bodoni font-bold uppercase text-text-dark flex items-center gap-2">
-                            <span>🌱</span> Reiki para Niños y Adolescentes
+                            Reiki para Niños y Adolescentes
                         </h4>
                         <p className="text-xs font-serif italic text-text-dark/70">
                             Cada etapa necesita una forma diferente de acompañamiento.
@@ -374,7 +374,7 @@ export const MoreReikiContent = () => {
                     <div className="space-y-2 pt-2 border-t border-stone-100">
                         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-2.5 bg-stone-50 rounded-xl border border-stone-200/50">
                             <span className="text-xs font-serif font-semibold text-text-dark/80">
-                                50 minutos · $50.000 · USD 50 · EUR 40
+                                50 minutos · $50.000 · USD 50
                             </span>
                             <Link
                                 href="/schedule"
@@ -385,7 +385,7 @@ export const MoreReikiContent = () => {
                         </div>
                         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-2.5 bg-stone-50 rounded-xl border border-stone-200/50">
                             <span className="text-xs font-serif font-semibold text-text-dark/80">
-                                80 minutos · $65.000 · USD 70 · EUR 55
+                                80 minutos · $65.000 · USD 70
                             </span>
                             <Link
                                 href="/schedule"
@@ -401,7 +401,7 @@ export const MoreReikiContent = () => {
                 <div className="bg-white/95 rounded-2xl p-5 sm:p-6 border border-stone-200/70 shadow-xs hover:shadow-md transition-all flex flex-col justify-between space-y-4">
                     <div className="space-y-2">
                         <h4 className="text-base sm:text-lg font-bodoni font-bold uppercase text-text-dark flex items-center gap-2">
-                            <span>🐾</span> Reiki para Mascotas · Armonía y Bienestar
+                            Reiki para Mascotas · Armonía y Bienestar
                         </h4>
                         <p className="text-xs font-serif italic text-text-dark/70">
                             Porque ellos también perciben el ambiente que los rodea.
@@ -417,7 +417,7 @@ export const MoreReikiContent = () => {
                     <div className="space-y-2 pt-2 border-t border-stone-100">
                         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-2.5 bg-stone-50 rounded-xl border border-stone-200/50">
                             <span className="text-xs font-serif font-semibold text-text-dark/80">
-                                30 minutos · $35.000 · USD 40 · EUR 30
+                                30 minutos · $35.000 · USD 40
                             </span>
                             <Link
                                 href="/schedule"
@@ -428,7 +428,7 @@ export const MoreReikiContent = () => {
                         </div>
                         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-2.5 bg-stone-50 rounded-xl border border-stone-200/50">
                             <span className="text-xs font-serif font-semibold text-text-dark/80">
-                                50 minutos · $50.000 · USD 50 · EUR 40
+                                50 minutos · $50.000 · USD 50
                             </span>
                             <Link
                                 href="/schedule"
@@ -444,7 +444,7 @@ export const MoreReikiContent = () => {
                 <div className="bg-white/95 rounded-2xl p-5 sm:p-6 border border-stone-200/70 shadow-xs hover:shadow-md transition-all flex flex-col justify-between space-y-4">
                     <div className="space-y-2">
                         <h4 className="text-base sm:text-lg font-bodoni font-bold uppercase text-text-dark flex items-center gap-2">
-                            <span>📜</span> Registros Akáshicos · La Memoria Sagrada del Alma
+                            Registros Akáshicos · La Memoria Sagrada del Alma
                         </h4>
                         <p className="text-xs font-serif italic text-text-dark/70">
                             Preguntas profundas. Nuevas perspectivas.

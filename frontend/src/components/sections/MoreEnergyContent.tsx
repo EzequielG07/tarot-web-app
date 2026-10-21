@@ -53,7 +53,7 @@ export const MoreEnergyContent = () => {
                     <div className="space-y-2">
                         <div className="flex items-center justify-between flex-wrap gap-2">
                             <h4 className="text-base sm:text-lg font-bodoni font-bold uppercase text-text-dark flex items-center gap-2">
-                                <span>⚡</span> Orientación Express
+                                Orientación Express
                             </h4>
                             <span className="text-xs font-serif font-medium bg-stone-100 text-text-dark/90 px-3 py-1 rounded-full border border-stone-200/60">
                                 WhatsApp
@@ -66,7 +66,7 @@ export const MoreEnergyContent = () => {
 
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-2 border-t border-stone-100">
                         <div className="text-xs font-serif font-semibold text-text-dark/80">
-                            15 minutos · $19.900 · USD 15 · EUR 14
+                            15 minutos · $19.900 · USD 15
                         </div>
                         <Link
                             href="/schedule"
@@ -81,7 +81,7 @@ export const MoreEnergyContent = () => {
                 <div className="bg-white/95 rounded-2xl p-5 sm:p-6 border border-stone-200/70 shadow-xs hover:shadow-md transition-all flex flex-col justify-between space-y-4">
                     <div className="space-y-2">
                         <h4 className="text-base sm:text-lg font-bodoni font-bold uppercase text-text-dark flex items-center gap-2">
-                            <span>🔮</span> Lectura de Claridad
+                            Lectura de Claridad
                         </h4>
                         <p className="text-xs sm:text-sm font-serif text-text-dark/90 leading-relaxed">
                             Para una situación puntual, una pregunta concreta o un momento en el que necesitás orientación.
@@ -90,7 +90,7 @@ export const MoreEnergyContent = () => {
 
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-2 border-t border-stone-100">
                         <div className="text-xs font-serif font-semibold text-text-dark/80">
-                            30 minutos · $35.000 · USD 30 · EUR 27
+                            30 minutos · $35.000 · USD 30
                         </div>
                         <Link
                             href="/schedule"
@@ -106,7 +106,7 @@ export const MoreEnergyContent = () => {
                     <div className="space-y-2">
                         <div className="flex items-center justify-between flex-wrap gap-2">
                             <h4 className="text-base sm:text-lg font-bodoni font-bold uppercase text-text-dark flex items-center gap-2">
-                                <span>🔮</span> Sesión Integral de Claridad
+                                Sesión Integral de Claridad
                             </h4>
                             <span className="text-xs font-serif font-bold text-text-dark bg-btn-light/80 px-2.5 py-0.5 rounded-full">
                                 Tu consulta más completa
@@ -122,7 +122,7 @@ export const MoreEnergyContent = () => {
 
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-2 border-t border-stone-100">
                         <div className="text-xs font-serif font-semibold text-text-dark/80">
-                            50 minutos · $50.000 · USD 50 · EUR 45
+                            50 minutos · $50.000 · USD 50
                         </div>
                         <Link
                             href="/schedule"
@@ -147,7 +147,7 @@ export const MoreEnergyContent = () => {
                 <div className="bg-white/95 rounded-2xl p-5 sm:p-6 border border-stone-200/70 shadow-xs hover:shadow-md transition-all flex flex-col justify-between space-y-4">
                     <div className="space-y-2">
                         <h4 className="text-base sm:text-lg font-bodoni font-bold uppercase text-text-dark flex items-center gap-2">
-                            <span>✨</span> Diagnóstico Energético y Lectura Profunda
+                            Diagnóstico Energético y Lectura Profunda
                         </h4>
                         <p className="text-xs sm:text-sm font-serif text-text-dark/90 leading-relaxed">
                             Una mirada integral sobre tu momento energético y las áreas que pueden requerir atención.
@@ -159,7 +159,7 @@ export const MoreEnergyContent = () => {
 
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-2 border-t border-stone-100">
                         <div className="text-xs font-serif font-semibold text-text-dark/80">
-                            50 minutos · $60.000 · USD 60 · EUR 55
+                            50 minutos · $60.000 · USD 60
                         </div>
                         <Link
                             href="/schedule"
@@ -175,7 +175,7 @@ export const MoreEnergyContent = () => {
                     <div className="space-y-2">
                         <div className="flex items-center justify-between flex-wrap gap-2">
                             <h4 className="text-base sm:text-lg font-bodoni font-bold uppercase text-text-dark flex items-center gap-2">
-                                <span>🌿</span> Diagnóstico + Sesión de Armonización
+                                Diagnóstico + Sesión de Armonización
                             </h4>
                             <span className="text-xs font-serif font-semibold bg-emerald-50 text-emerald-800 px-3 py-0.5 rounded-full border border-emerald-200/60">
                                 Experiencia Premium
@@ -195,7 +195,7 @@ export const MoreEnergyContent = () => {
 
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-2 border-t border-stone-100">
                         <div className="text-xs font-serif font-semibold text-text-dark/80">
-                            ⏳ Duración: 1 hora 30 min · $80.000 ARS · USD 80 · EUR 75
+                            Duración: 1 hora 30 min · $80.000 ARS · USD 80
                         </div>
                         <Link
                             href="/schedule"
@@ -210,7 +210,7 @@ export const MoreEnergyContent = () => {
                 <div className="bg-white/95 rounded-2xl p-5 sm:p-6 border border-stone-200/70 shadow-xs hover:shadow-md transition-all flex flex-col justify-between space-y-4">
                     <div className="space-y-2">
                         <h4 className="text-base sm:text-lg font-bodoni font-bold uppercase text-text-dark flex items-center gap-2">
-                            <span>🧿</span> Limpieza · Armonización y Protección
+                            Limpieza · Armonización y Protección
                         </h4>
                         <p className="text-xs sm:text-sm font-serif text-text-dark/90 leading-relaxed">
                             Para quienes sienten pesadez, estancamiento o necesidad de renovación energética. Liberación de estrés, angustia, miedos. Incluye diagnóstico energético inicial.
@@ -220,7 +220,7 @@ export const MoreEnergyContent = () => {
                     <div className="space-y-2 pt-2 border-t border-stone-100">
                         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-2.5 bg-stone-50 rounded-xl border border-stone-200/50">
                             <span className="text-xs font-serif font-semibold text-text-dark/80">
-                                30 minutos — $45.000 · USD 30 · EUR 28
+                                30 minutos — $45.000 · USD 30
                             </span>
                             <Link
                                 href="/schedule"
@@ -231,7 +231,7 @@ export const MoreEnergyContent = () => {
                         </div>
                         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-2.5 bg-stone-50 rounded-xl border border-stone-200/50">
                             <span className="text-xs font-serif font-semibold text-text-dark/80">
-                                50 minutos — $60.000 · USD 50 · EUR 48
+                                50 minutos — $60.000 · USD 50
                             </span>
                             <Link
                                 href="/schedule"
@@ -247,7 +247,7 @@ export const MoreEnergyContent = () => {
                 <div className="bg-white/95 rounded-2xl p-5 sm:p-6 border border-stone-200/70 shadow-xs hover:shadow-md transition-all flex flex-col justify-between space-y-4">
                     <div className="space-y-2">
                         <h4 className="text-base sm:text-lg font-bodoni font-bold uppercase text-text-dark flex items-center gap-2">
-                            <span>🚪</span> Limpieza, Destrabe y Apertura de Caminos
+                            Limpieza, Destrabe y Apertura de Caminos
                         </h4>
                         <p className="text-xs font-serif italic text-text-dark/70">
                             Cuando sentís que necesitás movimiento.
@@ -262,7 +262,7 @@ export const MoreEnergyContent = () => {
 
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-2 border-t border-stone-100">
                         <div className="text-xs font-serif font-semibold text-text-dark/80">
-                            50 minutos — $60.000 · USD 55 · EUR 50
+                            50 minutos — $60.000 · USD 55
                         </div>
                         <Link
                             href="/schedule"
@@ -305,7 +305,7 @@ export const MoreEnergyContent = () => {
 
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-2 border-t border-stone-100">
                         <div className="text-xs font-serif font-semibold text-text-dark/80">
-                            50 minutos · $60.000 · USD 60 · EUR 57
+                            50 minutos · $60.000 · USD 60
                         </div>
                         <Link
                             href="/schedule"
@@ -335,7 +335,7 @@ export const MoreEnergyContent = () => {
 
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-2 border-t border-stone-100">
                         <div className="text-xs font-serif font-semibold text-text-dark/80">
-                            50 minutos · $60.000 · USD 60 · EUR 57
+                            50 minutos · $60.000 · USD 60
                         </div>
                         <Link
                             href="/schedule"
@@ -368,7 +368,7 @@ export const MoreEnergyContent = () => {
 
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-2 border-t border-stone-100">
                         <div className="text-xs font-serif font-semibold text-text-dark/80">
-                            50 minutos · $60.000 · USD 60 · EUR 57
+                            50 minutos · $60.000 · USD 60
                         </div>
                         <Link
                             href="/schedule"
@@ -398,7 +398,7 @@ export const MoreEnergyContent = () => {
 
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-2 border-t border-stone-100">
                         <div className="text-xs font-serif font-semibold text-text-dark/80">
-                            50 minutos · $60.000 · USD 60 · EUR 57
+                            50 minutos · $60.000 · USD 60
                         </div>
                         <Link
                             href="/schedule"
@@ -463,7 +463,7 @@ export const MoreEnergyContent = () => {
 
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-2 border-t border-stone-100">
                         <div className="text-xs font-serif font-semibold text-text-dark/80">
-                            50 minutos · $60.000 · USD 60 · EUR 57
+                            50 minutos · $60.000 · USD 60
                         </div>
                         <Link
                             href="/schedule"
@@ -493,7 +493,7 @@ export const MoreEnergyContent = () => {
 
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-2 border-t border-stone-100">
                         <div className="text-xs font-serif font-semibold text-text-dark/80">
-                            50 minutos · $60.000 · USD 60 · EUR 57
+                            50 minutos · $60.000 · USD 60
                         </div>
                         <Link
                             href="/schedule"

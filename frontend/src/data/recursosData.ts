@@ -15,14 +15,14 @@ export const RECURSOS_DATA: CardData[] = [
 
         Elegí qué necesitás trabajar:
 
-        🔮 Consulta de Claridad Amorosa
-        💞 Armonización de ParejasEndulzamientos
-        🧲 Atracción
-        👨‍👩‍👧 Temas Familiares y Vínculos
-        ✨ Trabajos Esotéricos Personalizados
-        🌿 Armonización Reiki – 6 Linajes
-        💔 Cierres y Liberación de Vínculos
-        🔥 Reconciliación y Armonización Afectiva`,
+        Consulta de Claridad Amorosa
+        Armonización de ParejasEndulzamientos
+        Atracción
+        Temas Familiares y Vínculos
+        Trabajos Esotéricos Personalizados
+        Armonización Reiki – 6 Linajes
+        Cierres y Liberación de Vínculos
+        Reconciliación y Armonización Afectiva`,
         bgClass: 'bg-card-amor',
     },
     // Más ítems...
@@ -40,15 +40,15 @@ export const RECURSOS_DATA: CardData[] = [
 
         Elegí tu camino:
 
-        🔮 Sesión de Claridad Laboral y Económica
-        🔓 Destrabe
-        🚪 Apertura de Caminos
-        💰 Armonización para Prosperidad
-        🏪 Armonización de Negocios y Locales
-        📈 Reactivación Energética de Proyectos
-        🧿 Protección de Negocios
-        🛤️ Apertura de Nuevas Oportunidades
-        ✨ Trabajo Energético Personalizado
+        Sesión de Claridad Laboral y Económica
+        Destrabe
+        Apertura de Caminos
+        Armonización para Prosperidad
+        Armonización de Negocios y Locales
+        Reactivación Energética de Proyectos
+        Protección de Negocios
+        Apertura de Nuevas Oportunidades
+        Trabajo Energético Personalizado
         `,
         bgClass: 'bg-card-dinero',
     },
@@ -67,11 +67,11 @@ export const RECURSOS_DATA: CardData[] = [
         
         Elegí cómo querés abordarlo:
         
-        🔮 Sesión de Claridad
-        🧭 Orientación ante una Decisión
-        🌿 Armonización y Centrado de Energías para Decidir
-        🧘 Armonización del Estrés y la Sobrecarga
-        ✨ Tarot + Videncia para Situaciones Específicas`,
+        Sesión de Claridad
+        Orientación ante una Decisión
+        Armonización y Centrado de Energías para Decidir
+        Armonización del Estrés y la Sobrecarga
+        Tarot + Videncia para Situaciones Específicas`,
         bgClass: 'bg-card-decisiones',
     },
 
@@ -89,16 +89,16 @@ export const RECURSOS_DATA: CardData[] = [
        
         Elegí tu experiencia:
         
-        🌿 Sesión Reiki – 6 Linajes
-        ✨ Armonización Energética
-        🔮 Sesión Cuántica Radiónica
-        🌀 Limpieza Energética
-        🌙 Armonización de Chakras y Aura
-        🧿 Protección Energética
-        🏠 Armonización de Casas
-        🏪 Armonización de Locales y Espacios
-        🌬️ Centrado y Equilibrio Energético
-        💫 Sesión Combinada Reiki + Cuántica
+        Sesión Reiki – 6 Linajes
+        Armonización Energética
+        Sesión Cuántica Radiónica
+        Limpieza Energética
+        Armonización de Chakras y Aura
+        Protección Energética
+        Armonización de Casas
+        Armonización de Locales y Espacios
+        Centrado y Equilibrio Energético
+        Sesión Combinada Reiki + Cuántica
     
         Estas prácticas son complementarias y no sustituyen la atención médica, psicológica ni otros tratamientos profesionales.`,
         bgClass: 'bg-card-energia',
@@ -118,14 +118,14 @@ export const RECURSOS_DATA: CardData[] = [
 
         Explorá tu mundo interior:
 
-        🔮 Tarot de Autoconocimiento
-        🔢 Numerología Mística
-        🌿 Meditación + Reiki
-        ✨ Meditación + Cuántica Radiónica
-        🧘 Sesiones de Conexión Interior: Reiki + Cuántica + Meditación + Oráculo Angélico
-        🌙 Desarrollo de la Intuición: Apertura de Tercer Ojo, Activación de Videncia
-        🌀 Armonización Energética para Procesos Personales
-        📖 Frecuencia Sacerdotisa: ¿Querés ir más profundo? Descubrí Frecuencia Sacerdotisa, el espacio de formación y conocimiento creado por Anita Tarotista.
+        Tarot de Autoconocimiento
+        Numerología Mística
+        Meditación + Reiki
+        Meditación + Cuántica Radiónica
+        Sesiones de Conexión Interior: Reiki + Cuántica + Meditación + Oráculo Angélico
+        Desarrollo de la Intuición: Apertura de Tercer Ojo, Activación de Videncia
+        Armonización Energética para Procesos Personales
+        Frecuencia Sacerdotisa: ¿Querés ir más profundo? Descubrí Frecuencia Sacerdotisa, el espacio de formación y conocimiento creado por Anita Tarotista.
         `,
         bgClass: 'bg-card-autoconocimiento',
     },

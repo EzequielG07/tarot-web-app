@@ -227,7 +227,6 @@ export default function Footer() {
 
                         {/* Cabecera del Modal */}
                         <div className="text-center mb-4 sm:mb-5 px-4 sm:px-6">
-                            <span className="inline-block text-lg sm:text-xl mb-1">✨</span>
                             <h2
                                 id="faq-modal-title"
                                 className="text-lg sm:text-xl md:text-2xl font-serif font-bold tracking-wider sm:tracking-widest text-btn-light uppercase leading-snug"
@@ -283,7 +282,7 @@ export default function Footer() {
                         {/* Mensaje Final */}
                         <div className="mt-4 sm:mt-5 p-3 sm:p-3.5 rounded-xl sm:rounded-2xl bg-btn-light/10 border border-btn-light/20 text-center">
                             <p className="text-btn-light font-medium text-xs sm:text-sm md:text-base">
-                                ✨ Y listo. Tu espacio está reservado.
+                                Y listo. Tu espacio está reservado.
                             </p>
                         </div>
 
