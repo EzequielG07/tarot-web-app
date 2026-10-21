@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export const ServicesMyWork = () => {
     return (
-        <div className="relative w-full h-full bg-bg-card rounded-2xl p-6 sm:p-8 overflow-hidden flex flex-col justify-start text-left border-2 border-dashed border-sky-500/60">
+        <div className="relative w-full h-full bg-bg-card rounded-2xl p-6 sm:p-8 overflow-hidden flex flex-col justify-start text-left">
             {/* Video de fondo */}
             <video
                 autoPlay

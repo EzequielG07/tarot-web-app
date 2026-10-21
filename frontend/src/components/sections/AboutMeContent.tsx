@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export const AboutMeContent = () => {
     return (
-        <div className="w-full h-full flex flex-col justify-between space-y-4 relative z-10">
+        <div className="bg-area-servicios/95 rounded-3xl p-5 sm:p-7 lg:p-8 border border-border-accent/40 shadow-xs w-full h-full flex flex-col justify-between space-y-4 relative z-10">
             <div className="space-y-4">
                 <p className="text-xs font-medium font-serif uppercase text-text-dark/80">Sobre Mí</p>
 

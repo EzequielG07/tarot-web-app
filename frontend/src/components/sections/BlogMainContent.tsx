@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const BlogMainContent = () => {
     return (
-        <div className="relative w-full h-full max-w-none grid grid-cols-1 lg:grid-cols-5 gap-8 rounded-2xl overflow-hidden text-text-light p-6 border border-gray-500/10">
+        <div className="relative w-full h-full max-w-none grid grid-cols-1 lg:grid-cols-5 gap-8 rounded-3xl overflow-hidden text-text-light p-6 border border-gray-500/10">
             {/* Video de fondo */}
             <video
                 autoPlay

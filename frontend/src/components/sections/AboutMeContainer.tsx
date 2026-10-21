@@ -5,7 +5,7 @@ import { AboutMeBlog } from '@/components/sections/AboutMeBlog';
 
 export const AboutMeContainer = () => {
     return (
-        <section className="w-full min-h-[470px] bg-bg-main p-2 flex border-8 border-red-900">
+        <section className="w-full min-h-[470px] bg-bg-main p-2 flex">
             {/* Grilla principal de 12 columnas */}
             <div className="w-full max-w-none grid grid-cols-1 lg:grid-cols-12 gap-8">
                 <div className="lg:col-span-5 w-full h-full flex flex-col">

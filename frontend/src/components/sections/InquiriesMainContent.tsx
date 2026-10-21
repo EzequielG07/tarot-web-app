@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export const InquiriesMainContent = () => {
     return (
-        <div className="relative w-full h-full bg-bg-main text-text-dark rounded-2xl p-6 sm:p-8 flex flex-col justify-start text-left border-2 border-dashed border-sky-500/60">
+        <div className="relative w-full h-full text-text-dark flex flex-col justify-start text-left bg-area-servicios/95 rounded-3xl p-5 sm:p-7 lg:p-8 border border-border-accent/40 shadow-xs">
             <div className="w-full space-y-6 flex flex-col justify-start">
                 <div className="space-y-4 sm:space-y-6">
                     <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bodoni font-bold tracking-wide">
