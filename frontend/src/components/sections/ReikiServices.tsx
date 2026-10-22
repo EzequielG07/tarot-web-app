@@ -43,7 +43,7 @@ const REIKI_SERVICES: ReikiServiceItem[] = [
                         </span>
                         <Link
                             href="/schedule"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-btn-dark bg-btn-light hover:bg-btn-light-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
+                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-btn-dark bg-btn-light hover:bg-btn-light-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
                         >
                             Agendar Sesión (50 min) →
                         </Link>
@@ -54,7 +54,7 @@ const REIKI_SERVICES: ReikiServiceItem[] = [
                         </span>
                         <Link
                             href="/schedule"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-btn-dark bg-btn-light hover:bg-btn-light-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
+                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-btn-dark bg-btn-light hover:bg-btn-light-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
                         >
                             Agendar Sesión (80 min) →
                         </Link>
@@ -89,7 +89,7 @@ const REIKI_SERVICES: ReikiServiceItem[] = [
                         </span>
                         <Link
                             href="/schedule"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
+                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
                         >
                             Armonizar mis Chakras (50 min) →
                         </Link>
@@ -100,7 +100,7 @@ const REIKI_SERVICES: ReikiServiceItem[] = [
                         </span>
                         <Link
                             href="/schedule"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
+                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
                         >
                             Armonizar mis Chakras (80 min) →
                         </Link>
@@ -135,7 +135,7 @@ const REIKI_SERVICES: ReikiServiceItem[] = [
                         </span>
                         <Link
                             href="/schedule"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
+                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
                         >
                             Sesión Karmic Reiki (50 min) →
                         </Link>
@@ -146,7 +146,7 @@ const REIKI_SERVICES: ReikiServiceItem[] = [
                         </span>
                         <Link
                             href="/schedule"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
+                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
                         >
                             Sesión Karmic Reiki (80 min) →
                         </Link>
@@ -181,7 +181,7 @@ const REIKI_SERVICES: ReikiServiceItem[] = [
                         </span>
                         <Link
                             href="/schedule"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
+                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
                         >
                             Experimentar Karuna Reiki (50 min) →
                         </Link>
@@ -192,7 +192,7 @@ const REIKI_SERVICES: ReikiServiceItem[] = [
                         </span>
                         <Link
                             href="/schedule"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
+                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
                         >
                             Experimentar Karuna Reiki (80 min) →
                         </Link>
@@ -227,7 +227,7 @@ const REIKI_SERVICES: ReikiServiceItem[] = [
                         </span>
                         <Link
                             href="/schedule"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
+                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
                         >
                             Experimentar Jin Kei Do (50 min) →
                         </Link>
@@ -238,7 +238,7 @@ const REIKI_SERVICES: ReikiServiceItem[] = [
                         </span>
                         <Link
                             href="/schedule"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
+                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
                         >
                             Experimentar Jin Kei Do (80 min) →
                         </Link>
@@ -273,7 +273,7 @@ const REIKI_SERVICES: ReikiServiceItem[] = [
                         </span>
                         <Link
                             href="/schedule"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
+                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
                         >
                             Volver a mi Centro (50 min) →
                         </Link>
@@ -284,7 +284,7 @@ const REIKI_SERVICES: ReikiServiceItem[] = [
                         </span>
                         <Link
                             href="/schedule"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
+                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
                         >
                             Volver a mi Centro (80 min) →
                         </Link>
@@ -319,7 +319,7 @@ const REIKI_SERVICES: ReikiServiceItem[] = [
                         </span>
                         <Link
                             href="/schedule"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
+                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
                         >
                             Sesión Arcángeles (50 min) →
                         </Link>
@@ -330,7 +330,7 @@ const REIKI_SERVICES: ReikiServiceItem[] = [
                         </span>
                         <Link
                             href="/schedule"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
+                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
                         >
                             Sesión Arcángeles (80 min) →
                         </Link>
@@ -364,7 +364,7 @@ const REIKI_SERVICES: ReikiServiceItem[] = [
                     </div>
                     <Link
                         href="/schedule"
-                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
+                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
                     >
                         Despertar mi Intuición →
                     </Link>
@@ -398,7 +398,7 @@ const REIKI_SERVICES: ReikiServiceItem[] = [
                         </span>
                         <Link
                             href="/schedule"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
+                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
                         >
                             Sesión Reiki Niños (50 min) →
                         </Link>
@@ -409,7 +409,7 @@ const REIKI_SERVICES: ReikiServiceItem[] = [
                         </span>
                         <Link
                             href="/schedule"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
+                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
                         >
                             Sesión Reiki Niños (80 min) →
                         </Link>
@@ -444,7 +444,7 @@ const REIKI_SERVICES: ReikiServiceItem[] = [
                         </span>
                         <Link
                             href="/schedule"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
+                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
                         >
                             Sesión Mascotas (30 min) →
                         </Link>
@@ -455,7 +455,7 @@ const REIKI_SERVICES: ReikiServiceItem[] = [
                         </span>
                         <Link
                             href="/schedule"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
+                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
                         >
                             Sesión Mascotas (50 min) →
                         </Link>
@@ -489,7 +489,7 @@ const REIKI_SERVICES: ReikiServiceItem[] = [
                     </span>
                     <Link
                         href="/schedule"
-                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
+                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
                     >
                         Consultar sobre Registros →
                     </Link>

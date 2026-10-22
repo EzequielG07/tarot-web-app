@@ -42,7 +42,7 @@ export default function Navbar() {
                         </Link>
                         <Link
                             href="/schedule"
-                            className="px-4 py-2 rounded-full bg-btn-light text-text-dark hover:bg-btn-light-hover transition-colors whitespace-nowrap uppercase font-bold inline-block"
+                            className="px-4 py-2 rounded-full bg-btn-light text-text-dark hover:bg-btn-light-hover transition-colors whitespace-nowrap uppercase font-bold inline-block ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
                         >
                             Agendar Consulta →
                         </Link>
@@ -131,7 +131,7 @@ export default function Navbar() {
                     </Link>
                     <Link
                         href="/schedule"
-                        className="block w-full text-center mt-4 px-4 py-2 bg-btn-light text-text-dark hover:bg-btn-light-hover rounded-md transition-colors font-bold"
+                        className="block w-full text-center mt-4 px-4 py-2 bg-btn-light text-text-dark hover:bg-btn-light-hover rounded-md transition-colors font-bold ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
                         onClick={() => setIsOpen(false)}
                     >
                         Agendar Consulta →

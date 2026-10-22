@@ -119,7 +119,7 @@ export const CardDetalleExpandido = ({
                                             </div>
                                             <Link
                                                 href={mod.link || '/schedule'}
-                                                className="inline-flex items-center justify-center w-full px-4 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wider shadow-xs"
+                                                className="inline-flex items-center justify-center w-full px-4 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wider shadow-xs ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
                                             >
                                                 Reservar →
                                             </Link>

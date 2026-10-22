@@ -42,7 +42,7 @@ const ENERGY_SERVICES: EnergyServiceItem[] = [
                     </span>
                     <Link
                         href="/schedule"
-                        className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full text-btn-dark bg-btn-light hover:bg-btn-light-hover transition-all font-bold text-xs uppercase tracking-wider shadow-xs hover:shadow-md cursor-pointer shrink-0"
+                        className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full text-btn-dark bg-btn-light hover:bg-btn-light-hover transition-all font-bold text-xs uppercase tracking-wider shadow-xs hover:shadow-md cursor-pointer shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
                     >
                         Elegir mi Lectura →
                     </Link>
@@ -69,7 +69,7 @@ const ENERGY_SERVICES: EnergyServiceItem[] = [
                     </div>
                     <Link
                         href="/schedule"
-                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
+                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
                     >
                         Quiero mi Orientación →
                     </Link>
@@ -95,7 +95,7 @@ const ENERGY_SERVICES: EnergyServiceItem[] = [
                     </div>
                     <Link
                         href="/schedule"
-                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
+                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
                     >
                         Reservar 30 Min →
                     </Link>
@@ -125,7 +125,7 @@ const ENERGY_SERVICES: EnergyServiceItem[] = [
                     </div>
                     <Link
                         href="/schedule"
-                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
+                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
                     >
                         Reservar Sesión →
                     </Link>
@@ -154,7 +154,7 @@ const ENERGY_SERVICES: EnergyServiceItem[] = [
                     </div>
                     <Link
                         href="/schedule"
-                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
+                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
                     >
                         Quiero mi Diagnóstico →
                     </Link>
@@ -188,7 +188,7 @@ const ENERGY_SERVICES: EnergyServiceItem[] = [
                     </div>
                     <Link
                         href="/schedule"
-                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
+                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
                     >
                         Reservar Experiencia Premium →
                     </Link>
@@ -215,7 +215,7 @@ const ENERGY_SERVICES: EnergyServiceItem[] = [
                         </span>
                         <Link
                             href="/schedule"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
+                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
                         >
                             Quiero Armonizarme (30 min) →
                         </Link>
@@ -226,7 +226,7 @@ const ENERGY_SERVICES: EnergyServiceItem[] = [
                         </span>
                         <Link
                             href="/schedule"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
+                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
                         >
                             Quiero Armonizarme (50 min) →
                         </Link>
@@ -259,7 +259,7 @@ const ENERGY_SERVICES: EnergyServiceItem[] = [
                     </div>
                     <Link
                         href="/schedule"
-                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
+                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
                     >
                         Quiero Abrir Caminos →
                     </Link>
@@ -294,7 +294,7 @@ const ENERGY_SERVICES: EnergyServiceItem[] = [
                     </div>
                     <Link
                         href="/schedule"
-                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
+                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
                     >
                         Consulta Armonizar mi Espacio →
                     </Link>
@@ -326,7 +326,7 @@ const ENERGY_SERVICES: EnergyServiceItem[] = [
                     </div>
                     <Link
                         href="/schedule"
-                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
+                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
                     >
                         Consulta mi Limpia →
                     </Link>
@@ -361,7 +361,7 @@ const ENERGY_SERVICES: EnergyServiceItem[] = [
                     </div>
                     <Link
                         href="/schedule"
-                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
+                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
                     >
                         Consulta Personalizada →
                     </Link>
@@ -396,7 +396,7 @@ const ENERGY_SERVICES: EnergyServiceItem[] = [
                     </div>
                     <Link
                         href="/schedule"
-                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
+                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
                     >
                         Sesión Sanación Ancestral →
                     </Link>
@@ -428,7 +428,7 @@ const ENERGY_SERVICES: EnergyServiceItem[] = [
                     </span>
                     <Link
                         href="/schedule"
-                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
+                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
                     >
                         Crear mi Talismán →
                     </Link>
@@ -463,7 +463,7 @@ const ENERGY_SERVICES: EnergyServiceItem[] = [
                     </div>
                     <Link
                         href="/schedule"
-                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
+                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
                     >
                         Consultar mi Caso →
                     </Link>
@@ -495,7 +495,7 @@ const ENERGY_SERVICES: EnergyServiceItem[] = [
                     </div>
                     <Link
                         href="/schedule"
-                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
+                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
                     >
                         Explorar mi Intuición →
                     </Link>

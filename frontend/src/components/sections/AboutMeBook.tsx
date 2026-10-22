@@ -52,7 +52,7 @@ export const AboutMeBook = () => {
             <div className="pt-2">
                 <Link
                     href="/libro"
-                    className="inline-block px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors uppercase font-bold text-[11px] shrink-0"
+                    className="inline-block px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors uppercase font-bold text-[11px] shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
                 >
                     Comprar Libro →
                 </Link>

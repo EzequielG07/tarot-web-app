@@ -97,7 +97,7 @@ export const ContactFormSection = () => {
                         <div className="pt-2">
                             <button
                                 type="submit"
-                                className="w-full py-3 px-6 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors uppercase font-bold text-xs tracking-wider"
+                                className="w-full py-3 px-6 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors uppercase font-bold text-xs tracking-wider ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
                             >
                                 Enviar Consulta →
                             </button>

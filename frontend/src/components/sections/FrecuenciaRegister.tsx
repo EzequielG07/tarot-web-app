@@ -56,7 +56,7 @@ export const FrecuenciaRegister = () => {
                         {/* Botón Integrado */}
                         <button
                             type="submit"
-                            className="shrink-0 px-5 sm:px-7 py-2.5 sm:py-3 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-serif font-bold text-[10px] sm:text-xs uppercase tracking-wider shadow-md"
+                            className="shrink-0 px-5 sm:px-7 py-2.5 sm:py-3 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-serif font-bold text-[10px] sm:text-xs uppercase tracking-wider shadow-md ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
                         >
                             QUIERO REGISTRARME
                         </button>

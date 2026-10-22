@@ -17,7 +17,7 @@ export const AboutMeBlog = () => {
             {/* Sub-grilla de 3 columnas para los artículos */}
             <div className="w-full grid grid-cols-3 gap-3 items-start">
                 {/* Artículo 1 */}
-                <Link href="/blog/articulo-1" className="group block space-y-2">
+                <Link href="/blog/articulo-1" className="group block space-y-2 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)] rounded-xl p-1">
                     <div className="relative w-full aspect-square rounded-xl overflow-hidden border border-white/10">
                         <Image
                             src="/images/about/thumb-1.png"
@@ -32,7 +32,7 @@ export const AboutMeBlog = () => {
                 </Link>
 
                 {/* Artículo 2 */}
-                <Link href="/blog/articulo-2" className="group block space-y-2">
+                <Link href="/blog/articulo-2" className="group block space-y-2 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)] rounded-xl p-1">
                     <div className="relative w-full aspect-square rounded-xl overflow-hidden border border-white/10">
                         <Image
                             src="/images/about/thumb-2.png"
@@ -47,7 +47,7 @@ export const AboutMeBlog = () => {
                 </Link>
 
                 {/* Artículo 3 */}
-                <Link href="/blog/articulo-3" className="group block space-y-2">
+                <Link href="/blog/articulo-3" className="group block space-y-2 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)] rounded-xl p-1">
                     <div className="relative w-full aspect-square rounded-xl overflow-hidden border border-white/10">
                         <Image
                             src="/images/about/thumb-3.png"
@@ -66,7 +66,7 @@ export const AboutMeBlog = () => {
             <div className="pt-1">
                 <Link
                     href="/blog"
-                    className="inline-block text-xs font-serif font-bold uppercase text-text-dark hover:text-text-dark transition-colors tracking-wide"
+                    className="inline-block text-xs font-serif font-bold uppercase text-text-dark hover:text-text-dark transition-colors tracking-wide ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)] px-2 py-1 rounded"
                 >
                     VER TODOS LOS ARTÍCULOS →
                 </Link>

@@ -25,7 +25,7 @@ export const InquiriesCards = ({ selectedCardId, onToggle }: InquiriesCardsProps
                 <div className="pt-2">
                     <Link
                         href="/schedule"
-                        className="inline-block px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors uppercase font-bold text-xs shrink-0"
+                        className="inline-block px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors uppercase font-bold text-xs shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
                     >
                         QUIERO SABER QUÉ NECESITO →
                     </Link>

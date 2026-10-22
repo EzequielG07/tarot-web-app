@@ -60,7 +60,7 @@ export default function Footer() {
                         <h3 className="text-sm font-semibold uppercase tracking-wider text-text-light mb-2">
                             Frecuencia Sacerdotista
                         </h3>
-                        <Link href="/#aboutme" className="text-sm hover:text-btn-light transition-colors">
+                        <Link href="/#aboutme" className="text-sm hover:text-btn-light transition-colors ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)] px-1 rounded">
                             Encuentros - Rituales - Recursos
                         </Link>
                         <Link href="/#blog" className="text-sm hover:text-btn-light transition-colors">
@@ -80,7 +80,7 @@ export default function Footer() {
                         >
                             Preguntas Frecuentes
                         </button>
-                        <Link href="/faq" className="text-sm hover:text-btn-light transition-colors">
+                        <Link href="/faq" className="text-sm hover:text-btn-light transition-colors ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)] px-1 rounded">
                             Términos y condiciones - Política de Privacidad
                         </Link>
                     </div>
@@ -98,7 +98,7 @@ export default function Footer() {
                                     href="https://www.instagram.com"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="p-1 hover:text-btn-light transition-colors duration-200"
+                                    className="p-1 hover:text-btn-light transition-colors duration-200 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)] rounded-md"
                                     aria-label="Instagram"
                                 >
                                     <svg
@@ -120,7 +120,7 @@ export default function Footer() {
                                     href="https://www.facebook.com"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="p-1 hover:text-btn-light transition-colors duration-200"
+                                    className="p-1 hover:text-btn-light transition-colors duration-200 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)] rounded-md"
                                     aria-label="Facebook"
                                 >
                                     <svg className="h-5 w-5 fill-current" viewBox="0 0 24 24">
@@ -132,7 +132,7 @@ export default function Footer() {
                                     href="https://www.tiktok.com"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="p-1 hover:text-btn-light transition-colors duration-200"
+                                    className="p-1 hover:text-btn-light transition-colors duration-200 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)] rounded-md"
                                     aria-label="TikTok"
                                 >
                                     <svg className="h-5 w-5 fill-current" viewBox="0 0 24 24">
@@ -144,7 +144,7 @@ export default function Footer() {
                                     href="https://www.youtube.com"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="p-1 hover:text-btn-light transition-colors duration-200"
+                                    className="p-1 hover:text-btn-light transition-colors duration-200 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)] rounded-md"
                                     aria-label="YouTube"
                                 >
                                     <svg
@@ -165,7 +165,7 @@ export default function Footer() {
                             {/* Botón Agendar Consulta */}
                             <Link
                                 href="/schedule"
-                                className="px-3.5 py-2 rounded-full bg-btn-light text-text-dark hover:bg-btn-light-hover transition-colors whitespace-nowrap uppercase font-bold text-xs shrink-0"
+                                className="px-3.5 py-2 rounded-full bg-btn-light text-text-dark hover:bg-btn-light-hover transition-colors whitespace-nowrap uppercase font-bold text-xs shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
                             >
                                 Agendar Consulta →
                             </Link>
@@ -291,7 +291,7 @@ export default function Footer() {
                             <Link
                                 href="/schedule"
                                 onClick={() => setIsFaqOpen(false)}
-                                className="w-full sm:w-auto px-5 sm:px-6 py-2.5 rounded-full bg-btn-light text-text-dark hover:bg-btn-light-hover transition-colors uppercase font-bold text-xs text-center shrink-0"
+                                className="w-full sm:w-auto px-5 sm:px-6 py-2.5 rounded-full bg-btn-light text-text-dark hover:bg-btn-light-hover transition-colors uppercase font-bold text-xs text-center shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
                             >
                                 Agendar Consulta →
                             </Link>

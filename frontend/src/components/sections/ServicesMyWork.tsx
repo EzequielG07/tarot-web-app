@@ -35,7 +35,7 @@ export const ServicesMyWork = () => {
                 <div className="pt-2">
                     <Link
                         href="/schedule"
-                        className="inline-block px-5 py-2.5 rounded-full text-btn-dark bg-btn-light hover:bg-btn-light-hover transition-colors uppercase font-bold text-xs shrink-0"
+                        className="inline-block px-5 py-2.5 rounded-full text-btn-dark bg-btn-light hover:bg-btn-light-hover transition-colors uppercase font-bold text-xs shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
                     >
                         Conocé mi Trabajo →
                     </Link>
