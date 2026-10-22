@@ -3,10 +3,12 @@ import EggBook from '@/components/EggBook';
 import { InquiriesContainer } from '@/components/sections/InquiriesContainer';
 import { ServicesContainer } from '@/components/sections/ServicesContainer';
 import { BlogContainer } from '@/components/sections/BlogContainer';
-import { MoreServicesContainer } from '@/components/sections/MoreServicesContainer';
 import { AboutMeContainer } from '@/components/sections/AboutMeContainer';
 import { ContactFormSection } from '@/components/sections/ContactFormSection';
 import { FrecuenciaRegister } from '@/components/sections/FrecuenciaRegister';
+import { EnergyServices } from '@/components/sections/EnergyServices';
+import { ReikiServices } from '@/components/sections/ReikiServices';
+import { MagicServices } from '@/components/sections/MagicServices';
 
 export default function Home() {
     return (
@@ -16,7 +18,9 @@ export default function Home() {
             <ServicesContainer />
             <InquiriesContainer />
             <BlogContainer />
-            <MoreServicesContainer />
+            <EnergyServices />
+            <ReikiServices />
+            <MagicServices />
             <AboutMeContainer />
             <ContactFormSection />
             <FrecuenciaRegister />
