@@ -24,8 +24,8 @@ export const BlogSidebar = ({
 
     return (
         <div
-            id="blog-sidebar"
-            className={`relative w-full h-full max-w-none flex flex-col items-center justify-center lg:border-l lg:border-gray-500/10 lg:pl-8 p-6 rounded-3xl overflow-hidden text-center transition-all duration-300 ${estaAbierto ? 'ring-2 ring-amber-400/50 shadow-lg' : ''
+            id="frecuencia-sacerdotisa"
+            className={`scroll-mt-24 relative w-full h-full max-w-none flex flex-col items-center justify-center lg:border-l lg:border-gray-500/10 lg:pl-8 p-6 rounded-3xl overflow-hidden text-center transition-all duration-300 ${estaAbierto ? 'ring-2 ring-amber-400/50 shadow-lg' : ''
                 }`}
         >
             {/* Video de fondo */}

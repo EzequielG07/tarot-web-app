@@ -13,7 +13,7 @@ interface InquiriesCardsProps {
 
 export const InquiriesCards = ({ selectedCardId, onToggle }: InquiriesCardsProps) => {
     return (
-        <div className="w-full h-full flex flex-col justify-start bg-area-servicios/95 rounded-3xl p-5 sm:p-7 lg:p-8 border border-border-accent/40 shadow-xs">
+        <div id="lecturas" className="scroll-mt-24 w-full h-full flex flex-col justify-start bg-area-servicios/95 rounded-3xl p-5 sm:p-7 lg:p-8 border border-border-accent/40 shadow-xs">
             {/* Título arriba con margen responsive */}
             <div className="mb-6 space-y-3">
                 <h2 className="text-2xl sm:text-3xl font-bodoni font-bold text-text-dark">

@@ -12,37 +12,40 @@ export default function Navbar() {
             <div className="max-w-[100%] mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-center gap-x-16 h-20 gap-x-4">
                     {/* Logo / Nombre */}
-                    <div className="flex justify-content gap-6">
+                    <Link href="/" className="flex items-center gap-6 cursor-pointer">
                         <Image src="/images/logos/logo-signo.png" alt="Logo" width={50} height={50} />
                         <Image src="/images/logos/logo-anita.png" alt="Logo" width={100} height={50} />
-                    </div>
+                    </Link>
 
                     {/* Menú Escritorio */}
                     <div className="hidden xl:flex items-center gap-x-4 2xl:gap-x-6 text-xs xl:text-sm tracking-wider font-medium shrink-0">
                         <Link href="/" className="hover:text-btn-light transition-colors whitespace-nowrap">
                             Inicio
                         </Link>
-                        <Link href="/#lectures" className="hover:text-btn-light transition-colors whitespace-nowrap">
+                        <Link href="/#lecturas" className="hover:text-btn-light transition-colors whitespace-nowrap">
                             Lecturas
                         </Link>
-                        <Link href="/#services" className="hover:text-btn-light transition-colors whitespace-nowrap">
+                        <Link href="/#servicios-energeticos" className="hover:text-btn-light transition-colors whitespace-nowrap">
                             Servicios Energéticos
                         </Link>
-                        <Link href="/#aboutme" className="hover:text-btn-light transition-colors whitespace-nowrap">
+                        <Link href="/#sobre-anita" className="hover:text-btn-light transition-colors whitespace-nowrap">
                             Sobre Anita
                         </Link>
-                        <Link href="/#frequency" className="hover:text-btn-light transition-colors whitespace-nowrap">
+                        <Link href="/#frecuencia-sacerdotisa" className="hover:text-btn-light transition-colors whitespace-nowrap">
                             Frecuencia Sacerdotisa
                         </Link>
                         <Link href="/#blog" className="hover:text-btn-light transition-colors whitespace-nowrap">
                             Blog
                         </Link>
-                        <Link href="/#contact" className="hover:text-btn-light transition-colors whitespace-nowrap">
+                        <Link href="/#contacto" className="hover:text-btn-light transition-colors whitespace-nowrap">
                             Contacto
                         </Link>
-                        <button className="px-4 py-2 rounded-full bg-btn-light text-text-dark hover:bg-btn-light-hover transition-colors whitespace-nowrap uppercase font-bold">
+                        <Link
+                            href="/schedule"
+                            className="px-4 py-2 rounded-full bg-btn-light text-text-dark hover:bg-btn-light-hover transition-colors whitespace-nowrap uppercase font-bold inline-block"
+                        >
                             Agendar Consulta →
-                        </button>
+                        </Link>
                     </div>
 
                     {/* Botón Hamburguesa Móvil */}
@@ -85,28 +88,28 @@ export default function Navbar() {
                         Inicio
                     </Link>
                     <Link
-                        href="/#lectures"
+                        href="/#lecturas"
                         className="block py-2 text-text-light hover:text-btn-light"
                         onClick={() => setIsOpen(false)}
                     >
                         Lecturas
                     </Link>
                     <Link
-                        href="/#services"
+                        href="/#servicios-energeticos"
                         className="block py-2 text-text-light hover:text-btn-light"
                         onClick={() => setIsOpen(false)}
                     >
                         Servicios Energéticos
                     </Link>
                     <Link
-                        href="/#aboutme"
+                        href="/#sobre-anita"
                         className="block py-2 text-text-light hover:text-btn-light"
                         onClick={() => setIsOpen(false)}
                     >
                         Sobre Anita
                     </Link>
                     <Link
-                        href="/#frequency"
+                        href="/#frecuencia-sacerdotisa"
                         className="block py-2 text-text-light hover:text-btn-light"
                         onClick={() => setIsOpen(false)}
                     >
@@ -120,7 +123,7 @@ export default function Navbar() {
                         Blog
                     </Link>
                     <Link
-                        href="/#contact"
+                        href="/#contacto"
                         className="block py-2 text-text-light hover:text-btn-light"
                         onClick={() => setIsOpen(false)}
                     >

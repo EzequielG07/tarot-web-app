@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export const ContactFormSection = () => {
     return (
-        <section className="relative w-full max-w-7xl mx-auto min-h-[600px] flex items-center overflow-hidden rounded-2xl my-8 py-12 px-6 sm:px-10 lg:px-16 border shadow-2xl">
+        <section id="contacto" className="scroll-mt-24 relative w-full max-w-7xl mx-auto min-h-[600px] flex items-center overflow-hidden rounded-2xl my-8 py-12 px-6 sm:px-10 lg:px-16 border shadow-2xl">
             {/* Imagen de fondo ocupando el 100% del contenedor sin franjas vacías */}
             <div className="absolute inset-0 w-full h-full">
                 <Image

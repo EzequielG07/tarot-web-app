@@ -530,7 +530,7 @@ export const EnergyServices = () => {
     }, [selectedService]);
 
     return (
-        <section id="servicios-energeticos" className="w-full bg-bg-main p-4 sm:p-6 lg:p-8 flex flex-col">
+        <section id="servicios-energeticos" className="scroll-mt-24 w-full bg-bg-main p-4 sm:p-6 lg:p-8 flex flex-col">
             <div className="w-full bg-area-servicios/95 rounded-3xl p-5 sm:p-7 lg:p-8 border border-border-accent/40 shadow-xs flex flex-col text-text-dark space-y-8">
                 {/* Cabecera de la sección */}
                 <div className="text-center max-w-3xl mx-auto space-y-3">

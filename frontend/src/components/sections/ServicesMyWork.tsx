@@ -17,13 +17,15 @@ export const ServicesMyWork = () => {
             </video>
             <div className="w-full space-y-6 relative z-10 flex flex-col justify-start">
                 <div className="space-y-4 sm:space-y-6">
-                    <p className="text-xs sm:text-sm font-medium font-serif uppercase text-text-light/80">La mirada de Anita</p>
+                    <p className="text-xs sm:text-sm font-medium font-serif uppercase text-white/90 [text-shadow:0_1px_4px_rgba(0,0,0,0.95),0_2px_8px_rgba(0,0,0,0.9)]">
+                        La mirada de Anita
+                    </p>
 
-                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bodoni font-bold tracking-wide uppercase text-text-light">
+                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bodoni font-bold tracking-wide uppercase text-white [text-shadow:0_2px_4px_rgba(0,0,0,0.95),0_4px_12px_rgba(0,0,0,0.9),0_8px_24px_rgba(0,0,0,0.75)]">
                         Una Perspectiva Diferente sobre lo que te está Sucediendo
                     </h2>
 
-                    <p className="text-base sm:text-lg lg:text-xl font-serif text-text-light/90 leading-relaxed">
+                    <p className="text-base sm:text-lg lg:text-xl font-serif text-white/95 leading-relaxed [text-shadow:0_1px_3px_rgba(0,0,0,0.95),0_3px_8px_rgba(0,0,0,0.85)]">
                         Mi trabajo no consiste en date respuestas predeterminadas. <br className="my-2" />
                         Consiste en ayudarte a observar aquello que hoy necesitas comprender, desde una perspectiva
                         diferente.

@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export const AboutMeBlog = () => {
     return (
-        <div className="bg-area-servicios/95 rounded-3xl p-5 sm:p-7 lg:p-8 border border-border-accent/40 shadow-xs w-full h-full flex flex-col justify-center space-y-4">
+        <div id="blog" className="scroll-mt-24 bg-area-servicios/95 rounded-3xl p-5 sm:p-7 lg:p-8 border border-border-accent/40 shadow-xs w-full h-full flex flex-col justify-center space-y-4">
             {/* Encabezado: Título y Subtítulo */}
             <div className="w-full space-y-1">
                 <p className="text-xs font-medium font-serif uppercase text-text-dark/80">Desde mi Frecuencia</p>

@@ -9,6 +9,7 @@ import { FrecuenciaRegister } from '@/components/sections/FrecuenciaRegister';
 import { EnergyServices } from '@/components/sections/EnergyServices';
 import { ReikiServices } from '@/components/sections/ReikiServices';
 import { MagicServices } from '@/components/sections/MagicServices';
+import { GoogleReviewsCarousel } from '@/components/sections/GoogleReviewsCarousel';
 
 export default function Home() {
     return (
@@ -22,6 +23,7 @@ export default function Home() {
             <ReikiServices />
             <MagicServices />
             <AboutMeContainer />
+            <GoogleReviewsCarousel />
             <ContactFormSection />
             <FrecuenciaRegister />
         </div>
