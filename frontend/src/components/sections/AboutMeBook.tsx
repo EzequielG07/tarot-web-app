@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { getWhatsAppUrl } from '@/utils/whatsapp';
 
 export const AboutMeBook = () => {
     return (
@@ -51,8 +52,10 @@ export const AboutMeBook = () => {
 
             <div className="pt-2">
                 <Link
-                    href="/libro"
-                    className="inline-block px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors uppercase font-bold text-[11px] shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
+                    href={getWhatsAppUrl("¡Hola Anita! Me interesa adquirir tu libro \"Grimorio Moderno I: El Poder Oculto del Huevo\". ¿Cómo puedo comprarlo?")}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors uppercase font-bold text-[11px] shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
                 >
                     Comprar Libro →
                 </Link>

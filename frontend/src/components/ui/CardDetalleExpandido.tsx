@@ -4,6 +4,7 @@
 
 import { useRef, useEffect } from 'react';
 import Link from 'next/link';
+import { getWhatsAppUrl } from '@/utils/whatsapp';
 import { CardData } from '@/types/cards';
 
 interface CardDetalleExpandidoProps {
@@ -118,8 +119,10 @@ export const CardDetalleExpandido = ({
                                                 {mod.precioDuracion}
                                             </div>
                                             <Link
-                                                href={mod.link || '/schedule'}
-                                                className="inline-flex items-center justify-center w-full px-4 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wider shadow-xs ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
+                                                href={getWhatsAppUrl(`¡Hola Anita! Me gustaría reservar la opción "${mod.nombre}" de "${tarjetaActiva.titulo}" (${mod.precioDuracion}). ¿Cómo podemos coordinar?`)}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="inline-flex items-center justify-center w-full px-4 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wider shadow-xs ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
                                             >
                                                 Reservar →
                                             </Link>

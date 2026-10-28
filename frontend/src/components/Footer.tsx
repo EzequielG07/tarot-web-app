@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { getWhatsAppUrl } from '@/utils/whatsapp';
 
 export default function Footer() {
     const [isFaqOpen, setIsFaqOpen] = useState(false);
@@ -164,8 +165,10 @@ export default function Footer() {
 
                             {/* Botón Agendar Consulta */}
                             <Link
-                                href="/schedule"
-                                className="px-3.5 py-2 rounded-full bg-btn-light text-text-dark hover:bg-btn-light-hover transition-colors whitespace-nowrap uppercase font-bold text-xs shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
+                                href={getWhatsAppUrl("¡Hola Anita! Quisiera consultar disponibilidad para agendar una sesión. ¿Podrías brindarme más información?")}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="px-3.5 py-2 rounded-full bg-btn-light text-text-dark hover:bg-btn-light-hover transition-colors whitespace-nowrap uppercase font-bold text-xs shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
                             >
                                 Agendar Consulta →
                             </Link>
@@ -289,9 +292,11 @@ export default function Footer() {
                         {/* Botón de acción */}
                         <div className="mt-4 sm:mt-6 flex flex-col sm:flex-row items-center justify-center gap-2.5 sm:gap-3">
                             <Link
-                                href="/schedule"
+                                href={getWhatsAppUrl("¡Hola Anita! Quisiera consultar disponibilidad para agendar una sesión. ¿Podrías brindarme más información?")}
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 onClick={() => setIsFaqOpen(false)}
-                                className="w-full sm:w-auto px-5 sm:px-6 py-2.5 rounded-full bg-btn-light text-text-dark hover:bg-btn-light-hover transition-colors uppercase font-bold text-xs text-center shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
+                                className="w-full sm:w-auto px-5 sm:px-6 py-2.5 rounded-full bg-btn-light text-text-dark hover:bg-btn-light-hover transition-colors uppercase font-bold text-xs text-center shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
                             >
                                 Agendar Consulta →
                             </Link>

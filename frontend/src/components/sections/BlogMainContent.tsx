@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { getWhatsAppUrl } from '@/utils/whatsapp';
 
 export const BlogMainContent = () => {
     return (
@@ -46,8 +47,10 @@ export const BlogMainContent = () => {
                     </p>
                     <div className="pt-2">
                         <Link
-                            href="/schedule"
-                            className="inline-block px-5 py-2.5 rounded-full text-btn-dark bg-btn-light hover:bg-btn-light-hover transition-colors font-bold text-xs shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
+                            href={getWhatsAppUrl("¡Hola Anita! Quisiera elegir la Sesión Integral de Claridad ($50.000 ARS / USD 50). ¿Cómo podemos coordinar?")}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-block px-5 py-2.5 rounded-full text-btn-dark bg-btn-light hover:bg-btn-light-hover transition-colors font-bold text-xs shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
                         >
                             ELEGIR SESIÓN INTEGRAL →
                         </Link>
@@ -60,8 +63,10 @@ export const BlogMainContent = () => {
                     </p>
                     <div className="pt-2">
                         <Link
-                            href="/schedule"
-                            className="inline-block px-5 py-2.5 rounded-full text-btn-dark bg-btn-light hover:bg-btn-light-hover transition-colors font-bold text-xs shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
+                            href={getWhatsAppUrl("¡Hola Anita! No sé cuál servicio elegir y me gustaría que me orientes para encontrar la modalidad más adecuada para mí.")}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-block px-5 py-2.5 rounded-full text-btn-dark bg-btn-light hover:bg-btn-light-hover transition-colors font-bold text-xs shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
                         >
                             QUIERO QUE ME ORIENTES →
                         </Link>

@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { getWhatsAppUrl } from '@/utils/whatsapp';
 
 export interface ReikiServiceItem {
     id: string;
@@ -42,8 +43,10 @@ const REIKI_SERVICES: ReikiServiceItem[] = [
                             50 min · $ 50,000 · USD 50.
                         </span>
                         <Link
-                            href="/schedule"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-btn-dark bg-btn-light hover:bg-btn-light-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
+                            href={getWhatsAppUrl("¡Hola Anita! Me gustaría agendar una sesión de Reiki Usui (50 min - $ 50,000 / USD 50). ¿Cómo podemos coordinar?")}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-btn-dark bg-btn-light hover:bg-btn-light-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
                         >
                             Agendar Sesión (50 min) →
                         </Link>
@@ -53,8 +56,10 @@ const REIKI_SERVICES: ReikiServiceItem[] = [
                             1 hr 20 min · $ 65,000 · USD 70.
                         </span>
                         <Link
-                            href="/schedule"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-btn-dark bg-btn-light hover:bg-btn-light-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
+                            href={getWhatsAppUrl("¡Hola Anita! Me gustaría agendar una sesión de Reiki Usui (1 hr 20 min - $ 65,000 / USD 70). ¿Cómo podemos coordinar?")}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-btn-dark bg-btn-light hover:bg-btn-light-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
                         >
                             Agendar Sesión (80 min) →
                         </Link>
@@ -88,8 +93,10 @@ const REIKI_SERVICES: ReikiServiceItem[] = [
                             50 min · $ 50,000 · USD 50.
                         </span>
                         <Link
-                            href="/schedule"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
+                            href={getWhatsAppUrl("¡Hola Anita! Me gustaría agendar una sesión de Alineación de Chakras (50 min - $ 50,000 / USD 50). ¿Cómo podemos coordinar?")}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
                         >
                             Armonizar mis Chakras (50 min) →
                         </Link>
@@ -99,8 +106,10 @@ const REIKI_SERVICES: ReikiServiceItem[] = [
                             1 hr 20 min · $ 65,000 · USD 70.
                         </span>
                         <Link
-                            href="/schedule"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
+                            href={getWhatsAppUrl("¡Hola Anita! Me gustaría agendar una sesión de Alineación de Chakras (1 hr 20 min - $ 65,000 / USD 70). ¿Cómo podemos coordinar?")}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
                         >
                             Armonizar mis Chakras (80 min) →
                         </Link>
@@ -134,8 +143,10 @@ const REIKI_SERVICES: ReikiServiceItem[] = [
                             50 min · $ 50,000 · USD 50.
                         </span>
                         <Link
-                            href="/schedule"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
+                            href={getWhatsAppUrl("¡Hola Anita! Me gustaría agendar una sesión de Karmic Reiki (50 min - $ 50,000 / USD 50). ¿Cómo podemos coordinar?")}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
                         >
                             Sesión Karmic Reiki (50 min) →
                         </Link>
@@ -145,8 +156,10 @@ const REIKI_SERVICES: ReikiServiceItem[] = [
                             1 hr 20 min · $ 65,000 · USD 70.
                         </span>
                         <Link
-                            href="/schedule"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
+                            href={getWhatsAppUrl("¡Hola Anita! Me gustaría agendar una sesión de Karmic Reiki (1 hr 20 min - $ 65,000 / USD 70). ¿Cómo podemos coordinar?")}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
                         >
                             Sesión Karmic Reiki (80 min) →
                         </Link>
@@ -180,8 +193,10 @@ const REIKI_SERVICES: ReikiServiceItem[] = [
                             50 min · $ 50,000 · USD 50.
                         </span>
                         <Link
-                            href="/schedule"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
+                            href={getWhatsAppUrl("¡Hola Anita! Me gustaría agendar una sesión de Karuna Reiki (50 min - $ 50,000 / USD 50). ¿Cómo podemos coordinar?")}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
                         >
                             Experimentar Karuna Reiki (50 min) →
                         </Link>
@@ -191,8 +206,10 @@ const REIKI_SERVICES: ReikiServiceItem[] = [
                             1 hr 20 min · $ 65,000 · USD 70.
                         </span>
                         <Link
-                            href="/schedule"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
+                            href={getWhatsAppUrl("¡Hola Anita! Me gustaría agendar una sesión de Karuna Reiki (1 hr 20 min - $ 65,000 / USD 70). ¿Cómo podemos coordinar?")}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
                         >
                             Experimentar Karuna Reiki (80 min) →
                         </Link>
@@ -226,8 +243,10 @@ const REIKI_SERVICES: ReikiServiceItem[] = [
                             50 min · $ 50,000 · USD 50.
                         </span>
                         <Link
-                            href="/schedule"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
+                            href={getWhatsAppUrl("¡Hola Anita! Me gustaría agendar una sesión de Reiki Jin Kei Do (50 min - $ 50,000 / USD 50). ¿Cómo podemos coordinar?")}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
                         >
                             Experimentar Jin Kei Do (50 min) →
                         </Link>
@@ -237,8 +256,10 @@ const REIKI_SERVICES: ReikiServiceItem[] = [
                             1 hr 20 min · $ 65,000 · USD 70.
                         </span>
                         <Link
-                            href="/schedule"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
+                            href={getWhatsAppUrl("¡Hola Anita! Me gustaría agendar una sesión de Reiki Jin Kei Do (1 hr 20 min - $ 65,000 / USD 70). ¿Cómo podemos coordinar?")}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
                         >
                             Experimentar Jin Kei Do (80 min) →
                         </Link>
@@ -272,8 +293,10 @@ const REIKI_SERVICES: ReikiServiceItem[] = [
                             50 min · $ 50,000 · USD 50.
                         </span>
                         <Link
-                            href="/schedule"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
+                            href={getWhatsAppUrl("¡Hola Anita! Me gustaría agendar una sesión de Hará Reiki (50 min - $ 50,000 / USD 50). ¿Cómo podemos coordinar?")}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
                         >
                             Volver a mi Centro (50 min) →
                         </Link>
@@ -283,8 +306,10 @@ const REIKI_SERVICES: ReikiServiceItem[] = [
                             1 hr 20 min · $ 65,000 · USD 70.
                         </span>
                         <Link
-                            href="/schedule"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
+                            href={getWhatsAppUrl("¡Hola Anita! Me gustaría agendar una sesión de Hará Reiki (1 hr 20 min - $ 65,000 / USD 70). ¿Cómo podemos coordinar?")}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
                         >
                             Volver a mi Centro (80 min) →
                         </Link>
@@ -318,8 +343,10 @@ const REIKI_SERVICES: ReikiServiceItem[] = [
                             50 min · $ 50,000 · USD 50.
                         </span>
                         <Link
-                            href="/schedule"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
+                            href={getWhatsAppUrl("¡Hola Anita! Me gustaría agendar una sesión de Reiki con Arcángeles (50 min - $ 50,000 / USD 50). ¿Cómo podemos coordinar?")}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
                         >
                             Sesión Arcángeles (50 min) →
                         </Link>
@@ -329,8 +356,10 @@ const REIKI_SERVICES: ReikiServiceItem[] = [
                             1 hr 20 min · $ 65,000 · USD 70.
                         </span>
                         <Link
-                            href="/schedule"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
+                            href={getWhatsAppUrl("¡Hola Anita! Me gustaría agendar una sesión de Reiki con Arcángeles (1 hr 20 min - $ 65,000 / USD 70). ¿Cómo podemos coordinar?")}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
                         >
                             Sesión Arcángeles (80 min) →
                         </Link>
@@ -363,8 +392,10 @@ const REIKI_SERVICES: ReikiServiceItem[] = [
                         50 min · $ 60,000 · USD 60.
                     </div>
                     <Link
-                        href="/schedule"
-                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
+                        href={getWhatsAppUrl("¡Hola Anita! Me gustaría agendar la sesión de Apertura del Tercer Ojo (50 min - $ 60,000 / USD 60). ¿Cómo podemos coordinar?")}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
                     >
                         Despertar mi Intuición →
                     </Link>
@@ -397,8 +428,10 @@ const REIKI_SERVICES: ReikiServiceItem[] = [
                             50 min · $ 50,000 · USD 50.
                         </span>
                         <Link
-                            href="/schedule"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
+                            href={getWhatsAppUrl("¡Hola Anita! Me gustaría agendar una sesión de Reiki para Niños y Adolescentes (50 min - $ 50,000 / USD 50). ¿Cómo podemos coordinar?")}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
                         >
                             Sesión Reiki Niños (50 min) →
                         </Link>
@@ -408,8 +441,10 @@ const REIKI_SERVICES: ReikiServiceItem[] = [
                             1 hr 20 min · $ 65,000 · USD 70.
                         </span>
                         <Link
-                            href="/schedule"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
+                            href={getWhatsAppUrl("¡Hola Anita! Me gustaría agendar una sesión de Reiki para Niños y Adolescentes (1 hr 20 min - $ 65,000 / USD 70). ¿Cómo podemos coordinar?")}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
                         >
                             Sesión Reiki Niños (80 min) →
                         </Link>
@@ -443,8 +478,10 @@ const REIKI_SERVICES: ReikiServiceItem[] = [
                             30 min · $ 35,000 · USD 40.
                         </span>
                         <Link
-                            href="/schedule"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
+                            href={getWhatsAppUrl("¡Hola Anita! Me gustaría agendar una sesión de Reiki para Mascotas (30 min - $ 35,000 / USD 40). ¿Cómo podemos coordinar?")}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
                         >
                             Sesión Mascotas (30 min) →
                         </Link>
@@ -454,8 +491,10 @@ const REIKI_SERVICES: ReikiServiceItem[] = [
                             50 min · $ 50,000 · USD 50.
                         </span>
                         <Link
-                            href="/schedule"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
+                            href={getWhatsAppUrl("¡Hola Anita! Me gustaría agendar una sesión de Reiki para Mascotas (50 min - $ 50,000 / USD 50). ¿Cómo podemos coordinar?")}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
                         >
                             Sesión Mascotas (50 min) →
                         </Link>
@@ -488,8 +527,10 @@ const REIKI_SERVICES: ReikiServiceItem[] = [
                         Consulta personalizada / Información previa
                     </span>
                     <Link
-                        href="/schedule"
-                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
+                        href={getWhatsAppUrl("¡Hola Anita! Me gustaría consultar sobre la sesión de Registros Akáshicos y conocer más información para coordinar.")}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
                     >
                         Consultar sobre Registros →
                     </Link>

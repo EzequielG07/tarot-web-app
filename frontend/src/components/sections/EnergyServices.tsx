@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { getWhatsAppUrl } from '@/utils/whatsapp';
 
 export interface EnergyServiceItem {
     id: string;
@@ -41,8 +42,10 @@ const ENERGY_SERVICES: EnergyServiceItem[] = [
                         Atención Personalizada
                     </span>
                     <Link
-                        href="/schedule"
-                        className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full text-btn-dark bg-btn-light hover:bg-btn-light-hover transition-all font-bold text-xs uppercase tracking-wider shadow-xs hover:shadow-md cursor-pointer shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
+                        href={getWhatsAppUrl("¡Hola Anita! Quisiera consultar por una Lectura de Tarot, Videncia y Oráculos personalizada. ¿Cómo podemos coordinar?")}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full text-btn-dark bg-btn-light hover:bg-btn-light-hover transition-all font-bold text-xs uppercase tracking-wider shadow-xs hover:shadow-md cursor-pointer shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
                     >
                         Elegir mi Lectura →
                     </Link>
@@ -68,8 +71,10 @@ const ENERGY_SERVICES: EnergyServiceItem[] = [
                         15 min · $ 19,900 · USD 15.
                     </div>
                     <Link
-                        href="/schedule"
-                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
+                        href={getWhatsAppUrl("¡Hola Anita! Quisiera solicitar una Orientación Express (15 min - $ 19,900 / USD 15). ¿Cómo podemos coordinar?")}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
                     >
                         Quiero mi Orientación →
                     </Link>
@@ -94,8 +99,10 @@ const ENERGY_SERVICES: EnergyServiceItem[] = [
                         30 min · $ 35,000 · USD 30.
                     </div>
                     <Link
-                        href="/schedule"
-                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
+                        href={getWhatsAppUrl("¡Hola Anita! Quisiera reservar una Lectura de Claridad (30 min - $ 35,000 / USD 30). ¿Cómo podemos coordinar?")}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
                     >
                         Reservar 30 Min →
                     </Link>
@@ -124,8 +131,10 @@ const ENERGY_SERVICES: EnergyServiceItem[] = [
                         50 min · $ 50,000 · USD 50.
                     </div>
                     <Link
-                        href="/schedule"
-                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
+                        href={getWhatsAppUrl("¡Hola Anita! Quisiera reservar la Sesión Integral de Claridad (50 min - $ 50,000 / USD 50). ¿Cómo podemos coordinar?")}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
                     >
                         Reservar Sesión →
                     </Link>
@@ -153,8 +162,10 @@ const ENERGY_SERVICES: EnergyServiceItem[] = [
                         50 min · $ 60,000 · USD 60.
                     </div>
                     <Link
-                        href="/schedule"
-                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
+                        href={getWhatsAppUrl("¡Hola Anita! Quisiera solicitar el Diagnóstico Energético y Lectura Profunda (50 min - $ 60,000 / USD 60). ¿Cómo podemos coordinar?")}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
                     >
                         Quiero mi Diagnóstico →
                     </Link>
@@ -187,8 +198,10 @@ const ENERGY_SERVICES: EnergyServiceItem[] = [
                         1 hr 30 min · $ 80,000 · USD 80.
                     </div>
                     <Link
-                        href="/schedule"
-                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
+                        href={getWhatsAppUrl("¡Hola Anita! Quisiera reservar la Experiencia Premium: Diagnóstico + Sesión de Armonización (1 hr 30 min - $ 80,000 / USD 80). ¿Cómo podemos coordinar?")}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
                     >
                         Reservar Experiencia Premium →
                     </Link>
@@ -214,8 +227,10 @@ const ENERGY_SERVICES: EnergyServiceItem[] = [
                             30 min · $ 45,000 · USD 30.
                         </span>
                         <Link
-                            href="/schedule"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
+                            href={getWhatsAppUrl("¡Hola Anita! Quisiera reservar la sesión de Limpieza, Armonización y Protección (30 min - $ 45,000 / USD 30). ¿Cómo podemos coordinar?")}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
                         >
                             Quiero Armonizarme (30 min) →
                         </Link>
@@ -225,8 +240,10 @@ const ENERGY_SERVICES: EnergyServiceItem[] = [
                             50 min · $ 60,000 · USD 50.
                         </span>
                         <Link
-                            href="/schedule"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
+                            href={getWhatsAppUrl("¡Hola Anita! Quisiera reservar la sesión de Limpieza, Armonización y Protección (50 min - $ 60,000 / USD 50). ¿Cómo podemos coordinar?")}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
                         >
                             Quiero Armonizarme (50 min) →
                         </Link>
@@ -258,8 +275,10 @@ const ENERGY_SERVICES: EnergyServiceItem[] = [
                         50 min · $ 60,000 · USD 55.
                     </div>
                     <Link
-                        href="/schedule"
-                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
+                        href={getWhatsAppUrl("¡Hola Anita! Quisiera consultar y solicitar una sesión de Limpieza, Destrabe y Apertura de Caminos (50 min - $ 60,000 / USD 55). ¿Cómo podemos coordinar?")}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
                     >
                         Quiero Abrir Caminos →
                     </Link>
@@ -293,8 +312,10 @@ const ENERGY_SERVICES: EnergyServiceItem[] = [
                         50 min · $ 60,000 · USD 60.
                     </div>
                     <Link
-                        href="/schedule"
-                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
+                        href={getWhatsAppUrl("¡Hola Anita! Quisiera consultar por la Limpieza y Armonización de Espacios (50 min - $ 60,000 / USD 60). ¿Cómo podemos coordinar?")}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
                     >
                         Consulta Armonizar mi Espacio →
                     </Link>
@@ -325,8 +346,10 @@ const ENERGY_SERVICES: EnergyServiceItem[] = [
                         50 min · $ 60,000 · USD 60.
                     </div>
                     <Link
-                        href="/schedule"
-                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
+                        href={getWhatsAppUrl("¡Hola Anita! Quisiera consultar por los Baños y Limpias de Desbloqueo (50 min - $ 60,000 / USD 60). ¿Cómo podemos coordinar?")}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
                     >
                         Consulta mi Limpia →
                     </Link>
@@ -360,8 +383,10 @@ const ENERGY_SERVICES: EnergyServiceItem[] = [
                         50 min · $ 60,000 · USD 60.
                     </div>
                     <Link
-                        href="/schedule"
-                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
+                        href={getWhatsAppUrl("¡Hola Anita! Quisiera una Consulta Personalizada de Parapsicología Integral (50 min - $ 60,000 / USD 60). ¿Cómo podemos coordinar?")}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
                     >
                         Consulta Personalizada →
                     </Link>
@@ -395,8 +420,10 @@ const ENERGY_SERVICES: EnergyServiceItem[] = [
                         50 min · $ 60,000 · USD 60.
                     </div>
                     <Link
-                        href="/schedule"
-                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
+                        href={getWhatsAppUrl("¡Hola Anita! Quisiera agendar una Sesión de Sanación Ancestral (50 min - $ 60,000 / USD 60). ¿Cómo podemos coordinar?")}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
                     >
                         Sesión Sanación Ancestral →
                     </Link>
@@ -427,8 +454,10 @@ const ENERGY_SERVICES: EnergyServiceItem[] = [
                         Pieza artesanal y consagrada
                     </span>
                     <Link
-                        href="/schedule"
-                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
+                        href={getWhatsAppUrl("¡Hola Anita! Quisiera consultar por la creación de un Talismán o Amuleto de Poder personalizado y consagrado. ¿Podrías brindarme más información?")}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
                     >
                         Crear mi Talismán →
                     </Link>
@@ -462,8 +491,10 @@ const ENERGY_SERVICES: EnergyServiceItem[] = [
                         50 min · $ 60,000 · USD 60.
                     </div>
                     <Link
-                        href="/schedule"
-                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
+                        href={getWhatsAppUrl("¡Hola Anita! Quisiera consultar mi caso para un trabajo de Alta Magia Ritual y Psíquica (50 min - $ 60,000 / USD 60). ¿Cómo podemos coordinar?")}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
                     >
                         Consultar mi Caso →
                     </Link>
@@ -494,8 +525,10 @@ const ENERGY_SERVICES: EnergyServiceItem[] = [
                         50 min · $ 60,000 · USD 60.
                     </div>
                     <Link
-                        href="/schedule"
-                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
+                        href={getWhatsAppUrl("¡Hola Anita! Quisiera agendar una sesión de Clarividencia Activa (50 min - $ 60,000 / USD 60). ¿Cómo podemos coordinar?")}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
                     >
                         Explorar mi Intuición →
                     </Link>
