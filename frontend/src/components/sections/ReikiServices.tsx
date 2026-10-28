@@ -525,16 +525,16 @@ export const ReikiServices = () => {
 
     return (
         <section id="servicios-reiki" className="w-full bg-bg-main p-4 sm:p-6 lg:p-8 flex flex-col">
-            <div className="w-full bg-area-servicios/95 rounded-3xl p-5 sm:p-7 lg:p-8 border border-border-accent/40 shadow-xs flex flex-col text-text-dark space-y-8">
+            <div className="w-full bg-bg-main rounded-3xl p-5 sm:p-7 lg:p-8 border-4 border-amber-400 shadow-xs flex flex-col space-y-8">
                 {/* Cabecera de la sección */}
                 <div className="text-center max-w-3xl mx-auto space-y-3">
                     <span className="inline-block text-xs font-semibold font-serif tracking-widest uppercase text-text-dark/70 bg-stone-100 px-3.5 py-1.5 rounded-full border border-stone-200/80">
                         Sistema Reiki & Sanación
                     </span>
-                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bodoni font-bold uppercase tracking-wide text-text-dark">
+                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bodoni font-bold uppercase tracking-wide text-text-light">
                         SISTEMA DE SANACIÓN Y ARMONIZACIÓN REIKI
                     </h2>
-                    <p className="text-sm sm:text-base font-serif italic text-text-dark/85">
+                    <p className="text-sm sm:text-base font-serif italic text-text-light/85">
                         Espacios de pausa, equilibrio y conexión interior mediante prácticas energéticas tradicionales y especializadas.
                     </p>
                 </div>

@@ -13,13 +13,13 @@ interface InquiriesCardsProps {
 
 export const InquiriesCards = ({ selectedCardId, onToggle }: InquiriesCardsProps) => {
     return (
-        <div id="lecturas" className="scroll-mt-24 w-full h-full flex flex-col justify-start bg-area-servicios/95 rounded-3xl p-5 sm:p-7 lg:p-8 border border-border-accent/40 shadow-xs">
+        <div id="lecturas" className="scroll-mt-24 w-full h-full flex flex-col justify-start bg-bg-main rounded-3xl p-5 sm:p-7 lg:p-8 border-4 border-amber-400 shadow-xs">
             {/* Título arriba con margen responsive */}
             <div className="mb-6 space-y-3">
-                <h2 className="text-2xl sm:text-3xl font-bodoni font-bold text-text-dark">
+                <h2 className="text-2xl sm:text-3xl font-bodoni font-bold text-text-light">
                     ¿NO SABÉS QUÉ NECESITÁS?
                 </h2>
-                <p className="text-base sm:text-lg font-serif text-text-dark/90 leading-relaxed">
+                <p className="text-base sm:text-lg font-serif text-text-light/90 leading-relaxed">
                     No hace falta que sepas qué servicio elegir. Contame qué estás viviendo y te voy a orientar hacia el abordaje más adecuado para vos.
                 </p>
                 <div className="pt-2">

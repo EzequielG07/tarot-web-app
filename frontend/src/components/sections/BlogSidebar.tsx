@@ -44,15 +44,15 @@ export const BlogSidebar = ({
             {/* Contenedor interno centrado vertical y horizontalmente */}
             <div className="mt-5 w-full space-y-6 relative z-10 flex flex-col items-center justify-center max-w-sm flex-1 my-auto">
                 {/* Título de la sección */}
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bodoni font-bold tracking-wide uppercase text-text-light">
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bodoni font-bold tracking-wide uppercase text-white [text-shadow:0_2px_4px_rgba(0,0,0,0.95),0_4px_12px_rgba(0,0,0,0.9),0_8px_24px_rgba(0,0,0,0.75)]">
                     Frecuencia Sacerdotista
                 </h2>
 
                 {/* Texto descriptivo */}
-                <p className="text-lg sm:text-xl font-serif text-text-light">
+                <p className="text-lg sm:text-xl font-serif text-white/95 leading-relaxed [text-shadow:0_1px_3px_rgba(0,0,0,0.95),0_3px_8px_rgba(0,0,0,0.85)]">
                     El conocimiento que despierta cuando decidís mirar más allá de lo evidente.
                 </p>
-                <p className="text-lg sm:text-xl font-serif text-text-light">
+                <p className="text-lg sm:text-xl font-serif text-white/95 leading-relaxed [text-shadow:0_1px_3px_rgba(0,0,0,0.95),0_3px_8px_rgba(0,0,0,0.85)]">
                     Un espacio creado por Anita Tarotista para explorar parapsicología, energía, intuición, rituales, autoconocimiento y espiritualidad práctica.
                 </p>
                 {/* Botón interactivo para desplegar detalle */}
