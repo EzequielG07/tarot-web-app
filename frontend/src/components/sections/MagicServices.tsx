@@ -29,9 +29,8 @@ export const MagicServices = ({
             {/* Contenedor principal a lo ancho de la web (inspirado en BlogSidebar sin video) */}
             <div
                 id="magic-services"
-                className={`relative w-full max-w-none flex flex-col items-center justify-center p-6 sm:p-10 lg:p-14 rounded-3xl overflow-hidden text-center transition-all duration-500 bg-bg-card border border-white/10 shadow-xl ${
-                    estaAbierto ? 'ring-2 ring-amber-400/50 shadow-amber-950/30' : ''
-                }`}
+                className={`relative w-full max-w-none flex flex-col items-center justify-center p-6 sm:p-10 lg:p-14 rounded-3xl overflow-hidden text-center transition-all duration-500 bg-indigo-950 border border-white/10 shadow-xl ${estaAbierto ? 'ring-2 ring-amber-400/50 shadow-amber-950/30' : ''
+                    }`}
             >
                 {/* Contenedor interno centrado y espacioso */}
                 <div className="w-full space-y-6 relative z-10 flex flex-col items-center justify-center max-w-4xl mx-auto my-auto">

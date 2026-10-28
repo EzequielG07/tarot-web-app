@@ -48,18 +48,17 @@ export const MagicServicesExpandido = ({
         <div
             ref={panelRef}
             id="panel-magic-services-expandido"
-            className={`scroll-mt-28 grid transition-all duration-700 ease-in-out w-full ${
-                estaAbierto
+            className={`scroll-mt-28 grid transition-all duration-700 ease-in-out w-full ${estaAbierto
                     ? 'grid-rows-[1fr] opacity-100 mt-6'
                     : 'grid-rows-[0fr] opacity-0 mt-0 pointer-events-none'
-            }`}
+                }`}
         >
             <div className="overflow-hidden">
                 <div className="w-full bg-card-servicios rounded-3xl p-6 sm:p-8 lg:p-10 shadow-md border border-border-accent/40 transition-colors duration-500 text-text-dark flex flex-col space-y-8">
-                    
+
                     {/* Estructura en 2 Columnas Responsivas (Desktop: 2 cols, Mobile/Tablet: 1 col) */}
                     <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-stretch">
-                        
+
                         {/* COLUMNA 1: ¿Qué podemos trabajar? + Experiencia Cuántica */}
                         <div className="flex flex-col justify-between h-full space-y-6">
                             <div className="space-y-4">
@@ -183,7 +182,7 @@ export const MagicServicesExpandido = ({
                             </div>
 
                             {/* Tarjeta de llamado a la consulta / orientación */}
-                            <div className="p-5 sm:p-6 rounded-2xl bg-bg-card text-text-light flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm border border-white/10 text-center sm:text-left mt-auto">
+                            <div className="p-5 sm:p-6 rounded-2xl bg-indigo-950 text-text-light flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm border border-white/10 text-center sm:text-left mt-auto">
                                 <div className="space-y-1">
                                     <h5 className="text-sm sm:text-base font-bodoni font-bold uppercase tracking-wide text-btn-light">
                                         ¿QUERÉS SABER QUÉ NECESITÁS?

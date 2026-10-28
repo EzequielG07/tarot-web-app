@@ -1,16 +1,32 @@
 // src/components/sections/AboutMeContent.tsx
 
+import Image from 'next/image';
 import Link from 'next/link';
 
 export const AboutMeContent = () => {
     return (
-        <div id="sobre-anita" className="scroll-mt-24 bg-area-servicios/95 rounded-3xl p-5 sm:p-7 lg:p-8 border border-border-accent/40 shadow-xs w-full h-full flex flex-col justify-between space-y-4 relative z-10">
-            <div className="space-y-4">
+        <div id="sobre-anita" className="scroll-mt-24 bg-area-servicios/95 rounded-3xl p-5 sm:p-7 lg:p-8 border border-border-accent/40 shadow-xs w-full h-full flex flex-col justify-between space-y-6 relative z-10">
+            {/* Encabezado: Sobre Mí y Título */}
+            <div className="space-y-3">
                 <p className="text-xs font-medium font-serif uppercase text-text-dark/80">Sobre Mí</p>
 
                 <h2 className="text-lg sm:text-xl lg:text-2xl font-bodoni tracking-wide uppercase text-text-dark">
                     HAY COSAS QUE NO SE APRENDEN. SE DESPIERTAN.
                 </h2>
+            </div>
+
+            {/* Contenido con imagen flotante y texto envolvente */}
+            <div className="flow-root [&>p]:mb-4 [&>p:last-child]:mb-0">
+                {/* Imagen flotante a la izquierda */}
+                <div className="float-left mr-4 mb-3 sm:mr-6 sm:mb-4 w-36 sm:w-44 md:w-52 aspect-[3/4] relative rounded-2xl overflow-hidden shadow-sm">
+                    <Image
+                        src="/images/about/tarotista-example.jpg"
+                        alt="Anita - Tarotista"
+                        fill
+                        className="object-cover object-center"
+                        sizes="(max-width: 640px) 144px, (max-width: 768px) 176px, 208px"
+                    />
+                </div>
 
                 <p className="text-xs sm:text-sm font-serif text-text-dark/90 leading-relaxed">
                     Soy Anita, tarotista, maestra parapsicóloga, psíquica vidente y Reiki Master. Desde hace más de 20 años acompaño a personas que buscan comprender, ordenar o transformar algo en sus vidas.
@@ -45,7 +61,8 @@ export const AboutMeContent = () => {
                 </p>
             </div>
 
-            <div className="pt-2">
+            {/* Botón CTA al final */}
+            <div className="pt-2 clear-both">
                 <Link
                     href="/about"
                     className="inline-block px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors uppercase font-bold text-xs shrink-0 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)]"
@@ -56,4 +73,3 @@ export const AboutMeContent = () => {
         </div>
     );
 };
-
