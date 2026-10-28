@@ -12,10 +12,11 @@ interface ServicesCardsProps {
 
 export const ServicesCards = ({ selectedCardId, onToggle }: ServicesCardsProps) => {
     return (
-        <div className="w-full h-full flex flex-col justify-start bg-area-servicios/95 rounded-3xl p-5 sm:p-7 lg:p-8 border border-border-accent/40 shadow-xs">
+        <
+            div className="w-full h-full flex flex-col justify-start bg-bg-main rounded-3xl p-5 sm:p-7 lg:p-8 border-4 border-amber-400 shadow-xs">
             {/* Título arriba con margen responsive */}
             <div className="mb-6 space-y-3">
-                <h2 className="text-2xl sm:text-3xl font-bodoni font-bold text-text-dark">
+                <h2 className="text-2xl sm:text-3xl font-bodoni font-bold text-text-light">
                     ELEGÍ TU EXPERIENCIA según lo que estás viviendo y encontrá el espacio adecuado para vos.
                 </h2>
             </div>
