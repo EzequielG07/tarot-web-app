@@ -177,10 +177,13 @@ export default function Footer() {
                 </div>
             </div>
 
-            {/* Sub-barras: Derechos Reservados y Ubicación */}
+            {/* Sub-barras: Derechos Reservados, Aviso Legal y Ubicación */}
             <div className="border-t border-gray-500/40 py-6 px-6 sm:px-10 lg:px-12 text-xs text-text-light/60">
-                <div className="flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
+                <div className="flex flex-col md:flex-row items-center justify-between gap-3 text-center md:text-left">
                     <p>© {new Date().getFullYear()} Anita Tarot. Todos los derechos reservados.</p>
+                    <span className="text-[11px] font-medium tracking-widest uppercase text-text-light/75 bg-white/5 border border-border-accent/50 px-3.5 py-1 rounded-full">
+                        TODOS LOS SERVICIOS SON PARA MAYORES DE 18 AÑOS
+                    </span>
                     <div className="flex p-1 text-text-light/70">
                         <svg
                             className="h-5 w-5 mr-1"
