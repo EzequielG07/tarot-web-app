@@ -43,7 +43,7 @@ export const BlogMainContent = () => {
                         Podemos abordar amor, vínculos, decisiones, trabajo, proyectos y situaciones que necesites comprender con mayor profundidad.
                     </p>
                     <p className="text-lg sm:text-xl font-serif">
-                        $50.000 ARS · USD 50
+                        50 min · $50.000 · USD 50.
                     </p>
                     <div className="pt-2">
                         <Link
