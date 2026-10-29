@@ -6,9 +6,12 @@ import { getWhatsAppUrl } from '@/utils/whatsapp';
 
 export const AboutMeContent = () => {
     return (
-        <div id="sobre-anita" className="scroll-mt-24 bg-area-servicios/95 rounded-3xl p-5 sm:p-7 lg:p-8 border border-border-accent/40 shadow-xs w-full h-full flex flex-col justify-between space-y-6 relative z-10">
-            {/* Encabezado: Sobre Mí y Título */}
-            <div className="space-y-3">
+        <div
+            id="sobre-anita"
+            className="scroll-mt-24 bg-area-servicios/95 rounded-3xl p-5 sm:p-7 lg:p-8 border border-border-accent/40 shadow-xs w-full h-[480px] sm:h-[500px] lg:h-full flex flex-col justify-between relative z-10 min-h-0"
+        >
+            {/* Encabezado fijo: Sobre Mí y Título */}
+            <div className="space-y-2 pb-3 shrink-0 border-b border-stone-200/40">
                 <p className="text-xs font-medium font-serif uppercase text-text-dark/80">Sobre Mí</p>
 
                 <h2 className="text-lg sm:text-xl lg:text-2xl font-bodoni tracking-wide uppercase text-text-dark">
@@ -16,16 +19,16 @@ export const AboutMeContent = () => {
                 </h2>
             </div>
 
-            {/* Contenido con imagen flotante y texto envolvente */}
-            <div className="flow-root [&>p]:mb-4 [&>p:last-child]:mb-0">
+            {/* Contenido desplazable con scroll vertical estilizado */}
+            <div className="flex-1 overflow-y-auto pr-2 sm:pr-3 my-3 flow-root min-h-0 [&>p]:mb-4 [&>p:last-child]:mb-0 [scrollbar-width:thin] [scrollbar-color:rgba(0,0,0,0.25)_transparent] [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-text-dark/25 [&::-webkit-scrollbar-thumb]:rounded-full hover:[&::-webkit-scrollbar-thumb]:bg-text-dark/45">
                 {/* Imagen flotante a la izquierda */}
-                <div className="float-left mr-4 mb-3 sm:mr-6 sm:mb-4 w-36 sm:w-44 md:w-52 aspect-[3/4] relative rounded-2xl overflow-hidden shadow-sm">
+                <div className="float-left mr-4 mb-3 sm:mr-5 sm:mb-3 w-32 sm:w-40 md:w-44 aspect-[3/4] relative rounded-2xl overflow-hidden shadow-sm">
                     <Image
                         src="/images/about/tarotista-example.jpg"
                         alt="Anita - Tarotista"
                         fill
                         className="object-cover object-center"
-                        sizes="(max-width: 640px) 144px, (max-width: 768px) 176px, 208px"
+                        sizes="(max-width: 640px) 128px, 176px"
                     />
                 </div>
 
@@ -62,8 +65,8 @@ export const AboutMeContent = () => {
                 </p>
             </div>
 
-            {/* Botón CTA al final */}
-            <div className="pt-2 clear-both">
+            {/* Botón CTA fijo al pie */}
+            <div className="pt-3 shrink-0 clear-both border-t border-stone-200/40">
                 <Link
                     href={getWhatsAppUrl("¡Hola Anita! Leí tu presentación y me gustaría tener mi primera consulta de claridad. ¿Cómo podemos coordinar?")}
                     target="_blank"
