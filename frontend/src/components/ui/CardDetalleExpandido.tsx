@@ -6,6 +6,7 @@ import { useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { getWhatsAppUrl } from '@/utils/whatsapp';
 import { CardData } from '@/types/cards';
+import { usePrecios } from '@/context/PreciosContext';
 
 interface CardDetalleExpandidoProps {
     tarjetaActiva: CardData | null;
@@ -17,6 +18,7 @@ export const CardDetalleExpandido = ({
     onCerrar,
 }: CardDetalleExpandidoProps) => {
     const panelRef = useRef<HTMLDivElement>(null);
+    const { getPrecio } = usePrecios();
 
     // Scroll suave hacia el panel de detalle cuando se despliega
     useEffect(() => {
@@ -90,7 +92,10 @@ export const CardDetalleExpandido = ({
                                         : 'max-w-4xl mx-auto grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'
                                 }`}
                             >
-                                {tarjetaActiva.modalidades.map((mod, idx) => (
+                                {tarjetaActiva.modalidades.map((mod, idx) => {
+                                    const pInfo = mod.id ? getPrecio(mod.id) : null;
+                                    const displayPrecio = pInfo ? pInfo.labelText : mod.precioDuracion;
+                                    return (
                                     <div
                                         key={mod.id || idx}
                                         className="bg-white/80 hover:bg-white/95 backdrop-blur-xs rounded-xl p-5 border border-black/5 shadow-xs flex flex-col justify-between transition-all hover:shadow-md"
@@ -116,10 +121,10 @@ export const CardDetalleExpandido = ({
 
                                         <div className="pt-4 mt-3 border-t border-black/5 space-y-3">
                                             <div className="text-xs font-serif font-bold text-text-dark">
-                                                {mod.precioDuracion}
+                                                {displayPrecio}
                                             </div>
                                             <Link
-                                                href={getWhatsAppUrl(`¡Hola Anita! Me gustaría reservar la opción "${mod.nombre}" de "${tarjetaActiva.titulo}" (${mod.precioDuracion}). ¿Cómo podemos coordinar?`)}
+                                                href={getWhatsAppUrl(`¡Hola Anita! Me gustaría reservar la opción "${mod.nombre}" de "${tarjetaActiva.titulo}" (${displayPrecio}). ¿Cómo podemos coordinar?`)}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                                 className="inline-flex items-center justify-center w-full px-4 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wider shadow-xs ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
@@ -128,7 +133,8 @@ export const CardDetalleExpandido = ({
                                             </Link>
                                         </div>
                                     </div>
-                                ))}
+                                    );
+                                })}
                             </div>
                         )}
 

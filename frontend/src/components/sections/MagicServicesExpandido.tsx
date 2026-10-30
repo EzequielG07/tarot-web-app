@@ -4,6 +4,7 @@
 import { useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { getWhatsAppUrl } from '@/utils/whatsapp';
+import { usePrecios } from '@/context/PreciosContext';
 
 export interface MagicServicesExpandidoProps {
     estaAbierto: boolean;
@@ -15,6 +16,8 @@ export const MagicServicesExpandido = ({
     onCerrar,
 }: MagicServicesExpandidoProps) => {
     const panelRef = useRef<HTMLDivElement>(null);
+    const { getPrecio } = usePrecios();
+    const pCuantica = getPrecio('experiencia-cuantica');
 
     // Scroll suave hacia el panel de detalle cuando se despliega
     useEffect(() => {
@@ -139,12 +142,12 @@ export const MagicServicesExpandido = ({
                                         Una sesión integral, personalizada y diferente a una consulta convencional.
                                     </p>
                                     <div className="text-xs sm:text-sm font-serif font-bold text-text-dark/80 pt-0.5">
-                                        50 min · $ 60,000 · USD 60.
+                                        {pCuantica.labelText}
                                     </div>
                                 </div>
 
                                 <Link
-                                    href={getWhatsAppUrl("¡Hola Anita! Me gustaría agendar la Experiencia Cuántica de Armonización (50 min - $ 60,000 / USD 60). ¿Cómo podemos coordinar?")}
+                                    href={getWhatsAppUrl(`¡Hola Anita! Me gustaría agendar la Experiencia Cuántica de Armonización (${pCuantica.labelText}). ¿Cómo podemos coordinar?`)}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="shrink-0 px-5 py-2.5 rounded-full text-btn-dark bg-btn-light hover:bg-btn-light-hover transition-all uppercase font-bold text-xs tracking-wider shadow-xs hover:scale-105 active:scale-95 cursor-pointer ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"

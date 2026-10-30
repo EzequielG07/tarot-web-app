@@ -3,6 +3,8 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { getWhatsAppUrl } from '@/utils/whatsapp';
+import { usePrecios, PrecioItemInfo } from '@/context/PreciosContext';
+import { useMemo } from 'react';
 
 export interface ReikiServiceItem {
     id: string;
@@ -15,7 +17,7 @@ export interface ReikiServiceItem {
     contenidoCompleto: React.ReactNode;
 }
 
-const REIKI_SERVICES: ReikiServiceItem[] = [
+export const getReikiServices = (getPrecio: (id: string) => PrecioItemInfo): ReikiServiceItem[] => [
     {
         id: 'reiki-usui',
         tag: 'Sistema Tradicional',
@@ -40,10 +42,10 @@ const REIKI_SERVICES: ReikiServiceItem[] = [
                 <div className="space-y-2 pt-3 border-t border-stone-100">
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-3 bg-stone-50 rounded-xl border border-stone-200/50">
                         <span className="text-xs font-serif font-semibold text-text-dark/80">
-                            50 min · $ 50,000 · USD 50.
+                            {getPrecio('reiki-usui-50').labelText}
                         </span>
                         <Link
-                            href={getWhatsAppUrl("¡Hola Anita! Me gustaría agendar una sesión de Reiki Usui (50 min - $ 50,000 / USD 50). ¿Cómo podemos coordinar?")}
+                            href={getWhatsAppUrl(`¡Hola Anita! Me gustaría agendar una sesión de Reiki Usui (${getPrecio('reiki-usui-50').labelText}). ¿Cómo podemos coordinar?`)}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center justify-center px-4 py-2 rounded-full text-btn-dark bg-btn-light hover:bg-btn-light-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
@@ -53,10 +55,10 @@ const REIKI_SERVICES: ReikiServiceItem[] = [
                     </div>
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-3 bg-stone-50 rounded-xl border border-stone-200/50">
                         <span className="text-xs font-serif font-semibold text-text-dark/80">
-                            1 hr 20 min · $ 65,000 · USD 70.
+                            {getPrecio('reiki-usui-80').labelText}
                         </span>
                         <Link
-                            href={getWhatsAppUrl("¡Hola Anita! Me gustaría agendar una sesión de Reiki Usui (1 hr 20 min - $ 65,000 / USD 70). ¿Cómo podemos coordinar?")}
+                            href={getWhatsAppUrl(`¡Hola Anita! Me gustaría agendar una sesión de Reiki Usui (${getPrecio('reiki-usui-80').labelText}). ¿Cómo podemos coordinar?`)}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center justify-center px-4 py-2 rounded-full text-btn-dark bg-btn-light hover:bg-btn-light-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
@@ -90,10 +92,10 @@ const REIKI_SERVICES: ReikiServiceItem[] = [
                 <div className="space-y-2 pt-3 border-t border-stone-100">
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-3 bg-stone-50 rounded-xl border border-stone-200/50">
                         <span className="text-xs font-serif font-semibold text-text-dark/80">
-                            50 min · $ 50,000 · USD 50.
+                            {getPrecio('alineacion-chakras-50').labelText}
                         </span>
                         <Link
-                            href={getWhatsAppUrl("¡Hola Anita! Me gustaría agendar una sesión de Alineación de Chakras (50 min - $ 50,000 / USD 50). ¿Cómo podemos coordinar?")}
+                            href={getWhatsAppUrl(`¡Hola Anita! Me gustaría agendar una sesión de Alineación de Chakras (${getPrecio('alineacion-chakras-50').labelText}). ¿Cómo podemos coordinar?`)}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
@@ -103,10 +105,10 @@ const REIKI_SERVICES: ReikiServiceItem[] = [
                     </div>
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-3 bg-stone-50 rounded-xl border border-stone-200/50">
                         <span className="text-xs font-serif font-semibold text-text-dark/80">
-                            1 hr 20 min · $ 65,000 · USD 70.
+                            {getPrecio('alineacion-chakras-80').labelText}
                         </span>
                         <Link
-                            href={getWhatsAppUrl("¡Hola Anita! Me gustaría agendar una sesión de Alineación de Chakras (1 hr 20 min - $ 65,000 / USD 70). ¿Cómo podemos coordinar?")}
+                            href={getWhatsAppUrl(`¡Hola Anita! Me gustaría agendar una sesión de Alineación de Chakras (${getPrecio('alineacion-chakras-80').labelText}). ¿Cómo podemos coordinar?`)}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
@@ -140,10 +142,10 @@ const REIKI_SERVICES: ReikiServiceItem[] = [
                 <div className="space-y-2 pt-3 border-t border-stone-100">
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-3 bg-stone-50 rounded-xl border border-stone-200/50">
                         <span className="text-xs font-serif font-semibold text-text-dark/80">
-                            50 min · $ 50,000 · USD 50.
+                            {getPrecio('karmic-reiki-50').labelText}
                         </span>
                         <Link
-                            href={getWhatsAppUrl("¡Hola Anita! Me gustaría agendar una sesión de Karmic Reiki (50 min - $ 50,000 / USD 50). ¿Cómo podemos coordinar?")}
+                            href={getWhatsAppUrl(`¡Hola Anita! Me gustaría agendar una sesión de Karmic Reiki (${getPrecio('karmic-reiki-50').labelText}). ¿Cómo podemos coordinar?`)}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
@@ -153,10 +155,10 @@ const REIKI_SERVICES: ReikiServiceItem[] = [
                     </div>
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-3 bg-stone-50 rounded-xl border border-stone-200/50">
                         <span className="text-xs font-serif font-semibold text-text-dark/80">
-                            1 hr 20 min · $ 65,000 · USD 70.
+                            {getPrecio('karmic-reiki-80').labelText}
                         </span>
                         <Link
-                            href={getWhatsAppUrl("¡Hola Anita! Me gustaría agendar una sesión de Karmic Reiki (1 hr 20 min - $ 65,000 / USD 70). ¿Cómo podemos coordinar?")}
+                            href={getWhatsAppUrl(`¡Hola Anita! Me gustaría agendar una sesión de Karmic Reiki (${getPrecio('karmic-reiki-80').labelText}). ¿Cómo podemos coordinar?`)}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
@@ -190,10 +192,10 @@ const REIKI_SERVICES: ReikiServiceItem[] = [
                 <div className="space-y-2 pt-3 border-t border-stone-100">
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-3 bg-stone-50 rounded-xl border border-stone-200/50">
                         <span className="text-xs font-serif font-semibold text-text-dark/80">
-                            50 min · $ 50,000 · USD 50.
+                            {getPrecio('karuna-reiki-50').labelText}
                         </span>
                         <Link
-                            href={getWhatsAppUrl("¡Hola Anita! Me gustaría agendar una sesión de Karuna Reiki (50 min - $ 50,000 / USD 50). ¿Cómo podemos coordinar?")}
+                            href={getWhatsAppUrl(`¡Hola Anita! Me gustaría agendar una sesión de Karuna Reiki (${getPrecio('karuna-reiki-50').labelText}). ¿Cómo podemos coordinar?`)}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
@@ -203,10 +205,10 @@ const REIKI_SERVICES: ReikiServiceItem[] = [
                     </div>
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-3 bg-stone-50 rounded-xl border border-stone-200/50">
                         <span className="text-xs font-serif font-semibold text-text-dark/80">
-                            1 hr 20 min · $ 65,000 · USD 70.
+                            {getPrecio('karuna-reiki-80').labelText}
                         </span>
                         <Link
-                            href={getWhatsAppUrl("¡Hola Anita! Me gustaría agendar una sesión de Karuna Reiki (1 hr 20 min - $ 65,000 / USD 70). ¿Cómo podemos coordinar?")}
+                            href={getWhatsAppUrl(`¡Hola Anita! Me gustaría agendar una sesión de Karuna Reiki (${getPrecio('karuna-reiki-80').labelText}). ¿Cómo podemos coordinar?`)}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
@@ -240,10 +242,10 @@ const REIKI_SERVICES: ReikiServiceItem[] = [
                 <div className="space-y-2 pt-3 border-t border-stone-100">
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-3 bg-stone-50 rounded-xl border border-stone-200/50">
                         <span className="text-xs font-serif font-semibold text-text-dark/80">
-                            50 min · $ 50,000 · USD 50.
+                            {getPrecio('reiki-jin-kei-do-50').labelText}
                         </span>
                         <Link
-                            href={getWhatsAppUrl("¡Hola Anita! Me gustaría agendar una sesión de Reiki Jin Kei Do (50 min - $ 50,000 / USD 50). ¿Cómo podemos coordinar?")}
+                            href={getWhatsAppUrl(`¡Hola Anita! Me gustaría agendar una sesión de Reiki Jin Kei Do (${getPrecio('reiki-jin-kei-do-50').labelText}). ¿Cómo podemos coordinar?`)}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
@@ -253,10 +255,10 @@ const REIKI_SERVICES: ReikiServiceItem[] = [
                     </div>
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-3 bg-stone-50 rounded-xl border border-stone-200/50">
                         <span className="text-xs font-serif font-semibold text-text-dark/80">
-                            1 hr 20 min · $ 65,000 · USD 70.
+                            {getPrecio('reiki-jin-kei-do-80').labelText}
                         </span>
                         <Link
-                            href={getWhatsAppUrl("¡Hola Anita! Me gustaría agendar una sesión de Reiki Jin Kei Do (1 hr 20 min - $ 65,000 / USD 70). ¿Cómo podemos coordinar?")}
+                            href={getWhatsAppUrl(`¡Hola Anita! Me gustaría agendar una sesión de Reiki Jin Kei Do (${getPrecio('reiki-jin-kei-do-80').labelText}). ¿Cómo podemos coordinar?`)}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
@@ -290,10 +292,10 @@ const REIKI_SERVICES: ReikiServiceItem[] = [
                 <div className="space-y-2 pt-3 border-t border-stone-100">
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-3 bg-stone-50 rounded-xl border border-stone-200/50">
                         <span className="text-xs font-serif font-semibold text-text-dark/80">
-                            50 min · $ 50,000 · USD 50.
+                            {getPrecio('hara-reiki-50').labelText}
                         </span>
                         <Link
-                            href={getWhatsAppUrl("¡Hola Anita! Me gustaría agendar una sesión de Hará Reiki (50 min - $ 50,000 / USD 50). ¿Cómo podemos coordinar?")}
+                            href={getWhatsAppUrl(`¡Hola Anita! Me gustaría agendar una sesión de Hará Reiki (${getPrecio('hara-reiki-50').labelText}). ¿Cómo podemos coordinar?`)}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
@@ -303,10 +305,10 @@ const REIKI_SERVICES: ReikiServiceItem[] = [
                     </div>
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-3 bg-stone-50 rounded-xl border border-stone-200/50">
                         <span className="text-xs font-serif font-semibold text-text-dark/80">
-                            1 hr 20 min · $ 65,000 · USD 70.
+                            {getPrecio('hara-reiki-80').labelText}
                         </span>
                         <Link
-                            href={getWhatsAppUrl("¡Hola Anita! Me gustaría agendar una sesión de Hará Reiki (1 hr 20 min - $ 65,000 / USD 70). ¿Cómo podemos coordinar?")}
+                            href={getWhatsAppUrl(`¡Hola Anita! Me gustaría agendar una sesión de Hará Reiki (${getPrecio('hara-reiki-80').labelText}). ¿Cómo podemos coordinar?`)}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
@@ -340,10 +342,10 @@ const REIKI_SERVICES: ReikiServiceItem[] = [
                 <div className="space-y-2 pt-3 border-t border-stone-100">
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-3 bg-stone-50 rounded-xl border border-stone-200/50">
                         <span className="text-xs font-serif font-semibold text-text-dark/80">
-                            50 min · $ 50,000 · USD 50.
+                            {getPrecio('reiki-arcangeles-50').labelText}
                         </span>
                         <Link
-                            href={getWhatsAppUrl("¡Hola Anita! Me gustaría agendar una sesión de Reiki con Arcángeles (50 min - $ 50,000 / USD 50). ¿Cómo podemos coordinar?")}
+                            href={getWhatsAppUrl(`¡Hola Anita! Me gustaría agendar una sesión de Reiki con Arcángeles (${getPrecio('reiki-arcangeles-50').labelText}). ¿Cómo podemos coordinar?`)}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
@@ -353,10 +355,10 @@ const REIKI_SERVICES: ReikiServiceItem[] = [
                     </div>
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-3 bg-stone-50 rounded-xl border border-stone-200/50">
                         <span className="text-xs font-serif font-semibold text-text-dark/80">
-                            1 hr 20 min · $ 65,000 · USD 70.
+                            {getPrecio('reiki-arcangeles-80').labelText}
                         </span>
                         <Link
-                            href={getWhatsAppUrl("¡Hola Anita! Me gustaría agendar una sesión de Reiki con Arcángeles (1 hr 20 min - $ 65,000 / USD 70). ¿Cómo podemos coordinar?")}
+                            href={getWhatsAppUrl(`¡Hola Anita! Me gustaría agendar una sesión de Reiki con Arcángeles (${getPrecio('reiki-arcangeles-80').labelText}). ¿Cómo podemos coordinar?`)}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
@@ -389,10 +391,10 @@ const REIKI_SERVICES: ReikiServiceItem[] = [
                 </p>
                 <div className="pt-4 border-t border-stone-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                     <div className="text-xs font-serif font-semibold text-text-dark/80">
-                        50 min · $ 60,000 · USD 60.
+                        {getPrecio('apertura-tercer-ojo').labelText}
                     </div>
                     <Link
-                        href={getWhatsAppUrl("¡Hola Anita! Me gustaría agendar la sesión de Apertura del Tercer Ojo (50 min - $ 60,000 / USD 60). ¿Cómo podemos coordinar?")}
+                        href={getWhatsAppUrl(`¡Hola Anita! Me gustaría agendar la sesión de Apertura del Tercer Ojo (${getPrecio('apertura-tercer-ojo').labelText}). ¿Cómo podemos coordinar?`)}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
@@ -425,10 +427,10 @@ const REIKI_SERVICES: ReikiServiceItem[] = [
                 <div className="space-y-2 pt-3 border-t border-stone-100">
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-3 bg-stone-50 rounded-xl border border-stone-200/50">
                         <span className="text-xs font-serif font-semibold text-text-dark/80">
-                            50 min · $ 50,000 · USD 50.
+                            {getPrecio('reiki-ninos-50').labelText}
                         </span>
                         <Link
-                            href={getWhatsAppUrl("¡Hola Anita! Me gustaría agendar una sesión de Reiki para Niños y Adolescentes (50 min - $ 50,000 / USD 50). ¿Cómo podemos coordinar?")}
+                            href={getWhatsAppUrl(`¡Hola Anita! Me gustaría agendar una sesión de Reiki para Niños y Adolescentes (${getPrecio('reiki-ninos-50').labelText}). ¿Cómo podemos coordinar?`)}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
@@ -438,10 +440,10 @@ const REIKI_SERVICES: ReikiServiceItem[] = [
                     </div>
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-3 bg-stone-50 rounded-xl border border-stone-200/50">
                         <span className="text-xs font-serif font-semibold text-text-dark/80">
-                            1 hr 20 min · $ 65,000 · USD 70.
+                            {getPrecio('reiki-ninos-80').labelText}
                         </span>
                         <Link
-                            href={getWhatsAppUrl("¡Hola Anita! Me gustaría agendar una sesión de Reiki para Niños y Adolescentes (1 hr 20 min - $ 65,000 / USD 70). ¿Cómo podemos coordinar?")}
+                            href={getWhatsAppUrl(`¡Hola Anita! Me gustaría agendar una sesión de Reiki para Niños y Adolescentes (${getPrecio('reiki-ninos-80').labelText}). ¿Cómo podemos coordinar?`)}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
@@ -475,10 +477,10 @@ const REIKI_SERVICES: ReikiServiceItem[] = [
                 <div className="space-y-2 pt-3 border-t border-stone-100">
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-3 bg-stone-50 rounded-xl border border-stone-200/50">
                         <span className="text-xs font-serif font-semibold text-text-dark/80">
-                            30 min · $ 35,000 · USD 40.
+                            {getPrecio('reiki-mascotas-30').labelText}
                         </span>
                         <Link
-                            href={getWhatsAppUrl("¡Hola Anita! Me gustaría agendar una sesión de Reiki para Mascotas (30 min - $ 35,000 / USD 40). ¿Cómo podemos coordinar?")}
+                            href={getWhatsAppUrl(`¡Hola Anita! Me gustaría agendar una sesión de Reiki para Mascotas (${getPrecio('reiki-mascotas-30').labelText}). ¿Cómo podemos coordinar?`)}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
@@ -488,10 +490,10 @@ const REIKI_SERVICES: ReikiServiceItem[] = [
                     </div>
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-3 bg-stone-50 rounded-xl border border-stone-200/50">
                         <span className="text-xs font-serif font-semibold text-text-dark/80">
-                            50 min · $ 50,000 · USD 50.
+                            {getPrecio('reiki-mascotas-50').labelText}
                         </span>
                         <Link
-                            href={getWhatsAppUrl("¡Hola Anita! Me gustaría agendar una sesión de Reiki para Mascotas (50 min - $ 50,000 / USD 50). ¿Cómo podemos coordinar?")}
+                            href={getWhatsAppUrl(`¡Hola Anita! Me gustaría agendar una sesión de Reiki para Mascotas (${getPrecio('reiki-mascotas-50').labelText}). ¿Cómo podemos coordinar?`)}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
@@ -541,6 +543,8 @@ const REIKI_SERVICES: ReikiServiceItem[] = [
 ];
 
 export const ReikiServices = () => {
+    const { getPrecio, preciosList } = usePrecios();
+    const reikiServices = useMemo(() => getReikiServices(getPrecio), [getPrecio, preciosList]);
     const [selectedService, setSelectedService] = useState<ReikiServiceItem | null>(null);
 
     // Cierre con la tecla Escape y bloqueo del scroll de fondo cuando el modal está abierto
@@ -582,7 +586,7 @@ export const ReikiServices = () => {
 
                 {/* Grilla de rectángulos: reducida 15% en ancho (max-w-[85%]) y altura a la mitad (h-[175px]) */}
                 <div className="w-full max-w-[85%] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5 items-stretch">
-                    {REIKI_SERVICES.map((item) => (
+                    {reikiServices.map((item) => (
                         <article
                             key={item.id}
                             className="bg-white/95 rounded-2xl p-3.5 sm:p-4 border border-stone-200/70 shadow-xs hover:shadow-md transition-all flex flex-col justify-between h-[175px] group overflow-hidden"

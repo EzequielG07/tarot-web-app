@@ -2,11 +2,15 @@
 
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { getWhatsAppUrl } from '@/utils/whatsapp';
 
 export default function Footer() {
+    const pathname = usePathname();
     const [isFaqOpen, setIsFaqOpen] = useState(false);
+
+    if (pathname?.startsWith('/admin')) return null;
 
     useEffect(() => {
         const handleKeyDown = (e: KeyboardEvent) => {

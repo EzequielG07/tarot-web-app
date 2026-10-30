@@ -4,6 +4,8 @@ import localFont from 'next/font/local';
 import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import { PreciosProvider } from '@/context/PreciosContext';
+
 // Configuración de fuente Serif para Títulos (representa Capricho / Serif mística)
 const cormorant = Cormorant_Garamond({
     weight: ['600', '700'],
@@ -11,6 +13,7 @@ const cormorant = Cormorant_Garamond({
     variable: '--font-capricho',
     display: 'swap',
 });
+
 // Configuración de Roboto para UI general, botones, lectura, navbar y footer
 const roboto = Roboto({
     weight: ['400', '500', '700'],
@@ -18,15 +21,18 @@ const roboto = Roboto({
     variable: '--font-roboto',
     display: 'swap',
 });
+
 const bodoniSmallcaps = localFont({
     src: './fonts/Bodoni 72 Smallcaps Book.ttf',
     variable: '--font-bodoni-smallcaps',
     display: 'swap',
 });
+
 export const metadata: Metadata = {
     title: 'Tarot Místico',
     description: 'Lecturas de Tarot y Recursos Espirituales',
 };
+
 export default function RootLayout({
     children,
 }: {
@@ -38,11 +44,13 @@ export default function RootLayout({
             className={`${bodoniSmallcaps.variable} ${cormorant.variable} ${roboto.variable}`}
         >
             <body className="bg-bg-main text-text-light antialiased min-h-screen flex flex-col">
-                <Navbar />
-                <main className="flex-1">
-                    {children}
-                </main>
-                <Footer />
+                <PreciosProvider>
+                    <Navbar />
+                    <main className="flex-1">
+                        {children}
+                    </main>
+                    <Footer />
+                </PreciosProvider>
             </body>
         </html>
     );

@@ -1,12 +1,16 @@
 'use client';
 
 import { useState } from 'react';
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import { getWhatsAppUrl } from '@/utils/whatsapp';
 
 export default function Navbar() {
+    const pathname = usePathname();
     const [isOpen, setIsOpen] = useState(false);
+
+    if (pathname?.startsWith('/admin')) return null;
 
     return (
         <nav className="bg-bg-card text-text-light border-b border-border-accent sticky top-0 z-50 backdrop-blur-md">

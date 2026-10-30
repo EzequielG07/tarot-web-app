@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos de Ciberseguridad: Supabase, JWT y Row Level Security</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap');
+        
+        :root {
+            --bg: #0f172a;
+            --surface: #1e293b;
+            --border: #334155;
+            --text: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8;
+            --accent-green: #34d399;
+            --accent-amber: #fbbf24;
+            --accent-red: #f87171;
+            --code-bg: #090d16;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 48px;
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+        }
+
+        h1, h2, h3, h4 {
+            color: #ffffff;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 16px;
+            margin-bottom: 24px;
+            color: var(--accent);
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-top: 36px;
+            margin-bottom: 16px;
+            color: var(--accent-green);
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            margin-top: 24px;
+            margin-bottom: 12px;
+        }
+
+        p, li {
+            color: var(--text-muted);
+            font-size: 0.98rem;
+        }
+
+        strong {
+            color: #ffffff;
+        }
+
+        code {
+            font-family: 'JetBrains Mono', monospace;
+            background: var(--code-bg);
+            color: var(--accent-amber);
+            padding: 2px 6px;
+            border-radius: 6px;
+            font-size: 0.9em;
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+
+        pre {
+            background: var(--code-bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 20px;
+            overflow-x: auto;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.88rem;
+            color: #e2e8f0;
+            line-height: 1.5;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(56, 189, 248, 0.15);
+            color: var(--accent);
+            padding: 4px 12px;
+            border-radius: 9999px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+        }
+
+        .callout {
+            background: rgba(251, 191, 36, 0.08);
+            border-left: 4px solid var(--accent-amber);
+            padding: 16px 20px;
+            border-radius: 0 10px 10px 0;
+            margin: 20px 0;
+        }
+
+        .callout.danger {
+            background: rgba(248, 113, 113, 0.08);
+            border-left-color: var(--accent-red);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 24px 0;
+            font-size: 0.9rem;
+        }
+
+        th, td {
+            border: 1px solid var(--border);
+            padding: 12px 14px;
+            text-align: left;
+        }
+
+        th {
+            background: rgba(255,255,255,0.03);
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background: rgba(255,255,255,0.015);
+        }
+
+        @media print {
+            body {
+                background: white;
+                color: #1e293b;
+                padding: 0;
+            }
+            .container {
+                border: none;
+                box-shadow: none;
+                padding: 0;
+                background: white;
+            }
+            h1, h2, h3, strong {
+                color: #0f172a;
+            }
+            p, li {
+                color: #334155;
+            }
+            pre, code {
+                background: #f1f5f9;
+                color: #0f172a;
+                border: 1px solid #cbd5e1;
+            }
+            th, td {
+                border-color: #cbd5e1;
+            }
+            .badge {
+                border: 1px solid #cbd5e1;
+                color: #0284c7;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span class="badge">MANUAL DE CIBERSEGURIDAD WEB</span>
+        <h1>Arquitectura Segura: Supabase, JWT y Row Level Security (RLS)</h1>
+        
+        <p>Este informe técnico detalla los principios de defensa en profundidad, control de acceso basado en roles (RBAC) y seguridad criptográfica implementados en la base de datos de <strong>Anita Tarot</strong>.</p>
+
+        <h2>1. El Paradigma Backend-as-a-Service (BaaS) y Zero Trust</h2>
+        <p>En el desarrollo web tradicional, la base de datos confía en un servidor backend centralizado (Node, Python, Java). El backend filtra las consultas con cláusulas <code>WHERE</code>. Si un desarrollador olvida un filtro o comete un fallo de autorización (vulnerabilidad <strong>IDOR / BOLA</strong>), cualquier atacante puede manipular registros.</p>
+        
+        <p>En <strong>Supabase</strong>, aplicamos el principio de <strong>Zero Trust (Confianza Cero)</strong>: la seguridad se delega directamente en el <strong>motor de PostgreSQL</strong> mediante políticas criptográficas evaluadas a nivel de cada fila individual.</p>
+
+        <div class="callout">
+            <strong>Principio Fundamental:</strong> No importa si un atacante accede directamente a la API REST de la base de datos usando Postman, cURL o un script en Python; <strong>PostgreSQL rechaza la petición en el propio kernel de la base de datos</strong> si no cumple con las políticas de Row Level Security.
+        </div>
+
+        <h2>2. ¿Por qué es seguro exponer la `Anon Key` en el frontend?</h2>
+        <p>Es común que auditores de seguridad novatos marquen la variable <code>NEXT_PUBLIC_SUPABASE_ANON_KEY</code> como un hallazgo de "fuga de credenciales". Sin embargo, esto es un <strong>falso positivo</strong> por las siguientes razones técnicas:</p>
+        <ul>
+            <li><strong>Rol `anon`:</strong> La clave anónima es simplemente un identificador de proyecto que asigna al usuario el rol de invitado sin privilegios.</li>
+            <li><strong>Aislamiento total con RLS:</strong> Con Row Level Security activo, el rol <code>anon</code> solo puede ejecutar las operaciones explícitamente autorizadas (en nuestro caso, solo <code>SELECT</code>).</li>
+            <li><strong>La clave crítica es `service_role`:</strong> La clave <code>service_role secret</code> tiene privilegios de superusuario para saltarse el RLS (<code>bypassrls</code>). Esa clave <strong>NUNCA</strong> debe exponerse en el cliente.</li>
+        </ul>
+
+        <h2>3. Row Level Security (RLS) a Bajo Nivel</h2>
+        <p>Cuando ejecutamos:</p>
+        <pre><code>ALTER TABLE public.servicios_precios ENABLE ROW LEVEL SECURITY;</code></pre>
+        <p>PostgreSQL activa un interruptor de seguridad estricto: <strong>la tabla queda completamente bloqueada</strong> para cualquier rol no privilegiado.</p>
+
+        <h3>Desglose de las Políticas Implementadas:</h3>
+        
+        <h4>A. Política Pública de Lectura:</h4>
+        <pre><code>CREATE POLICY "Permitir lectura publica de precios" 
+ON public.servicios_precios FOR SELECT 
+USING (true);</code></pre>
+        <p>El predicado <code>USING (true)</code> indica que cualquier usuario del mundo puede leer las filas de la tabla para visualizarlas en el sitio web.</p>
+
+        <h4>B. Política Restringida de Modificación (Solo Admin):</h4>
+        <pre><code>CREATE POLICY "Permitir modificacion solo a usuarios autenticados" 
+ON public.servicios_precios FOR UPDATE 
+TO authenticated 
+USING (true)
+WITH CHECK (true);</code></pre>
+        <ul>
+            <li><code>TO authenticated</code>: La consulta <strong>solo es válida</strong> si la cabecera HTTP incluye un token JWT firmado por Supabase Auth con el claim <code>role: 'authenticated'</code>.</li>
+            <li><code>WITH CHECK (true)</code>: Valida que los datos modificados cumplan con las restricciones de la base de datos antes de persistir.</li>
+        </ul>
+
+        <h2>4. Matriz de Mitigación de Amenazas (OWASP Top 10)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Amenaza (OWASP)</th>
+                    <th>Escenario de Ataque</th>
+                    <th>Mitigación Implementada</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Broken Access Control (A01:2021)</strong></td>
+                    <td>Un usuario malicioso envía un <code>UPDATE</code> vía HTTP para cambiar tarifas a $0.</td>
+                    <td>RLS descarta la petición a nivel de motor de PostgreSQL al no poseer el rol <code>authenticated</code>.</td>
+                </tr>
+                <tr>
+                    <td><strong>Injection (A03:2021)</strong></td>
+                    <td>Inyección SQL en campos de texto (ej. <code>' OR '1'='1</code>).</td>
+                    <td>PostgREST convierte automáticamente los datos en consultas parametrizadas seguras.</td>
+                </tr>
+                <tr>
+                    <td><strong>Cryptographic Failures (A02:2021)</strong></td>
+                    <td>Intercepción de contraseñas o tokens en tránsito.</td>
+                    <td>Tráfico cifrado de extremo a extremo mediante <strong>TLS/HTTPS</strong> y contraseñas hasheadas con <strong>bcrypt</strong>.</td>
+                </tr>
+                <tr>
+                    <td><strong>Privilege Escalation</strong></td>
+                    <td>Un atacante modifica su JWT localmente para asignarse el rol `authenticated`.</td>
+                    <td>Postgres valida la firma criptográfica HMAC-SHA256 del JWT contra la clave privada del servidor.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>5. Cómo guardar este archivo en PDF</h2>
+        <p>Puedes abrir este archivo HTML en tu navegador (Google Chrome, Microsoft Edge, Brave) y presionar <code>Ctrl + P</code> (o <code>Cmd + P</code> en Mac) y seleccionar <strong>"Guardar como PDF"</strong>. El diseño ya cuenta con estilos adaptados para una impresión limpia y nítida.</p>
+    </div>
+</body>
+</html>
+

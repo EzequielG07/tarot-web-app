@@ -1,8 +1,14 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { getWhatsAppUrl } from '@/utils/whatsapp';
+import { usePrecios } from '@/context/PreciosContext';
 
 export const BlogMainContent = () => {
+    const { getPrecio } = usePrecios();
+    const precioInfo = getPrecio('blog-sesion-integral');
+
     return (
         <div className="relative w-full h-full max-w-none grid grid-cols-1 lg:grid-cols-5 gap-8 rounded-3xl overflow-hidden text-text-light p-6 border border-gray-500/10">
             {/* Video de fondo */}
@@ -34,7 +40,7 @@ export const BlogMainContent = () => {
                         SESIÓN INTEGRAL DE CLARIDAD
                     </h2>
                     <p className="text-lg sm:text-xl font-serif">
-                        50 min
+                        {precioInfo.duracion}
                     </p>
                     <p className="text-lg sm:text-xl font-serif">
                         La experiencia más completa. Combina videncia, tarot, oráculo, bola de cristal y péndulo de luz, según las necesidades de la consulta.
@@ -42,12 +48,12 @@ export const BlogMainContent = () => {
                     <p className="text-lg sm:text-xl font-serif">
                         Podemos abordar amor, vínculos, decisiones, trabajo, proyectos y situaciones que necesites comprender con mayor profundidad.
                     </p>
-                    <p className="text-lg sm:text-xl font-serif">
-                        50 min · $50.000 · USD 50.
+                    <p className="text-lg sm:text-xl font-serif font-semibold text-btn-light">
+                        {precioInfo.labelText}
                     </p>
                     <div className="pt-2">
                         <Link
-                            href={getWhatsAppUrl("¡Hola Anita! Quisiera elegir la Sesión Integral de Claridad ($50.000 ARS / USD 50). ¿Cómo podemos coordinar?")}
+                            href={getWhatsAppUrl(`¡Hola Anita! Quisiera elegir la Sesión Integral de Claridad (${precioInfo.labelText}). ¿Cómo podemos coordinar?`)}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-block px-5 py-2.5 rounded-full text-btn-dark bg-btn-light hover:bg-btn-light-hover transition-colors font-bold text-xs shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"

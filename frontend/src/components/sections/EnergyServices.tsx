@@ -3,6 +3,8 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { getWhatsAppUrl } from '@/utils/whatsapp';
+import { usePrecios, PrecioItemInfo } from '@/context/PreciosContext';
+import { useMemo } from 'react';
 
 export interface EnergyServiceItem {
     id: string;
@@ -16,7 +18,7 @@ export interface EnergyServiceItem {
     contenidoCompleto: React.ReactNode;
 }
 
-const ENERGY_SERVICES: EnergyServiceItem[] = [
+export const getEnergyServices = (getPrecio: (id: string) => PrecioItemInfo): EnergyServiceItem[] => [
     {
         id: 'lecturas-tarot',
         tag: 'Servicios Energéticos',
@@ -60,7 +62,7 @@ const ENERGY_SERVICES: EnergyServiceItem[] = [
         titulo: 'Orientación Express',
         subtitulo: 'Respuesta rápida y puntual para tus dudas',
         resumen: 'Para una consulta concreta que necesita una orientación breve y puntual.',
-        precioDuracion: '15 min · $ 19,900 · USD 15.',
+        precioDuracion: getPrecio('orientacion-express').labelText,
         contenidoCompleto: (
             <div className="space-y-4">
                 <p className="text-sm sm:text-base font-serif text-text-dark/90 leading-relaxed">
@@ -68,10 +70,10 @@ const ENERGY_SERVICES: EnergyServiceItem[] = [
                 </p>
                 <div className="pt-4 border-t border-stone-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                     <div className="text-xs font-serif font-semibold text-text-dark/80">
-                        15 min · $ 19,900 · USD 15.
+                        {getPrecio('orientacion-express').labelText}
                     </div>
                     <Link
-                        href={getWhatsAppUrl("¡Hola Anita! Quisiera solicitar una Orientación Express (15 min - $ 19,900 / USD 15). ¿Cómo podemos coordinar?")}
+                        href={getWhatsAppUrl(`¡Hola Anita! Quisiera solicitar una Orientación Express (${getPrecio('orientacion-express').labelText}). ¿Cómo podemos coordinar?`)}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
@@ -88,7 +90,7 @@ const ENERGY_SERVICES: EnergyServiceItem[] = [
         titulo: 'Lectura de Claridad',
         subtitulo: 'Orientación profunda sobre tu presente',
         resumen: 'Para una situación puntual, una pregunta concreta o un momento en el que necesitás orientación.',
-        precioDuracion: '30 min · $ 35,000 · USD 30.',
+        precioDuracion: getPrecio('lectura-claridad').labelText,
         contenidoCompleto: (
             <div className="space-y-4">
                 <p className="text-sm sm:text-base font-serif text-text-dark/90 leading-relaxed">
@@ -96,10 +98,10 @@ const ENERGY_SERVICES: EnergyServiceItem[] = [
                 </p>
                 <div className="pt-4 border-t border-stone-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                     <div className="text-xs font-serif font-semibold text-text-dark/80">
-                        30 min · $ 35,000 · USD 30.
+                        {getPrecio('lectura-claridad').labelText}
                     </div>
                     <Link
-                        href={getWhatsAppUrl("¡Hola Anita! Quisiera reservar una Lectura de Claridad (30 min - $ 35,000 / USD 30). ¿Cómo podemos coordinar?")}
+                        href={getWhatsAppUrl(`¡Hola Anita! Quisiera reservar una Lectura de Claridad (${getPrecio('lectura-claridad').labelText}). ¿Cómo podemos coordinar?`)}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
@@ -117,7 +119,7 @@ const ENERGY_SERVICES: EnergyServiceItem[] = [
         titulo: 'Sesión Integral de Claridad',
         subtitulo: 'Videncia + Tarot + Lectura de Manos + Péndulo',
         resumen: 'Integra, según las necesidades de la consulta, Videncia + Tarot + Lectura de Manos + Péndulo de Luz. Ideal para explorar una situación que requiere una mirada más amplia.',
-        precioDuracion: '50 min · $ 50,000 · USD 50.',
+        precioDuracion: getPrecio('sesion-integral-claridad').labelText,
         contenidoCompleto: (
             <div className="space-y-4">
                 <p className="text-sm sm:text-base font-serif text-text-dark/90 leading-relaxed">
@@ -128,10 +130,10 @@ const ENERGY_SERVICES: EnergyServiceItem[] = [
                 </p>
                 <div className="pt-4 border-t border-stone-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                     <div className="text-xs font-serif font-semibold text-text-dark/80">
-                        50 min · $ 50,000 · USD 50.
+                        {getPrecio('sesion-integral-claridad').labelText}
                     </div>
                     <Link
-                        href={getWhatsAppUrl("¡Hola Anita! Quisiera reservar la Sesión Integral de Claridad (50 min - $ 50,000 / USD 50). ¿Cómo podemos coordinar?")}
+                        href={getWhatsAppUrl(`¡Hola Anita! Quisiera reservar la Sesión Integral de Claridad (${getPrecio('sesion-integral-claridad').labelText}). ¿Cómo podemos coordinar?`)}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
@@ -148,7 +150,7 @@ const ENERGY_SERVICES: EnergyServiceItem[] = [
         titulo: 'Diagnóstico Energético y Lectura Profunda',
         subtitulo: 'Mapa holístico de tu momento actual',
         resumen: 'Una mirada integral sobre tu momento energético y las áreas que pueden requerir atención. Incluye consideraciones astrológicas, numerología, radiestesia y videncia.',
-        precioDuracion: '50 min · $ 60,000 · USD 60.',
+        precioDuracion: getPrecio('diagnostico-energetico-profundo').labelText,
         contenidoCompleto: (
             <div className="space-y-4">
                 <p className="text-sm sm:text-base font-serif text-text-dark/90 leading-relaxed">
@@ -159,10 +161,10 @@ const ENERGY_SERVICES: EnergyServiceItem[] = [
                 </div>
                 <div className="pt-4 border-t border-stone-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                     <div className="text-xs font-serif font-semibold text-text-dark/80">
-                        50 min · $ 60,000 · USD 60.
+                        {getPrecio('diagnostico-energetico-profundo').labelText}
                     </div>
                     <Link
-                        href={getWhatsAppUrl("¡Hola Anita! Quisiera solicitar el Diagnóstico Energético y Lectura Profunda (50 min - $ 60,000 / USD 60). ¿Cómo podemos coordinar?")}
+                        href={getWhatsAppUrl(`¡Hola Anita! Quisiera solicitar el Diagnóstico Energético y Lectura Profunda (${getPrecio('diagnostico-energetico-profundo').labelText}). ¿Cómo podemos coordinar?`)}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
@@ -180,7 +182,7 @@ const ENERGY_SERVICES: EnergyServiceItem[] = [
         titulo: 'Diagnóstico + Sesión de Armonización',
         subtitulo: 'Encuentro extendido de diagnóstico y acción',
         resumen: 'Una experiencia integral para quienes necesitan comprender y trabajar su situación. Combina diagnóstico energético, lectura y sesión de armonización en un único encuentro extendido.',
-        precioDuracion: '1 hr 30 min · $ 80,000 · USD 80.',
+        precioDuracion: getPrecio('diagnostico-sesion-armonizacion').labelText,
         contenidoCompleto: (
             <div className="space-y-4">
                 <p className="text-sm sm:text-base font-serif text-text-dark/90 leading-relaxed">
@@ -195,10 +197,10 @@ const ENERGY_SERVICES: EnergyServiceItem[] = [
                 </div>
                 <div className="pt-4 border-t border-stone-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                     <div className="text-xs font-serif font-semibold text-text-dark/80">
-                        1 hr 30 min · $ 80,000 · USD 80.
+                        {getPrecio('diagnostico-sesion-armonizacion').labelText}
                     </div>
                     <Link
-                        href={getWhatsAppUrl("¡Hola Anita! Quisiera reservar la Experiencia Premium: Diagnóstico + Sesión de Armonización (1 hr 30 min - $ 80,000 / USD 80). ¿Cómo podemos coordinar?")}
+                        href={getWhatsAppUrl(`¡Hola Anita! Quisiera reservar la Experiencia Premium: Diagnóstico + Sesión de Armonización (${getPrecio('diagnostico-sesion-armonizacion').labelText}). ¿Cómo podemos coordinar?`)}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
@@ -258,7 +260,7 @@ const ENERGY_SERVICES: EnergyServiceItem[] = [
         titulo: 'Limpieza, Destrabe y Apertura de Caminos',
         subtitulo: 'Cuando sentís que necesitás movimiento',
         resumen: 'Hay momentos en los que una situación parece repetirse. Combina limpieza y trabajo energético orientado a acompañar procesos de amor, trabajo, dinero y proyectos.',
-        precioDuracion: '50 min · $ 60,000 · USD 55.',
+        precioDuracion: getPrecio('limpieza-destrabe-caminos').labelText,
         contenidoCompleto: (
             <div className="space-y-4">
                 <p className="text-xs sm:text-sm font-serif italic text-text-dark/70">
@@ -272,10 +274,10 @@ const ENERGY_SERVICES: EnergyServiceItem[] = [
                 </p>
                 <div className="pt-4 border-t border-stone-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                     <div className="text-xs font-serif font-semibold text-text-dark/80">
-                        50 min · $ 60,000 · USD 55.
+                        {getPrecio('limpieza-destrabe-caminos').labelText}
                     </div>
                     <Link
-                        href={getWhatsAppUrl("¡Hola Anita! Quisiera consultar y solicitar una sesión de Limpieza, Destrabe y Apertura de Caminos (50 min - $ 60,000 / USD 55). ¿Cómo podemos coordinar?")}
+                        href={getWhatsAppUrl(`¡Hola Anita! Quisiera consultar y solicitar una sesión de Limpieza, Destrabe y Apertura de Caminos (${getPrecio('limpieza-destrabe-caminos').labelText}). ¿Cómo podemos coordinar?`)}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
@@ -292,7 +294,7 @@ const ENERGY_SERVICES: EnergyServiceItem[] = [
         titulo: 'Limpieza y Armonización de Espacios',
         subtitulo: 'Casas · Locales · Consultorios · Terrenos',
         resumen: '¿Sentís que un espacio perdió su armonía? Una limpieza energética permite disolver cargas y recuperar una atmósfera más liviana, equilibrada y agradable.',
-        precioDuracion: '50 min · $ 60,000 · USD 60.',
+        precioDuracion: getPrecio('limpieza-espacios').labelText,
         contenidoCompleto: (
             <div className="space-y-4">
                 <div className="text-xs font-serif text-text-dark/70 bg-stone-100 px-3 py-1 rounded-lg inline-block border border-stone-200/60">
@@ -309,10 +311,10 @@ const ENERGY_SERVICES: EnergyServiceItem[] = [
                 </p>
                 <div className="pt-4 border-t border-stone-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                     <div className="text-xs font-serif font-semibold text-text-dark/80">
-                        50 min · $ 60,000 · USD 60.
+                        {getPrecio('limpieza-espacios').labelText}
                     </div>
                     <Link
-                        href={getWhatsAppUrl("¡Hola Anita! Quisiera consultar por la Limpieza y Armonización de Espacios (50 min - $ 60,000 / USD 60). ¿Cómo podemos coordinar?")}
+                        href={getWhatsAppUrl(`¡Hola Anita! Quisiera consultar por la Limpieza y Armonización de Espacios (${getPrecio('limpieza-espacios').labelText}). ¿Cómo podemos coordinar?`)}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
@@ -343,10 +345,10 @@ const ENERGY_SERVICES: EnergyServiceItem[] = [
                 </p>
                 <div className="pt-4 border-t border-stone-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                     <div className="text-xs font-serif font-semibold text-text-dark/80">
-                        50 min · $ 60,000 · USD 60.
+                        {getPrecio('banos-limpias-desbloqueo').labelText}
                     </div>
                     <Link
-                        href={getWhatsAppUrl("¡Hola Anita! Quisiera consultar por los Baños y Limpias de Desbloqueo (50 min - $ 60,000 / USD 60). ¿Cómo podemos coordinar?")}
+                        href={getWhatsAppUrl(`¡Hola Anita! Quisiera consultar por los Baños y Limpias de Desbloqueo (${getPrecio('banos-limpias-desbloqueo').labelText}). ¿Cómo podemos coordinar?`)}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
@@ -380,10 +382,10 @@ const ENERGY_SERVICES: EnergyServiceItem[] = [
                 </p>
                 <div className="pt-4 border-t border-stone-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                     <div className="text-xs font-serif font-semibold text-text-dark/80">
-                        50 min · $ 60,000 · USD 60.
+                        {getPrecio('parapsicologia-integral').labelText}
                     </div>
                     <Link
-                        href={getWhatsAppUrl("¡Hola Anita! Quisiera una Consulta Personalizada de Parapsicología Integral (50 min - $ 60,000 / USD 60). ¿Cómo podemos coordinar?")}
+                        href={getWhatsAppUrl(`¡Hola Anita! Quisiera una Consulta Personalizada de Parapsicología Integral (${getPrecio('parapsicologia-integral').labelText}). ¿Cómo podemos coordinar?`)}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
@@ -417,10 +419,10 @@ const ENERGY_SERVICES: EnergyServiceItem[] = [
                 </div>
                 <div className="pt-4 border-t border-stone-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                     <div className="text-xs font-serif font-semibold text-text-dark/80">
-                        50 min · $ 60,000 · USD 60.
+                        {getPrecio('sanaciones-ancestrales').labelText}
                     </div>
                     <Link
-                        href={getWhatsAppUrl("¡Hola Anita! Quisiera agendar una Sesión de Sanación Ancestral (50 min - $ 60,000 / USD 60). ¿Cómo podemos coordinar?")}
+                        href={getWhatsAppUrl(`¡Hola Anita! Quisiera agendar una Sesión de Sanación Ancestral (${getPrecio('sanaciones-ancestrales').labelText}). ¿Cómo podemos coordinar?`)}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
@@ -488,10 +490,10 @@ const ENERGY_SERVICES: EnergyServiceItem[] = [
                 </p>
                 <div className="pt-4 border-t border-stone-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                     <div className="text-xs font-serif font-semibold text-text-dark/80">
-                        50 min · $ 60,000 · USD 60.
+                        {getPrecio('alta-magia-ritual').labelText}
                     </div>
                     <Link
-                        href={getWhatsAppUrl("¡Hola Anita! Quisiera consultar mi caso para un trabajo de Alta Magia Ritual y Psíquica (50 min - $ 60,000 / USD 60). ¿Cómo podemos coordinar?")}
+                        href={getWhatsAppUrl(`¡Hola Anita! Quisiera consultar mi caso para un trabajo de Alta Magia Ritual y Psíquica (${getPrecio('alta-magia-ritual').labelText}). ¿Cómo podemos coordinar?`)}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
@@ -522,10 +524,10 @@ const ENERGY_SERVICES: EnergyServiceItem[] = [
                 </p>
                 <div className="pt-4 border-t border-stone-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                     <div className="text-xs font-serif font-semibold text-text-dark/80">
-                        50 min · $ 60,000 · USD 60.
+                        {getPrecio('clarividencia-activa').labelText}
                     </div>
                     <Link
-                        href={getWhatsAppUrl("¡Hola Anita! Quisiera agendar una sesión de Clarividencia Activa (50 min - $ 60,000 / USD 60). ¿Cómo podemos coordinar?")}
+                        href={getWhatsAppUrl(`¡Hola Anita! Quisiera agendar una sesión de Clarividencia Activa (${getPrecio('clarividencia-activa').labelText}). ¿Cómo podemos coordinar?`)}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
@@ -539,6 +541,8 @@ const ENERGY_SERVICES: EnergyServiceItem[] = [
 ];
 
 export const EnergyServices = () => {
+    const { getPrecio, preciosList } = usePrecios();
+    const energyServices = useMemo(() => getEnergyServices(getPrecio), [getPrecio, preciosList]);
     const [selectedService, setSelectedService] = useState<EnergyServiceItem | null>(null);
 
     // Cierre con la tecla Escape y bloqueo del scroll de fondo cuando el modal está abierto
@@ -580,7 +584,7 @@ export const EnergyServices = () => {
 
                 {/* Grilla de 15 rectángulos: reducida 15% en ancho (max-w-[85%]) y altura a la mitad (h-[175px]) */}
                 <div className="w-full max-w-[85%] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5 items-stretch">
-                    {ENERGY_SERVICES.map((item) => (
+                    {energyServices.map((item) => (
                         <article
                             key={item.id}
                             className="bg-white/95 rounded-2xl p-3.5 sm:p-4 border border-stone-200/70 shadow-xs hover:shadow-md transition-all flex flex-col justify-between h-[175px] group overflow-hidden"
