@@ -56,7 +56,7 @@ export const BlogMainContent = () => {
                             href={getWhatsAppUrl(`¡Hola Anita! Quisiera elegir la Sesión Integral de Claridad (${precioInfo.labelText}). ¿Cómo podemos coordinar?`)}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-block px-5 py-2.5 rounded-full text-btn-dark bg-btn-light hover:bg-btn-light-hover transition-colors font-bold text-xs shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
+                            className="inline-block px-5 py-2.5 rounded-full text-btn-dark bg-btn-light hover:bg-btn-light-hover transition-colors font-bold text-xs shrink-0"
                         >
                             ELEGIR SESIÓN INTEGRAL →
                         </Link>
@@ -72,7 +72,7 @@ export const BlogMainContent = () => {
                             href={getWhatsAppUrl("¡Hola Anita! No sé cuál servicio elegir y me gustaría que me orientes para encontrar la modalidad más adecuada para mí.")}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-block px-5 py-2.5 rounded-full text-btn-dark bg-btn-light hover:bg-btn-light-hover transition-colors font-bold text-xs shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
+                            className="inline-block px-5 py-2.5 rounded-full text-btn-dark bg-btn-light hover:bg-btn-light-hover transition-colors font-bold text-xs shrink-0"
                         >
                             QUIERO QUE ME ORIENTES →
                         </Link>

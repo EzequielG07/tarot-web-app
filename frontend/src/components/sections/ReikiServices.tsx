@@ -48,7 +48,7 @@ export const getReikiServices = (getPrecio: (id: string) => PrecioItemInfo): Rei
                             href={getWhatsAppUrl(`¡Hola Anita! Me gustaría agendar una sesión de Reiki Usui (${getPrecio('reiki-usui-50').labelText}). ¿Cómo podemos coordinar?`)}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-btn-dark bg-btn-light hover:bg-btn-light-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
+                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-btn-dark bg-btn-light hover:bg-btn-light-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
                         >
                             Agendar Sesión (50 min) →
                         </Link>
@@ -61,7 +61,7 @@ export const getReikiServices = (getPrecio: (id: string) => PrecioItemInfo): Rei
                             href={getWhatsAppUrl(`¡Hola Anita! Me gustaría agendar una sesión de Reiki Usui (${getPrecio('reiki-usui-80').labelText}). ¿Cómo podemos coordinar?`)}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-btn-dark bg-btn-light hover:bg-btn-light-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
+                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-btn-dark bg-btn-light hover:bg-btn-light-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
                         >
                             Agendar Sesión (80 min) →
                         </Link>
@@ -98,7 +98,7 @@ export const getReikiServices = (getPrecio: (id: string) => PrecioItemInfo): Rei
                             href={getWhatsAppUrl(`¡Hola Anita! Me gustaría agendar una sesión de Alineación de Chakras (${getPrecio('alineacion-chakras-50').labelText}). ¿Cómo podemos coordinar?`)}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
+                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
                         >
                             Armonizar mis Chakras (50 min) →
                         </Link>
@@ -111,7 +111,7 @@ export const getReikiServices = (getPrecio: (id: string) => PrecioItemInfo): Rei
                             href={getWhatsAppUrl(`¡Hola Anita! Me gustaría agendar una sesión de Alineación de Chakras (${getPrecio('alineacion-chakras-80').labelText}). ¿Cómo podemos coordinar?`)}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
+                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
                         >
                             Armonizar mis Chakras (80 min) →
                         </Link>
@@ -148,7 +148,7 @@ export const getReikiServices = (getPrecio: (id: string) => PrecioItemInfo): Rei
                             href={getWhatsAppUrl(`¡Hola Anita! Me gustaría agendar una sesión de Karmic Reiki (${getPrecio('karmic-reiki-50').labelText}). ¿Cómo podemos coordinar?`)}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
+                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
                         >
                             Sesión Karmic Reiki (50 min) →
                         </Link>
@@ -161,7 +161,7 @@ export const getReikiServices = (getPrecio: (id: string) => PrecioItemInfo): Rei
                             href={getWhatsAppUrl(`¡Hola Anita! Me gustaría agendar una sesión de Karmic Reiki (${getPrecio('karmic-reiki-80').labelText}). ¿Cómo podemos coordinar?`)}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
+                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
                         >
                             Sesión Karmic Reiki (80 min) →
                         </Link>
@@ -198,7 +198,7 @@ export const getReikiServices = (getPrecio: (id: string) => PrecioItemInfo): Rei
                             href={getWhatsAppUrl(`¡Hola Anita! Me gustaría agendar una sesión de Karuna Reiki (${getPrecio('karuna-reiki-50').labelText}). ¿Cómo podemos coordinar?`)}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
+                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
                         >
                             Experimentar Karuna Reiki (50 min) →
                         </Link>
@@ -211,7 +211,7 @@ export const getReikiServices = (getPrecio: (id: string) => PrecioItemInfo): Rei
                             href={getWhatsAppUrl(`¡Hola Anita! Me gustaría agendar una sesión de Karuna Reiki (${getPrecio('karuna-reiki-80').labelText}). ¿Cómo podemos coordinar?`)}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
+                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
                         >
                             Experimentar Karuna Reiki (80 min) →
                         </Link>
@@ -248,7 +248,7 @@ export const getReikiServices = (getPrecio: (id: string) => PrecioItemInfo): Rei
                             href={getWhatsAppUrl(`¡Hola Anita! Me gustaría agendar una sesión de Reiki Jin Kei Do (${getPrecio('reiki-jin-kei-do-50').labelText}). ¿Cómo podemos coordinar?`)}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
+                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
                         >
                             Experimentar Jin Kei Do (50 min) →
                         </Link>
@@ -261,7 +261,7 @@ export const getReikiServices = (getPrecio: (id: string) => PrecioItemInfo): Rei
                             href={getWhatsAppUrl(`¡Hola Anita! Me gustaría agendar una sesión de Reiki Jin Kei Do (${getPrecio('reiki-jin-kei-do-80').labelText}). ¿Cómo podemos coordinar?`)}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
+                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
                         >
                             Experimentar Jin Kei Do (80 min) →
                         </Link>
@@ -298,7 +298,7 @@ export const getReikiServices = (getPrecio: (id: string) => PrecioItemInfo): Rei
                             href={getWhatsAppUrl(`¡Hola Anita! Me gustaría agendar una sesión de Hará Reiki (${getPrecio('hara-reiki-50').labelText}). ¿Cómo podemos coordinar?`)}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
+                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
                         >
                             Volver a mi Centro (50 min) →
                         </Link>
@@ -311,7 +311,7 @@ export const getReikiServices = (getPrecio: (id: string) => PrecioItemInfo): Rei
                             href={getWhatsAppUrl(`¡Hola Anita! Me gustaría agendar una sesión de Hará Reiki (${getPrecio('hara-reiki-80').labelText}). ¿Cómo podemos coordinar?`)}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
+                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
                         >
                             Volver a mi Centro (80 min) →
                         </Link>
@@ -348,7 +348,7 @@ export const getReikiServices = (getPrecio: (id: string) => PrecioItemInfo): Rei
                             href={getWhatsAppUrl(`¡Hola Anita! Me gustaría agendar una sesión de Reiki con Arcángeles (${getPrecio('reiki-arcangeles-50').labelText}). ¿Cómo podemos coordinar?`)}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
+                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
                         >
                             Sesión Arcángeles (50 min) →
                         </Link>
@@ -361,7 +361,7 @@ export const getReikiServices = (getPrecio: (id: string) => PrecioItemInfo): Rei
                             href={getWhatsAppUrl(`¡Hola Anita! Me gustaría agendar una sesión de Reiki con Arcángeles (${getPrecio('reiki-arcangeles-80').labelText}). ¿Cómo podemos coordinar?`)}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
+                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
                         >
                             Sesión Arcángeles (80 min) →
                         </Link>
@@ -397,7 +397,7 @@ export const getReikiServices = (getPrecio: (id: string) => PrecioItemInfo): Rei
                         href={getWhatsAppUrl(`¡Hola Anita! Me gustaría agendar la sesión de Apertura del Tercer Ojo (${getPrecio('apertura-tercer-ojo').labelText}). ¿Cómo podemos coordinar?`)}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
+                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
                     >
                         Despertar mi Intuición →
                     </Link>
@@ -433,7 +433,7 @@ export const getReikiServices = (getPrecio: (id: string) => PrecioItemInfo): Rei
                             href={getWhatsAppUrl(`¡Hola Anita! Me gustaría agendar una sesión de Reiki para Niños y Adolescentes (${getPrecio('reiki-ninos-50').labelText}). ¿Cómo podemos coordinar?`)}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
+                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
                         >
                             Sesión Reiki Niños (50 min) →
                         </Link>
@@ -446,7 +446,7 @@ export const getReikiServices = (getPrecio: (id: string) => PrecioItemInfo): Rei
                             href={getWhatsAppUrl(`¡Hola Anita! Me gustaría agendar una sesión de Reiki para Niños y Adolescentes (${getPrecio('reiki-ninos-80').labelText}). ¿Cómo podemos coordinar?`)}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
+                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
                         >
                             Sesión Reiki Niños (80 min) →
                         </Link>
@@ -483,7 +483,7 @@ export const getReikiServices = (getPrecio: (id: string) => PrecioItemInfo): Rei
                             href={getWhatsAppUrl(`¡Hola Anita! Me gustaría agendar una sesión de Reiki para Mascotas (${getPrecio('reiki-mascotas-30').labelText}). ¿Cómo podemos coordinar?`)}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
+                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
                         >
                             Sesión Mascotas (30 min) →
                         </Link>
@@ -496,7 +496,7 @@ export const getReikiServices = (getPrecio: (id: string) => PrecioItemInfo): Rei
                             href={getWhatsAppUrl(`¡Hola Anita! Me gustaría agendar una sesión de Reiki para Mascotas (${getPrecio('reiki-mascotas-50').labelText}). ¿Cómo podemos coordinar?`)}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
+                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
                         >
                             Sesión Mascotas (50 min) →
                         </Link>
@@ -532,7 +532,7 @@ export const getReikiServices = (getPrecio: (id: string) => PrecioItemInfo): Rei
                         href={getWhatsAppUrl("¡Hola Anita! Me gustaría consultar sobre la sesión de Registros Akáshicos y conocer más información para coordinar.")}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
+                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
                     >
                         Consultar sobre Registros →
                     </Link>

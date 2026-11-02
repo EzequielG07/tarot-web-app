@@ -347,7 +347,7 @@ export const AboutMeBlog = () => {
                                 href={getWhatsAppUrl("¡Hola Anita! Me gustaría consultar por sus Ebooks de Rituales, Limpiezas y Protección. ¿Podrías brindarme más información?")}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="w-full sm:w-auto inline-flex items-center justify-center text-center px-5 sm:px-6 py-3 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)] cursor-pointer"
+                                className="w-full sm:w-auto inline-flex items-center justify-center text-center px-5 sm:px-6 py-3 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide cursor-pointer"
                             >
                                 Consultá por nuestros EBOOKS DE RITUALES, LIMPIEZAS Y PROTECCIÓN.
                             </Link>

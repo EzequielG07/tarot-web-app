@@ -172,7 +172,7 @@ export default function Footer() {
                                 href={getWhatsAppUrl("¡Hola Anita! Quisiera consultar disponibilidad para agendar una sesión. ¿Podrías brindarme más información?")}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="px-3.5 py-2 rounded-full bg-btn-light text-text-dark hover:bg-btn-light-hover transition-colors whitespace-nowrap uppercase font-bold text-xs shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
+                                className="px-3.5 py-2 rounded-full bg-btn-light text-text-dark hover:bg-btn-light-hover transition-colors whitespace-nowrap uppercase font-bold text-xs shrink-0"
                             >
                                 Agendar Consulta →
                             </Link>
@@ -303,7 +303,7 @@ export default function Footer() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 onClick={() => setIsFaqOpen(false)}
-                                className="w-full sm:w-auto px-5 sm:px-6 py-2.5 rounded-full bg-btn-light text-text-dark hover:bg-btn-light-hover transition-colors uppercase font-bold text-xs text-center shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
+                                className="w-full sm:w-auto px-5 sm:px-6 py-2.5 rounded-full bg-btn-light text-text-dark hover:bg-btn-light-hover transition-colors uppercase font-bold text-xs text-center shrink-0"
                             >
                                 Agendar Consulta →
                             </Link>

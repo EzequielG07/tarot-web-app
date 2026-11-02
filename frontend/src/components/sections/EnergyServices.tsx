@@ -47,7 +47,7 @@ export const getEnergyServices = (getPrecio: (id: string) => PrecioItemInfo): En
                         href={getWhatsAppUrl("¡Hola Anita! Quisiera consultar por una Lectura de Tarot, Videncia y Oráculos personalizada. ¿Cómo podemos coordinar?")}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full text-btn-dark bg-btn-light hover:bg-btn-light-hover transition-all font-bold text-xs uppercase tracking-wider shadow-xs hover:shadow-md cursor-pointer shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
+                        className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full text-btn-dark bg-btn-light hover:bg-btn-light-hover transition-all font-bold text-xs uppercase tracking-wider shadow-xs hover:shadow-md cursor-pointer shrink-0"
                     >
                         Elegir mi Lectura →
                     </Link>
@@ -76,7 +76,7 @@ export const getEnergyServices = (getPrecio: (id: string) => PrecioItemInfo): En
                         href={getWhatsAppUrl(`¡Hola Anita! Quisiera solicitar una Orientación Express (${getPrecio('orientacion-express').labelText}). ¿Cómo podemos coordinar?`)}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
+                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
                     >
                         Quiero mi Orientación →
                     </Link>
@@ -104,7 +104,7 @@ export const getEnergyServices = (getPrecio: (id: string) => PrecioItemInfo): En
                         href={getWhatsAppUrl(`¡Hola Anita! Quisiera reservar una Lectura de Claridad (${getPrecio('lectura-claridad').labelText}). ¿Cómo podemos coordinar?`)}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
+                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
                     >
                         Reservar 30 Min →
                     </Link>
@@ -136,7 +136,7 @@ export const getEnergyServices = (getPrecio: (id: string) => PrecioItemInfo): En
                         href={getWhatsAppUrl(`¡Hola Anita! Quisiera reservar la Sesión Integral de Claridad (${getPrecio('sesion-integral-claridad').labelText}). ¿Cómo podemos coordinar?`)}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
+                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
                     >
                         Reservar Sesión →
                     </Link>
@@ -167,7 +167,7 @@ export const getEnergyServices = (getPrecio: (id: string) => PrecioItemInfo): En
                         href={getWhatsAppUrl(`¡Hola Anita! Quisiera solicitar el Diagnóstico Energético y Lectura Profunda (${getPrecio('diagnostico-energetico-profundo').labelText}). ¿Cómo podemos coordinar?`)}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
+                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
                     >
                         Quiero mi Diagnóstico →
                     </Link>
@@ -203,7 +203,7 @@ export const getEnergyServices = (getPrecio: (id: string) => PrecioItemInfo): En
                         href={getWhatsAppUrl(`¡Hola Anita! Quisiera reservar la Experiencia Premium: Diagnóstico + Sesión de Armonización (${getPrecio('diagnostico-sesion-armonizacion').labelText}). ¿Cómo podemos coordinar?`)}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
+                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
                     >
                         Reservar Experiencia Premium →
                     </Link>
@@ -232,7 +232,7 @@ export const getEnergyServices = (getPrecio: (id: string) => PrecioItemInfo): En
                             href={getWhatsAppUrl("¡Hola Anita! Quisiera reservar la sesión de Limpieza, Armonización y Protección (30 min - $ 45,000 / USD 30). ¿Cómo podemos coordinar?")}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
+                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
                         >
                             Quiero Armonizarme (30 min) →
                         </Link>
@@ -245,7 +245,7 @@ export const getEnergyServices = (getPrecio: (id: string) => PrecioItemInfo): En
                             href={getWhatsAppUrl("¡Hola Anita! Quisiera reservar la sesión de Limpieza, Armonización y Protección (50 min - $ 60,000 / USD 50). ¿Cómo podemos coordinar?")}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
+                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
                         >
                             Quiero Armonizarme (50 min) →
                         </Link>
@@ -280,7 +280,7 @@ export const getEnergyServices = (getPrecio: (id: string) => PrecioItemInfo): En
                         href={getWhatsAppUrl(`¡Hola Anita! Quisiera consultar y solicitar una sesión de Limpieza, Destrabe y Apertura de Caminos (${getPrecio('limpieza-destrabe-caminos').labelText}). ¿Cómo podemos coordinar?`)}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
+                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
                     >
                         Quiero Abrir Caminos →
                     </Link>
@@ -317,7 +317,7 @@ export const getEnergyServices = (getPrecio: (id: string) => PrecioItemInfo): En
                         href={getWhatsAppUrl(`¡Hola Anita! Quisiera consultar por la Limpieza y Armonización de Espacios (${getPrecio('limpieza-espacios').labelText}). ¿Cómo podemos coordinar?`)}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
+                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
                     >
                         Consulta Armonizar mi Espacio →
                     </Link>
@@ -351,7 +351,7 @@ export const getEnergyServices = (getPrecio: (id: string) => PrecioItemInfo): En
                         href={getWhatsAppUrl(`¡Hola Anita! Quisiera consultar por los Baños y Limpias de Desbloqueo (${getPrecio('banos-limpias-desbloqueo').labelText}). ¿Cómo podemos coordinar?`)}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
+                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
                     >
                         Consulta mi Limpia →
                     </Link>
@@ -388,7 +388,7 @@ export const getEnergyServices = (getPrecio: (id: string) => PrecioItemInfo): En
                         href={getWhatsAppUrl(`¡Hola Anita! Quisiera una Consulta Personalizada de Parapsicología Integral (${getPrecio('parapsicologia-integral').labelText}). ¿Cómo podemos coordinar?`)}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
+                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
                     >
                         Consulta Personalizada →
                     </Link>
@@ -425,7 +425,7 @@ export const getEnergyServices = (getPrecio: (id: string) => PrecioItemInfo): En
                         href={getWhatsAppUrl(`¡Hola Anita! Quisiera agendar una Sesión de Sanación Ancestral (${getPrecio('sanaciones-ancestrales').labelText}). ¿Cómo podemos coordinar?`)}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
+                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
                     >
                         Sesión Sanación Ancestral →
                     </Link>
@@ -459,7 +459,7 @@ export const getEnergyServices = (getPrecio: (id: string) => PrecioItemInfo): En
                         href={getWhatsAppUrl("¡Hola Anita! Quisiera consultar por la creación de un Talismán o Amuleto de Poder personalizado y consagrado. ¿Podrías brindarme más información?")}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
+                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
                     >
                         Crear mi Talismán →
                     </Link>
@@ -496,7 +496,7 @@ export const getEnergyServices = (getPrecio: (id: string) => PrecioItemInfo): En
                         href={getWhatsAppUrl(`¡Hola Anita! Quisiera consultar mi caso para un trabajo de Alta Magia Ritual y Psíquica (${getPrecio('alta-magia-ritual').labelText}). ¿Cómo podemos coordinar?`)}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
+                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
                     >
                         Consultar mi Caso →
                     </Link>
@@ -530,7 +530,7 @@ export const getEnergyServices = (getPrecio: (id: string) => PrecioItemInfo): En
                         href={getWhatsAppUrl(`¡Hola Anita! Quisiera agendar una sesión de Clarividencia Activa (${getPrecio('clarividencia-activa').labelText}). ¿Cómo podemos coordinar?`)}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
+                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
                     >
                         Explorar mi Intuición →
                     </Link>

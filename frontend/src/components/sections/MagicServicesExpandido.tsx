@@ -150,7 +150,7 @@ export const MagicServicesExpandido = ({
                                     href={getWhatsAppUrl(`¡Hola Anita! Me gustaría agendar la Experiencia Cuántica de Armonización (${pCuantica.labelText}). ¿Cómo podemos coordinar?`)}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="shrink-0 px-5 py-2.5 rounded-full text-btn-dark bg-btn-light hover:bg-btn-light-hover transition-all uppercase font-bold text-xs tracking-wider shadow-xs hover:scale-105 active:scale-95 cursor-pointer ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
+                                    className="shrink-0 px-5 py-2.5 rounded-full text-btn-dark bg-btn-light hover:bg-btn-light-hover transition-all uppercase font-bold text-xs tracking-wider shadow-xs hover:scale-105 active:scale-95 cursor-pointer"
                                 >
                                     Experiencia Cuántica →
                                 </Link>
@@ -202,7 +202,7 @@ export const MagicServicesExpandido = ({
                                     href={getWhatsAppUrl("¡Hola Anita! Quisiera recibir orientación para ver qué servicio necesito según mi situación.")}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="shrink-0 px-5 py-2.5 rounded-full text-btn-dark bg-btn-light hover:bg-btn-light-hover transition-all uppercase font-bold text-xs shadow-xs cursor-pointer hover:scale-105 active:scale-95 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
+                                    className="shrink-0 px-5 py-2.5 rounded-full text-btn-dark bg-btn-light hover:bg-btn-light-hover transition-all uppercase font-bold text-xs shadow-xs cursor-pointer hover:scale-105 active:scale-95"
                                 >
                                     Quiero ver qué servicio necesito →
                                 </Link>

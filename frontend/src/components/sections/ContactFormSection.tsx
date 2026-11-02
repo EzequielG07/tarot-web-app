@@ -261,7 +261,7 @@ export const ContactFormSection = () => {
                                 disabled={!isFormComplete}
                                 className={`w-full py-3 px-6 rounded-full text-text-light bg-btn-dark uppercase font-bold text-xs tracking-wider transition-all ${
                                     isFormComplete
-                                        ? 'hover:bg-btn-dark-hover cursor-pointer ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]'
+                                        ? 'hover:bg-btn-dark-hover cursor-pointer'
                                         : 'opacity-50 cursor-not-allowed border border-white/10'
                                 }`}
                             >

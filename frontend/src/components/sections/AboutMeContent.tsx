@@ -71,7 +71,7 @@ export const AboutMeContent = () => {
                     href={getWhatsAppUrl("¡Hola Anita! Leí tu presentación y me gustaría tener mi primera consulta de claridad. ¿Cómo podemos coordinar?")}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors uppercase font-bold text-xs shrink-0 ring-2 ring-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"
+                    className="inline-block px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors uppercase font-bold text-xs shrink-0"
                 >
                     QUIERO TENER MI PRIMERA CONSULTA DE CLARIDAD →
                 </Link>
