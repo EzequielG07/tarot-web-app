@@ -65,10 +65,10 @@ export default function Footer() {
                         <h3 className="text-sm font-semibold uppercase tracking-wider text-text-light mb-2">
                             Frecuencia Sacerdotista
                         </h3>
-                        <Link href="/#aboutme" className="text-sm hover:text-btn-light transition-colors ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)] px-1 rounded">
+                        <Link href="/#blog" className="text-sm hover:text-btn-light transition-colors">
                             Encuentros - Rituales - Recursos
                         </Link>
-                        <Link href="/#blog" className="text-sm hover:text-btn-light transition-colors">
+                        <Link href="/#frecuencia-register" className="text-sm hover:text-btn-light transition-colors">
                             Comunidad
                         </Link>
                     </div>
@@ -100,10 +100,10 @@ export default function Footer() {
                             {/* Íconos de Redes */}
                             <div className="flex items-center gap-1.5 text-text-light/70 shrink-0">
                                 <a
-                                    href="https://www.instagram.com"
+                                    href="https://www.instagram.com/anitatarotista?utm_source=ig_web_button_share_sheet&xtok=ZDNlZDc0MzIxNw=="
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="p-1 hover:text-btn-light transition-colors duration-200 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)] rounded-md"
+                                    className="p-1 hover:text-btn-light transition-colors duration-200  rounded-md"
                                     aria-label="Instagram"
                                 >
                                     <svg
@@ -122,10 +122,10 @@ export default function Footer() {
                                 </a>
 
                                 <a
-                                    href="https://www.facebook.com"
+                                    href="https://www.facebook.com/anitatarotista"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="p-1 hover:text-btn-light transition-colors duration-200 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)] rounded-md"
+                                    className="p-1 hover:text-btn-light transition-colors duration-200 rounded-md"
                                     aria-label="Facebook"
                                 >
                                     <svg className="h-5 w-5 fill-current" viewBox="0 0 24 24">
@@ -134,10 +134,10 @@ export default function Footer() {
                                 </a>
 
                                 <a
-                                    href="https://www.tiktok.com"
+                                    href="https://www.tiktok.com/@anitatarotista?_r=1&_t=ZS-99PKhgd52gC"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="p-1 hover:text-btn-light transition-colors duration-200 ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)] rounded-md"
+                                    className="p-1 hover:text-btn-light transition-colors duration-200 rounded-md"
                                     aria-label="TikTok"
                                 >
                                     <svg className="h-5 w-5 fill-current" viewBox="0 0 24 24">
@@ -145,7 +145,7 @@ export default function Footer() {
                                     </svg>
                                 </a>
 
-                                <a
+                                {/* <a
                                     href="https://www.youtube.com"
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -164,7 +164,7 @@ export default function Footer() {
                                         <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 3.88 12 3.88 12 3.88s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" />
                                         <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
                                     </svg>
-                                </a>
+                                </a> */}
                             </div>
 
                             {/* Botón Agendar Consulta */}

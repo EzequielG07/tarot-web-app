@@ -223,26 +223,41 @@ export const AboutMeBlog = () => {
     const ritualSeleccionado = rituales.find((r) => r.id === modalActivo);
 
     return (
-        <div id="blog" className="scroll-mt-24 bg-area-servicios/95 rounded-3xl p-5 sm:p-7 lg:p-8 border border-border-accent/40 shadow-xs w-full h-full flex flex-col justify-between space-y-4">
+        <div id="blog" className="scroll-mt-24 relative overflow-hidden rounded-3xl p-5 sm:p-7 lg:p-8 border border-border-accent/40 shadow-xl w-full h-full flex flex-col justify-around space-y-4">
+            {/* Imagen de fondo */}
+            <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
+                <Image
+                    src="/images/backgrounds/aboutmeblog-bg.jpeg"
+                    alt="Fondo de Rituales"
+                    fill
+                    className="object-cover object-center"
+                    priority
+                />
+                {/* Overlay sutil para realzar profundidad y contraste */}
+                <div className="absolute inset-0 bg-black/25 backdrop-blur-[0.5px]" />
+            </div>
+
             {/* Encabezado: Título y Subtítulo */}
-            <div className="w-full space-y-1">
-                <p className="text-xs font-medium font-serif uppercase text-text-dark/80">Desde mi Frecuencia</p>
-                <h3 className="text-sm sm:text-base lg:text-lg font-bodoni font-bold uppercase text-text-dark leading-snug">
-                    Rituales
+            <div className="w-full space-y-1 relative z-10">
+                <p className="text-xs font-medium font-serif uppercase text-white/90 [text-shadow:0_1px_3px_rgba(0,0,0,0.95),0_2px_6px_rgba(0,0,0,0.85)]">
+                    Desde mi Frecuencia
+                </p>
+                <h3 className="text-sm sm:text-base lg:text-lg font-bodoni font-bold uppercase text-white leading-snug [text-shadow:0_2px_4px_rgba(0,0,0,0.95),0_4px_12px_rgba(0,0,0,0.9),0_8px_24px_rgba(0,0,0,0.75)]">
+                    Rituales y Limpiezas
                 </h3>
             </div>
 
             {/* Grilla uniforme de 2 columnas para los 2 rituales */}
-            <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-4 items-stretch">
+            <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-4 items-stretch relative z-10">
                 {rituales.map((ritual) => (
                     <button
                         key={ritual.id}
                         type="button"
                         onClick={() => setModalActivo(ritual.id)}
-                        className="group text-left block space-y-2.5 p-2.5 rounded-2xl bg-white/70 hover:bg-white/95 border border-stone-200/80 shadow-xs hover:shadow-md transition-all cursor-pointer"
+                        className="group text-left block space-y-2.5 p-2.5 rounded-2xl bg-white/10 hover:bg-white/20 border border-white/20 hover:border-white/40 backdrop-blur-md shadow-lg hover:shadow-xl transition-all cursor-pointer"
                     >
                         {/* Imagen con aspect ratio uniforme */}
-                        <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden border border-black/5 bg-stone-100">
+                        <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden border border-white/10 bg-black/20">
                             <Image
                                 src={ritual.imagen}
                                 alt={ritual.titulo}
@@ -250,7 +265,7 @@ export const AboutMeBlog = () => {
                                 className="object-cover group-hover:scale-105 transition-transform duration-300"
                             />
                             <div className="absolute top-2 left-2">
-                                <span className="text-[10px] font-sans font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-black/60 text-white backdrop-blur-xs">
+                                <span className="text-[10px] font-sans font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-black/70 text-white backdrop-blur-xs border border-white/15">
                                     {ritual.tag}
                                 </span>
                             </div>
@@ -258,10 +273,10 @@ export const AboutMeBlog = () => {
 
                         {/* Título y llamado sutil */}
                         <div className="space-y-1">
-                            <p className="text-xs font-serif font-bold text-text-dark leading-snug line-clamp-2 group-hover:text-text-dark transition-colors uppercase">
+                            <p className="text-xs font-serif font-bold text-white leading-snug line-clamp-2 uppercase [text-shadow:0_1px_3px_rgba(0,0,0,0.95),0_2px_6px_rgba(0,0,0,0.85)]">
                                 {ritual.titulo}
                             </p>
-                            <span className="text-[11px] font-serif font-semibold text-text-dark/60 group-hover:text-text-dark flex items-center gap-1 transition-colors">
+                            <span className="text-[11px] font-serif font-semibold text-btn-light group-hover:text-white flex items-center gap-1 transition-colors [text-shadow:0_1px_3px_rgba(0,0,0,0.95)]">
                                 Leer ritual completo →
                             </span>
                         </div>

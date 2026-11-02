@@ -62,11 +62,10 @@ export const BlogSidebarExpandido = ({
         <div
             ref={panelRef}
             id="panel-blog-sidebar-expandido"
-            className={`scroll-mt-28 grid transition-all duration-700 ease-in-out w-full ${
-                estaAbierto
+            className={`scroll-mt-28 grid transition-all duration-700 ease-in-out w-full ${estaAbierto
                     ? 'grid-rows-[1fr] opacity-100 mt-6'
                     : 'grid-rows-[0fr] opacity-0 mt-0 pointer-events-none'
-            }`}
+                }`}
         >
             <div className="overflow-hidden">
                 <div className="w-full bg-card-servicios rounded-2xl p-6 sm:p-10 lg:p-12 flex flex-col items-center text-center shadow-md border border-border-accent/40 transition-colors duration-500">
@@ -97,10 +96,64 @@ export const BlogSidebarExpandido = ({
                         <p>
                             Mi propósito es invitarte a mirar diferente para comprender diferente, porque cuando cambia la mirada, pueden aparecer nuevas posibilidades.
                         </p>
-                        <div className="pt-2 text-center sm:text-left">
+                        <div className="pt-2 text-center sm:text-left space-y-4">
                             <p className="font-bodoni font-bold text-base sm:text-lg text-text-dark uppercase tracking-wide">
                                 Soy Anita Tarotista y esta es mi Frecuencia Sacerdotisa.
                             </p>
+
+                            {/* Redes de Frecuencia Sacerdotisa */}
+                            <div className="pt-3 border-t border-text-dark/15 flex flex-col sm:flex-row items-center sm:items-start gap-3">
+                                <span className="text-xs font-serif font-bold uppercase tracking-wider text-text-dark/80 pt-1">
+                                    Redes de Frecuencia Sacerdotisa:
+                                </span>
+                                <div className="flex items-center gap-2.5">
+                                    <a
+                                        href="https://www.instagram.com/frecuenciasacerdotisa?igsh=aGF6ZDJ4bGNzemN3"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="w-8 h-8 rounded-full bg-white/80 hover:bg-white text-text-dark hover:text-text-dark border border-stone-300/80 shadow-xs hover:shadow-sm flex items-center justify-center transition-all hover:scale-110"
+                                        aria-label="Instagram"
+                                    >
+                                        <svg
+                                            className="h-4 w-4"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            strokeWidth="2"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            viewBox="0 0 24 24"
+                                        >
+                                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                                        </svg>
+                                    </a>
+
+                                    <a
+                                        href="https://www.facebook.com/share/1EKGwphRAD/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="w-8 h-8 rounded-full bg-white/80 hover:bg-white text-text-dark hover:text-text-dark border border-stone-300/80 shadow-xs hover:shadow-sm flex items-center justify-center transition-all hover:scale-110"
+                                        aria-label="Facebook"
+                                    >
+                                        <svg className="h-4 w-4 fill-current" viewBox="0 0 24 24">
+                                            <path d="M14 13.5h2.5l1-4H14v-2c0-1.03.22-1.5 1.5-1.5H18V2.14c-.52-.07-1.62-.14-2.76-.14-3.26 0-5.24 1.83-5.24 5.5v2H7v4h3V22h4v-8.5z" />
+                                        </svg>
+                                    </a>
+
+                                    <a
+                                        href="https://www.tiktok.com/@frecuenciasacerdotisa?_r=1&_t=ZS-98GIniqHtys"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="w-8 h-8 rounded-full bg-white/80 hover:bg-white text-text-dark hover:text-text-dark border border-stone-300/80 shadow-xs hover:shadow-sm flex items-center justify-center transition-all hover:scale-110"
+                                        aria-label="TikTok"
+                                    >
+                                        <svg className="h-4 w-4 fill-current" viewBox="0 0 24 24">
+                                            <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.02 1.63 4.14 1.03 1.12 2.49 1.83 3.94 1.93v3.86c-1.77-.08-3.52-.64-4.91-1.74-.29-.23-.55-.49-.79-.77v5.77c.06 1.77-.42 3.58-1.42 5.03-1.15 1.74-3.12 2.92-5.18 3.06-2.31.2-4.71-.62-6.19-2.39-1.58-1.83-2.14-4.51-1.39-6.84.69-2.22 2.61-3.99 4.9-4.28.91-.12 1.84-.01 2.72.26v3.91c-.88-.28-1.89-.19-2.67.33-.88.56-1.42 1.57-1.44 2.62-.02 1.34.88 2.61 2.15 2.99 1.19.37 2.58-.09 3.25-1.16.42-.64.59-1.42.57-2.19V0h-.02z" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
