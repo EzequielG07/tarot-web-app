@@ -82,10 +82,12 @@ VALUES
 ('reiki-ninos-80', 'Reiki & Terapias Holísticas', 'Reiki para Niños y Adolescentes', 'Sesión 1 hr 20 min', '1 hr 20 min', 65000, 70, 31),
 ('reiki-mascotas-30', 'Reiki & Terapias Holísticas', 'Reiki para Mascotas', 'Sesión 30 min', '30 min', 35000, 40, 32),
 ('reiki-mascotas-50', 'Reiki & Terapias Holísticas', 'Reiki para Mascotas', 'Sesión 50 min', '50 min', 50000, 50, 33),
+('pausa-energetica', 'Reiki & Terapias Holísticas', 'Pausa Energética (Reiki)', 'Sesión breve 30 min', '30 min', 35000, 30, 34),
+('reiki-profundo', 'Reiki & Terapias Holísticas', 'Reiki Profundo', 'Armonización profunda 50 min', '50 min', 50000, 50, 35),
 
 -- Secciones Destacadas
-('experiencia-cuantica', 'Experiencias Destacadas', 'Experiencia Cuántica de Armonización', 'Tarjeta expandida', '50 min', 60000, 60, 34),
-('blog-sesion-integral', 'Experiencias Destacadas', 'Sesión Integral de Claridad (Blog)', 'Tarjeta en Blog', '50 min', 50000, 50, 35)
+('experiencia-cuantica', 'Experiencias Destacadas', 'Experiencia Cuántica de Armonización', 'Tarjeta expandida', '50 min', 60000, 60, 36),
+('blog-sesion-integral', 'Experiencias Destacadas', 'Sesión Integral de Claridad (Blog)', 'Tarjeta en Blog', '50 min', 50000, 50, 37)
 
 ON CONFLICT (id) DO UPDATE SET
     categoria = EXCLUDED.categoria,

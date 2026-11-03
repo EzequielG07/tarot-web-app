@@ -217,7 +217,7 @@ export const getEnergyServices = (getPrecio: (id: string) => PrecioItemInfo): En
         titulo: 'Limpieza · Armonización y Protección',
         subtitulo: 'Liberación de estrés, angustia y miedos',
         resumen: 'Para quienes sienten pesadez, estancamiento o necesidad de renovación energética. Liberación de cargas emocionales. Incluye diagnóstico energético inicial.',
-        precioDuracion: '30 min · $ 45,000 · USD 30. / 50 min · $ 60,000 · USD 50.',
+        precioDuracion: `${getPrecio('limpieza-armonizacion-30').labelText} / ${getPrecio('limpieza-armonizacion-50').labelText}`,
         contenidoCompleto: (
             <div className="space-y-4">
                 <p className="text-sm sm:text-base font-serif text-text-dark/90 leading-relaxed">
@@ -226,10 +226,10 @@ export const getEnergyServices = (getPrecio: (id: string) => PrecioItemInfo): En
                 <div className="space-y-3 pt-2">
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-3 bg-stone-50 rounded-xl border border-stone-200/50">
                         <span className="text-xs font-serif font-semibold text-text-dark/80">
-                            30 min · $ 45,000 · USD 30.
+                            {getPrecio('limpieza-armonizacion-30').labelText}
                         </span>
                         <Link
-                            href={getWhatsAppUrl("¡Hola Anita! Quisiera reservar la sesión de Limpieza, Armonización y Protección (30 min - $ 45,000 / USD 30). ¿Cómo podemos coordinar?")}
+                            href={getWhatsAppUrl(`¡Hola Anita! Quisiera reservar la sesión de Limpieza, Armonización y Protección (${getPrecio('limpieza-armonizacion-30').labelText}). ¿Cómo podemos coordinar?`)}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
@@ -239,10 +239,10 @@ export const getEnergyServices = (getPrecio: (id: string) => PrecioItemInfo): En
                     </div>
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-3 bg-stone-50 rounded-xl border border-stone-200/50">
                         <span className="text-xs font-serif font-semibold text-text-dark/80">
-                            50 min · $ 60,000 · USD 50.
+                            {getPrecio('limpieza-armonizacion-50').labelText}
                         </span>
                         <Link
-                            href={getWhatsAppUrl("¡Hola Anita! Quisiera reservar la sesión de Limpieza, Armonización y Protección (50 min - $ 60,000 / USD 50). ¿Cómo podemos coordinar?")}
+                            href={getWhatsAppUrl(`¡Hola Anita! Quisiera reservar la sesión de Limpieza, Armonización y Protección (${getPrecio('limpieza-armonizacion-50').labelText}). ¿Cómo podemos coordinar?`)}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
@@ -331,7 +331,7 @@ export const getEnergyServices = (getPrecio: (id: string) => PrecioItemInfo): En
         titulo: 'Baños y Limpias de Desbloqueo',
         subtitulo: 'Cuando sentís que necesitás soltar y volver a avanzar',
         resumen: 'Prácticas de purificación y renovación diseñadas de manera personalizada: amor, prosperidad, proyectos, protección y nuevos comienzos. Un ritual para marcar un antes y un después.',
-        precioDuracion: '50 min · $ 60,000 · USD 60.',
+        precioDuracion: getPrecio('banos-limpias-desbloqueo').labelText,
         contenidoCompleto: (
             <div className="space-y-4">
                 <p className="text-xs sm:text-sm font-serif italic text-text-dark/70">
@@ -365,7 +365,7 @@ export const getEnergyServices = (getPrecio: (id: string) => PrecioItemInfo): En
         titulo: 'Parapsicología Integral',
         subtitulo: 'Cuando lo evidente no alcanza para comprender lo que vivís',
         resumen: 'Aborda fenómenos y experiencias que escapan a las explicaciones habituales. Evaluación de situaciones inusuales desde una mirada de observación, análisis y exploración espiritual.',
-        precioDuracion: '50 min · $ 60,000 · USD 60.',
+        precioDuracion: getPrecio('parapsicologia-integral').labelText,
         contenidoCompleto: (
             <div className="space-y-4">
                 <p className="text-xs sm:text-sm font-serif italic text-text-dark/70">
@@ -402,7 +402,7 @@ export const getEnergyServices = (getPrecio: (id: string) => PrecioItemInfo): En
         titulo: 'Sanaciones Ancestrales',
         subtitulo: 'Comprender tus raíces para transformar tus patrones',
         resumen: 'Trabajo sobre patrones familiares, lealtades invisibles y cargas emocionales heredadas. Una experiencia de introspección, liberación simbólica y reconexión.',
-        precioDuracion: '50 min · $ 60,000 · USD 60.',
+        precioDuracion: getPrecio('sanaciones-ancestrales').labelText,
         contenidoCompleto: (
             <div className="space-y-4">
                 <p className="text-xs sm:text-sm font-serif italic text-text-dark/70">
@@ -473,7 +473,7 @@ export const getEnergyServices = (getPrecio: (id: string) => PrecioItemInfo): En
         titulo: 'Alta Magia Ritual y Psíquica',
         subtitulo: 'Apertura de caminos, cortes de daño y victoria',
         resumen: 'Cuando la fuerza de voluntad no basta, el trabajo energético abre puertas. Cortes de daño, apertura de caminos y rituales de éxito para el dominio de tu propio destino.',
-        precioDuracion: '50 min · $ 60,000 · USD 60.',
+        precioDuracion: getPrecio('alta-magia-ritual').labelText,
         contenidoCompleto: (
             <div className="space-y-4">
                 <p className="text-xs sm:text-sm font-serif italic text-text-dark/70">
@@ -510,7 +510,7 @@ export const getEnergyServices = (getPrecio: (id: string) => PrecioItemInfo): En
         titulo: 'Clarividencia Activa',
         subtitulo: 'Desarrollá una percepción más consciente de tu intuición',
         resumen: 'Espacio para profundizar la sensibilidad intuitiva, percepción y capacidad de interpretación para recibir mensajes nítidos. Se adapta a tu nivel y objetivo.',
-        precioDuracion: '50 min · $ 60,000 · USD 60.',
+        precioDuracion: getPrecio('clarividencia-activa').labelText,
         contenidoCompleto: (
             <div className="space-y-4">
                 <p className="text-xs sm:text-sm font-serif italic text-text-dark/70">

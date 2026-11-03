@@ -42,9 +42,11 @@ export const DEFAULT_PRECIOS: ServicioPrecio[] = [
     { id: 'reiki-ninos-80', categoria: 'Reiki & Terapias Holísticas', servicio_nombre: 'Reiki para Niños y Adolescentes', opcion_nombre: 'Sesión 1 hr 20 min', duracion: '1 hr 20 min', precio_ars: 65000, precio_usd: 70, orden: 31 },
     { id: 'reiki-mascotas-30', categoria: 'Reiki & Terapias Holísticas', servicio_nombre: 'Reiki para Mascotas', opcion_nombre: 'Sesión 30 min', duracion: '30 min', precio_ars: 35000, precio_usd: 40, orden: 32 },
     { id: 'reiki-mascotas-50', categoria: 'Reiki & Terapias Holísticas', servicio_nombre: 'Reiki para Mascotas', opcion_nombre: 'Sesión 50 min', duracion: '50 min', precio_ars: 50000, precio_usd: 50, orden: 33 },
+    { id: 'pausa-energetica', categoria: 'Reiki & Terapias Holísticas', servicio_nombre: 'Pausa Energética (Reiki)', opcion_nombre: 'Sesión breve 30 min', duracion: '30 min', precio_ars: 35000, precio_usd: 30, orden: 34 },
+    { id: 'reiki-profundo', categoria: 'Reiki & Terapias Holísticas', servicio_nombre: 'Reiki Profundo', opcion_nombre: 'Armonización profunda 50 min', duracion: '50 min', precio_ars: 50000, precio_usd: 50, orden: 35 },
 
-    { id: 'experiencia-cuantica', categoria: 'Experiencias Destacadas', servicio_nombre: 'Experiencia Cuántica de Armonización', opcion_nombre: 'Tarjeta expandida', duracion: '50 min', precio_ars: 60000, precio_usd: 60, orden: 34 },
-    { id: 'blog-sesion-integral', categoria: 'Experiencias Destacadas', servicio_nombre: 'Sesión Integral de Claridad (Blog)', opcion_nombre: 'Tarjeta en Blog', duracion: '50 min', precio_ars: 50000, precio_usd: 50, orden: 35 }
+    { id: 'experiencia-cuantica', categoria: 'Experiencias Destacadas', servicio_nombre: 'Experiencia Cuántica de Armonización', opcion_nombre: 'Tarjeta expandida', duracion: '50 min', precio_ars: 60000, precio_usd: 60, orden: 36 },
+    { id: 'blog-sesion-integral', categoria: 'Experiencias Destacadas', servicio_nombre: 'Sesión Integral de Claridad (Blog)', opcion_nombre: 'Tarjeta en Blog', duracion: '50 min', precio_ars: 50000, precio_usd: 50, orden: 37 }
 ];
 
 export interface PrecioItemInfo {

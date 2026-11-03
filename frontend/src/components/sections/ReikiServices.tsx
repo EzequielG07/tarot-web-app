@@ -25,7 +25,7 @@ export const getReikiServices = (getPrecio: (id: string) => PrecioItemInfo): Rei
         titulo: 'Reiki Usui · El Despertar del Equilibrio',
         subtitulo: 'Volvé a encontrar un espacio de calma',
         resumen: 'Reiki Usui propone un momento de pausa, relajación y conexión interior mediante una práctica energética tradicional. Ideal para acompañar procesos de relajación, descanso y equilibrio emocional.',
-        precioDuracion: '50 min · $ 50,000 · USD 50. / 1 hr 20 min · $ 65,000 · USD 70.',
+        precioDuracion: `${getPrecio('reiki-usui-50').labelText} / ${getPrecio('reiki-usui-80').labelText}`,
         contenidoCompleto: (
             <div className="space-y-4">
                 <p className="text-base font-serif italic text-text-dark/95 leading-relaxed">
@@ -77,7 +77,7 @@ export const getReikiServices = (getPrecio: (id: string) => PrecioItemInfo): Rei
         titulo: 'Alineación de Chakras y Armonización Vital',
         subtitulo: 'Cuando necesitás volver a encontrar tu centro',
         resumen: 'Una sesión enfocada en el trabajo energético de los principales centros de energía. Incluye trabajo sobre los 7 chakras, campo áurico y protección energética.',
-        precioDuracion: '50 min · $ 50,000 · USD 50. / 1 hr 20 min · $ 65,000 · USD 70.',
+        precioDuracion: `${getPrecio('alineacion-chakras-50').labelText} / ${getPrecio('alineacion-chakras-80').labelText}`,
         contenidoCompleto: (
             <div className="space-y-4">
                 <p className="text-xs sm:text-sm font-serif italic text-text-dark/70">
@@ -127,7 +127,7 @@ export const getReikiServices = (getPrecio: (id: string) => PrecioItemInfo): Rei
         titulo: 'Karmic Reiki · Liberación de Lazos y Patrones',
         subtitulo: 'Para explorar aquello que parece repetirse una y otra vez',
         resumen: 'Abordaje espiritual orientado a trabajar sobre patrones repetitivos, vínculos y apegos que necesitás comprender y soltar. Una experiencia de introspección y liberación.',
-        precioDuracion: '50 min · $ 50,000 · USD 50. / 1 hr 20 min · $ 65,000 · USD 70.',
+        precioDuracion: `${getPrecio('karmic-reiki-50').labelText} / ${getPrecio('karmic-reiki-80').labelText}`,
         contenidoCompleto: (
             <div className="space-y-4">
                 <p className="text-xs sm:text-sm font-serif italic text-text-dark/70">
@@ -177,7 +177,7 @@ export const getReikiServices = (getPrecio: (id: string) => PrecioItemInfo): Rei
         titulo: 'Karuna Reiki · Sanación desde la Compasión',
         subtitulo: 'Un espacio para tratarte con más suavidad',
         resumen: 'Karuna significa acción compasiva. Propone un trabajo energético para cultivar armonía interior, calma, aceptación y conexión profunda con uno mismo.',
-        precioDuracion: '50 min · $ 50,000 · USD 50. / 1 hr 20 min · $ 65,000 · USD 70.',
+        precioDuracion: `${getPrecio('karuna-reiki-50').labelText} / ${getPrecio('karuna-reiki-80').labelText}`,
         contenidoCompleto: (
             <div className="space-y-4">
                 <p className="text-xs sm:text-sm font-serif italic text-text-dark/70">
@@ -227,7 +227,7 @@ export const getReikiServices = (getPrecio: (id: string) => PrecioItemInfo): Rei
         titulo: 'Reiki Jin Kei Do · Sabiduría en Movimiento',
         subtitulo: 'Silenciar el ruido para volver a escucharte',
         resumen: 'Integra Reiki, respiración consciente, atención interior y presencia. Ideal para mentes activas, líderes y terapeutas que buscan despejar el canal mental y fluir.',
-        precioDuracion: '50 min · $ 50,000 · USD 50. / 1 hr 20 min · $ 65,000 · USD 70.',
+        precioDuracion: `${getPrecio('reiki-jin-kei-do-50').labelText} / ${getPrecio('reiki-jin-kei-do-80').labelText}`,
         contenidoCompleto: (
             <div className="space-y-4">
                 <p className="text-xs sm:text-sm font-serif italic text-text-dark/70">
@@ -277,7 +277,7 @@ export const getReikiServices = (getPrecio: (id: string) => PrecioItemInfo): Rei
         titulo: 'Hará Reiki · Tu Centro de Poder Vital',
         subtitulo: 'Volvé a tu eje y recupera tu estabilidad',
         resumen: 'Si sufres de fatiga, dispersión o indecisión. Centramos tu energía en el Hara para recuperar el equilibrio físico, enraizamiento y estabilidad emocional.',
-        precioDuracion: '50 min · $ 50,000 · USD 50. / 1 hr 20 min · $ 65,000 · USD 70.',
+        precioDuracion: `${getPrecio('hara-reiki-50').labelText} / ${getPrecio('hara-reiki-80').labelText}`,
         contenidoCompleto: (
             <div className="space-y-4">
                 <p className="text-xs sm:text-sm font-serif italic text-text-dark/70">
@@ -327,7 +327,7 @@ export const getReikiServices = (getPrecio: (id: string) => PrecioItemInfo): Rei
         titulo: 'Reiki con Arcángeles · Sintonía de Luz',
         subtitulo: 'Un espacio de calma, protección y conexión espiritual',
         resumen: 'Combina el Reiki con el simbolismo y la energía de los Arcángeles para brindar consuelo, restauración energética del ser, amor puro y profunda paz interior.',
-        precioDuracion: '50 min · $ 50,000 · USD 50. / 1 hr 20 min · $ 65,000 · USD 70.',
+        precioDuracion: `${getPrecio('reiki-arcangeles-50').labelText} / ${getPrecio('reiki-arcangeles-80').labelText}`,
         contenidoCompleto: (
             <div className="space-y-4">
                 <p className="text-xs sm:text-sm font-serif italic text-text-dark/70">
@@ -377,7 +377,7 @@ export const getReikiServices = (getPrecio: (id: string) => PrecioItemInfo): Rei
         titulo: 'Apertura del Tercer Ojo · Visión Interior',
         subtitulo: 'Cuando querés escuchar con mayor claridad tu propia intuición',
         resumen: 'Experiencia energética orientada al desarrollo de la percepción interior, la introspección y la sensibilidad intuitiva. Para silenciar el ruido y conectar con tu mundo interior.',
-        precioDuracion: '50 min · $ 60,000 · USD 60.',
+        precioDuracion: getPrecio('apertura-tercer-ojo').labelText,
         contenidoCompleto: (
             <div className="space-y-4">
                 <p className="text-xs sm:text-sm font-serif italic text-text-dark/70">
@@ -412,7 +412,7 @@ export const getReikiServices = (getPrecio: (id: string) => PrecioItemInfo): Rei
         titulo: 'Reiki para Niños y Adolescentes',
         subtitulo: 'Acompañamiento sereno en cada etapa de crecimiento',
         resumen: 'Espacio de contención y templanza para equilibrar el campo vibratorio, favorecer la calma y un descanso reparador, abordando tensiones y transiciones de crecimiento.',
-        precioDuracion: '50 min · $ 50,000 · USD 50. / 1 hr 20 min · $ 65,000 · USD 70.',
+        precioDuracion: `${getPrecio('reiki-ninos-50').labelText} / ${getPrecio('reiki-ninos-80').labelText}`,
         contenidoCompleto: (
             <div className="space-y-4">
                 <p className="text-xs sm:text-sm font-serif italic text-text-dark/70">
@@ -462,7 +462,7 @@ export const getReikiServices = (getPrecio: (id: string) => PrecioItemInfo): Rei
         titulo: 'Reiki para Mascotas · Armonía y Bienestar',
         subtitulo: 'Porque ellos también perciben el ambiente que los rodea',
         resumen: 'Sesión sutil para reconfortar a animales de compañía ante mudanzas, miedos, decaimiento o estrés ambiental, devolviéndoles su vitalidad y serenidad natural.',
-        precioDuracion: '30 min · $ 35,000 · USD 40. / 50 min · $ 50,000 · USD 50.',
+        precioDuracion: `${getPrecio('reiki-mascotas-30').labelText} / ${getPrecio('reiki-mascotas-50').labelText}`,
         contenidoCompleto: (
             <div className="space-y-4">
                 <p className="text-xs sm:text-sm font-serif italic text-text-dark/70">

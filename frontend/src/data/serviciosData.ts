@@ -59,7 +59,7 @@ Esta sesión propone una mirada integral combinando diagnóstico energético, pe
 • Obtener mayor claridad sobre tus próximos pasos.`,
         modalidades: [
             {
-                id: 'sesion-diagnostico-profundo',
+                id: 'diagnostico-energetico-profundo',
                 nombre: 'Sesión Diagnóstico y Lectura Profunda',
                 duracion: '50 min',
                 precioDuracion: '50 min · $ 60,000 · USD 60.',
@@ -117,7 +117,7 @@ Esta propuesta trabaja sobre campo energético, chakras, protección y armonizac
 Elegí tu nivel de limpieza:`,
         modalidades: [
             {
-                id: 'limpieza-armonizacion',
+                id: 'limpieza-armonizacion-30',
                 nombre: 'Limpieza y Armonización',
                 duracion: '30 min',
                 precioDuracion: '30 min · $ 45,000 · USD 30.',
@@ -125,7 +125,7 @@ Elegí tu nivel de limpieza:`,
                 link: '/schedule',
             },
             {
-                id: 'limpieza-profunda-3en1',
+                id: 'limpieza-armonizacion-50',
                 nombre: 'Limpieza y Armonización Profunda',
                 tag: 'Limpieza 3 en 1',
                 duracion: '50 min',
