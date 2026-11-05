@@ -24,7 +24,7 @@ export const AboutMeContent = () => {
                 {/* Imagen flotante a la izquierda */}
                 <div className="float-left mr-4 mb-3 sm:mr-5 sm:mb-3 w-32 sm:w-40 md:w-44 aspect-[3/4] relative rounded-2xl overflow-hidden shadow-sm">
                     <Image
-                        src="/images/about/tarotista-example.jpg"
+                        src="/images/about/tarotista-example.webp"
                         alt="Anita - Tarotista"
                         fill
                         className="object-cover object-center"

@@ -17,7 +17,7 @@ export const AboutMeBook = () => {
                 {/* Portada (5 sub-cols -> 33.3%) */}
                 <div className="sm:col-span-5 w-full aspect-[2/3] relative rounded-xl overflow-hidden">
                     <Image
-                        src="/images/about/portada-libro.png"
+                        src="/images/about/portada-libro.webp"
                         alt="Portada de Libro Destacado"
                         fill
                         className="object-cover object-center"

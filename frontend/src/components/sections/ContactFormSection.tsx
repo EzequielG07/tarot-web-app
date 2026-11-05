@@ -119,7 +119,7 @@ export const ContactFormSection = () => {
             {/* Imagen de fondo ocupando el 100% solo en Desktop (>= lg) */}
             <div className="hidden lg:block absolute inset-0 w-full h-full">
                 <Image
-                    src="/images/backgrounds/turnos-bg.png"
+                    src="/images/backgrounds/turnos-bg.webp"
                     alt="Fondo de contacto"
                     fill
                     className="object-cover object-left"
@@ -130,7 +130,7 @@ export const ContactFormSection = () => {
             {/* Imagen de encabezado solo visible en Mobile (< lg) */}
             <div className="block lg:hidden w-full relative aspect-square sm:aspect-[4/3] max-h-[380px] rounded-2xl overflow-hidden mb-6 shadow-lg border border-white/10">
                 <Image
-                    src="/images/backgrounds/turnos-bg-mobile.png"
+                    src="/images/backgrounds/turnos-bg-mobile.webp"
                     alt="Contacto Anita Tarot"
                     fill
                     className="object-cover object-center"
@@ -167,11 +167,10 @@ export const ContactFormSection = () => {
                                 onChange={handleChange}
                                 onBlur={handleBlur}
                                 placeholder="Tu nombre"
-                                className={`w-full px-4 py-2.5 rounded-xl text-text-light text-sm placeholder:text-text-light/40 focus:outline-none transition-colors ${
-                                    errors.nombre && touched.nombre
+                                className={`w-full px-4 py-2.5 rounded-xl text-text-light text-sm placeholder:text-text-light/40 focus:outline-none transition-colors ${errors.nombre && touched.nombre
                                         ? 'bg-red-950/20 border border-red-400 focus:border-red-400'
                                         : 'bg-white/10 border border-white/15 focus:border-amber-400/60'
-                                }`}
+                                    }`}
                                 required
                             />
                             {errors.nombre && touched.nombre && (
@@ -192,11 +191,10 @@ export const ContactFormSection = () => {
                                 onChange={handleChange}
                                 onBlur={handleBlur}
                                 placeholder="+54 9 11 ..."
-                                className={`w-full px-4 py-2.5 rounded-xl text-text-light text-sm placeholder:text-text-light/40 focus:outline-none transition-colors ${
-                                    errors.celular && touched.celular
+                                className={`w-full px-4 py-2.5 rounded-xl text-text-light text-sm placeholder:text-text-light/40 focus:outline-none transition-colors ${errors.celular && touched.celular
                                         ? 'bg-red-950/20 border border-red-400 focus:border-red-400'
                                         : 'bg-white/10 border border-white/15 focus:border-amber-400/60'
-                                }`}
+                                    }`}
                                 required
                             />
                             {errors.celular && touched.celular && (
@@ -217,11 +215,10 @@ export const ContactFormSection = () => {
                                 onChange={handleChange}
                                 onBlur={handleBlur}
                                 placeholder="tu@email.com"
-                                className={`w-full px-4 py-2.5 rounded-xl text-text-light text-sm placeholder:text-text-light/40 focus:outline-none transition-colors ${
-                                    errors.email && touched.email
+                                className={`w-full px-4 py-2.5 rounded-xl text-text-light text-sm placeholder:text-text-light/40 focus:outline-none transition-colors ${errors.email && touched.email
                                         ? 'bg-red-950/20 border border-red-400 focus:border-red-400'
                                         : 'bg-white/10 border border-white/15 focus:border-amber-400/60'
-                                }`}
+                                    }`}
                                 required
                             />
                             {errors.email && touched.email && (
@@ -242,11 +239,10 @@ export const ContactFormSection = () => {
                                 onChange={handleChange}
                                 onBlur={handleBlur}
                                 placeholder="Escribí tu mensaje o consulta acá..."
-                                className={`w-full px-4 py-2.5 rounded-xl text-text-light text-sm placeholder:text-text-light/40 focus:outline-none transition-colors resize-none ${
-                                    errors.consulta && touched.consulta
+                                className={`w-full px-4 py-2.5 rounded-xl text-text-light text-sm placeholder:text-text-light/40 focus:outline-none transition-colors resize-none ${errors.consulta && touched.consulta
                                         ? 'bg-red-950/20 border border-red-400 focus:border-red-400'
                                         : 'bg-white/10 border border-white/15 focus:border-amber-400/60'
-                                }`}
+                                    }`}
                                 required
                             />
                             {errors.consulta && touched.consulta && (
@@ -259,11 +255,10 @@ export const ContactFormSection = () => {
                             <button
                                 type="submit"
                                 disabled={!isFormComplete}
-                                className={`w-full py-3 px-6 rounded-full text-text-light bg-btn-dark uppercase font-bold text-xs tracking-wider transition-all ${
-                                    isFormComplete
+                                className={`w-full py-3 px-6 rounded-full text-text-light bg-btn-dark uppercase font-bold text-xs tracking-wider transition-all ${isFormComplete
                                         ? 'hover:bg-btn-dark-hover cursor-pointer'
                                         : 'opacity-50 cursor-not-allowed border border-white/10'
-                                }`}
+                                    }`}
                             >
                                 Enviar Consulta →
                             </button>

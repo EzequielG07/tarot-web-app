@@ -45,7 +45,7 @@ export const AboutMeBlog = () => {
             titulo: 'RITUAL DE LIMPIEZA ENERGÉTICA Y PROTECCIÓN',
             subtitulo: 'Cuando necesitás recuperar la armonía y fortalecer tu protección espiritual',
             tag: 'Limpieza & Protección',
-            imagen: '/images/about/thumb-1.png',
+            imagen: '/images/about/thumb-1.webp',
             contenido: (
                 <div className="space-y-5 text-text-dark text-sm sm:text-base font-serif leading-relaxed">
                     <p className="italic text-text-dark/90 text-base sm:text-lg">
@@ -133,7 +133,7 @@ export const AboutMeBlog = () => {
             titulo: '5 RITUALES PARA REALIZAR EL 31 DE DICIEMBRE',
             subtitulo: 'Despedí el año, renová tu energía y preparate para recibir un nuevo ciclo',
             tag: 'Fin de Año & Prosperidad',
-            imagen: '/images/about/thumb-2.png',
+            imagen: '/images/about/thumb-2.webp',
             contenido: (
                 <div className="space-y-5 text-text-dark text-sm sm:text-base font-serif leading-relaxed">
                     <p className="italic text-text-dark/90 text-base sm:text-lg">
@@ -227,7 +227,7 @@ export const AboutMeBlog = () => {
             {/* Imagen de fondo */}
             <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
                 <Image
-                    src="/images/backgrounds/aboutmeblog-bg.jpeg"
+                    src="/images/backgrounds/aboutmeblog-bg.webp"
                     alt="Fondo de Rituales"
                     fill
                     className="object-cover object-center"
