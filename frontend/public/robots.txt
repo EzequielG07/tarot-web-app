@@ -1,0 +1,12 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Bloqueo explícito del panel administrativo y autenticación
+Disallow: /admin/
+Disallow: /admin/login/
+Disallow: /admin/dashboard/
+
+# Mapa del sitio para rastreadores de Google y Bing
+Sitemap: https://anitatarotista.com/sitemap.xml
+

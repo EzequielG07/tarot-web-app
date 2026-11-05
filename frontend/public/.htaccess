@@ -1,0 +1,57 @@
+# ========================================================
+# CABECERAS DE SEGURIDAD Y PROTECCIÓN HTTP (HOSTINGER)
+# ========================================================
+
+<IfModule mod_headers.c>
+    # 1. HSTS (HTTP Strict Transport Security) - Obliga navegación HTTPS por 1 año
+    Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" env=HTTPS
+
+    # 2. X-Frame-Options - Protección Anti-Clickjacking (Impide incrustar la web en iframes externos)
+    Header always set X-Frame-Options "DENY"
+
+    # 3. X-Content-Type-Options - Impide que el navegador adivine tipos MIME (Anti-MIME Sniffing)
+    Header always set X-Content-Type-Options "nosniff"
+
+    # 4. Referrer-Policy - Protege datos de referencia
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+    # 5. Permissions-Policy - Deshabilita accesos innecesarios a hardware y APIs sensibles
+    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()"
+
+    # 6. X-XSS-Protection - Filtro de protección XSS heredado
+    Header always set X-XSS-Protection "1; mode=block"
+
+    # 7. Content-Security-Policy (CSP) - Protección estricta contra XSS e inyecciones de código
+    Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://apis.google.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: blob: https://*.supabase.co https://*.googleusercontent.com; media-src 'self' data: blob:; connect-src 'self' https://*.supabase.co https://*.supabase.in https://api.whatsapp.com https://wa.me; frame-ancestors 'none'; object-src 'none'; base-uri 'self';"
+</IfModule>
+
+# ========================================================
+# REGLAS DE REESCRITURA Y ENRUTAMIENTO (SPA / NEXT.JS EXPORT)
+# ========================================================
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Forzar HTTPS en Hostinger
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    # Prevenir acceso directo a archivos sensibles o de configuración
+    RewriteRule ^(\.env|\.git|\.well-known|schema_legal\.sql|schema\.sql) - [F,L,NC]
+
+    # Soporte para rutas limpias de Next.js export con trailingSlash
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME}/index.html -f
+    RewriteRule ^(.*)/?$ $1/index.html [L]
+</IfModule>
+
+# Bloquear listado de directorios
+Options -Indexes
+
+# ========================================================
+# COMPRESIÓN Y CACHÉ DE RENDIMIENTO
+# ========================================================
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/javascript application/json image/svg+xml
+</IfModule>
+
