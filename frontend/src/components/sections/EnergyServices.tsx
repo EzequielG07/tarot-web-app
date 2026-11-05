@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { getWhatsAppUrl } from '@/utils/whatsapp';
 import { usePrecios, PrecioItemInfo } from '@/context/PreciosContext';
 import { useMemo } from 'react';
+import { useClickwrap } from '@/context/ClickwrapContext';
 
 export interface EnergyServiceItem {
     id: string;
@@ -18,7 +19,7 @@ export interface EnergyServiceItem {
     contenidoCompleto: React.ReactNode;
 }
 
-export const getEnergyServices = (getPrecio: (id: string) => PrecioItemInfo): EnergyServiceItem[] => [
+export const getEnergyServices = (getPrecio: (id: string) => PrecioItemInfo, onReservar?: (servicioId: string, servicioNombre: string, precioTexto: string) => void): EnergyServiceItem[] => [
     {
         id: 'lecturas-tarot',
         tag: 'Servicios Energéticos',
@@ -72,14 +73,13 @@ export const getEnergyServices = (getPrecio: (id: string) => PrecioItemInfo): En
                     <div className="text-xs font-serif font-semibold text-text-dark/80">
                         {getPrecio('orientacion-express').labelText}
                     </div>
-                    <Link
-                        href={getWhatsAppUrl(`¡Hola Anita! Quisiera solicitar una Orientación Express (${getPrecio('orientacion-express').labelText}). ¿Cómo podemos coordinar?`)}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
+                    <button
+                        type="button"
+                        onClick={() => onReservar?.('orientacion-express', 'Orientación Express', getPrecio('orientacion-express').labelText)}
+                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 cursor-pointer"
                     >
                         Quiero mi Orientación →
-                    </Link>
+                    </button>
                 </div>
             </div>
         ),
@@ -100,14 +100,13 @@ export const getEnergyServices = (getPrecio: (id: string) => PrecioItemInfo): En
                     <div className="text-xs font-serif font-semibold text-text-dark/80">
                         {getPrecio('lectura-claridad').labelText}
                     </div>
-                    <Link
-                        href={getWhatsAppUrl(`¡Hola Anita! Quisiera reservar una Lectura de Claridad (${getPrecio('lectura-claridad').labelText}). ¿Cómo podemos coordinar?`)}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
+                    <button
+                        type="button"
+                        onClick={() => onReservar?.('lectura-claridad', 'Lectura de Claridad', getPrecio('lectura-claridad').labelText)}
+                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 cursor-pointer"
                     >
                         Reservar 30 Min →
-                    </Link>
+                    </button>
                 </div>
             </div>
         ),
@@ -132,14 +131,13 @@ export const getEnergyServices = (getPrecio: (id: string) => PrecioItemInfo): En
                     <div className="text-xs font-serif font-semibold text-text-dark/80">
                         {getPrecio('sesion-integral-claridad').labelText}
                     </div>
-                    <Link
-                        href={getWhatsAppUrl(`¡Hola Anita! Quisiera reservar la Sesión Integral de Claridad (${getPrecio('sesion-integral-claridad').labelText}). ¿Cómo podemos coordinar?`)}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
+                    <button
+                        type="button"
+                        onClick={() => onReservar?.('sesion-integral-claridad', 'Sesión Integral de Claridad', getPrecio('sesion-integral-claridad').labelText)}
+                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 cursor-pointer"
                     >
                         Reservar Sesión →
-                    </Link>
+                    </button>
                 </div>
             </div>
         ),
@@ -163,14 +161,13 @@ export const getEnergyServices = (getPrecio: (id: string) => PrecioItemInfo): En
                     <div className="text-xs font-serif font-semibold text-text-dark/80">
                         {getPrecio('diagnostico-energetico-profundo').labelText}
                     </div>
-                    <Link
-                        href={getWhatsAppUrl(`¡Hola Anita! Quisiera solicitar el Diagnóstico Energético y Lectura Profunda (${getPrecio('diagnostico-energetico-profundo').labelText}). ¿Cómo podemos coordinar?`)}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
+                    <button
+                        type="button"
+                        onClick={() => onReservar?.('diagnostico-energetico-profundo', 'Diagnóstico Energético Profundo', getPrecio('diagnostico-energetico-profundo').labelText)}
+                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 cursor-pointer"
                     >
                         Quiero mi Diagnóstico →
-                    </Link>
+                    </button>
                 </div>
             </div>
         ),
@@ -199,14 +196,13 @@ export const getEnergyServices = (getPrecio: (id: string) => PrecioItemInfo): En
                     <div className="text-xs font-serif font-semibold text-text-dark/80">
                         {getPrecio('diagnostico-sesion-armonizacion').labelText}
                     </div>
-                    <Link
-                        href={getWhatsAppUrl(`¡Hola Anita! Quisiera reservar la Experiencia Premium: Diagnóstico + Sesión de Armonización (${getPrecio('diagnostico-sesion-armonizacion').labelText}). ¿Cómo podemos coordinar?`)}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
+                    <button
+                        type="button"
+                        onClick={() => onReservar?.('diagnostico-sesion-armonizacion', 'Diagnóstico + Sesión de Armonización', getPrecio('diagnostico-sesion-armonizacion').labelText)}
+                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 cursor-pointer"
                     >
                         Reservar Experiencia Premium →
-                    </Link>
+                    </button>
                 </div>
             </div>
         ),
@@ -228,27 +224,25 @@ export const getEnergyServices = (getPrecio: (id: string) => PrecioItemInfo): En
                         <span className="text-xs font-serif font-semibold text-text-dark/80">
                             {getPrecio('limpieza-armonizacion-30').labelText}
                         </span>
-                        <Link
-                            href={getWhatsAppUrl(`¡Hola Anita! Quisiera reservar la sesión de Limpieza, Armonización y Protección (${getPrecio('limpieza-armonizacion-30').labelText}). ¿Cómo podemos coordinar?`)}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
-                        >
-                            Quiero Armonizarme (30 min) →
-                        </Link>
+                        <button
+                        type="button"
+                        onClick={() => onReservar?.('limpieza-armonizacion-30', 'Limpieza, Armonización y Protección (30 min)', getPrecio('limpieza-armonizacion-30').labelText)}
+                        className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 cursor-pointer"
+                    >
+                        Quiero Armonizarme (30 min) →
+                    </button>
                     </div>
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-3 bg-stone-50 rounded-xl border border-stone-200/50">
                         <span className="text-xs font-serif font-semibold text-text-dark/80">
                             {getPrecio('limpieza-armonizacion-50').labelText}
                         </span>
-                        <Link
-                            href={getWhatsAppUrl(`¡Hola Anita! Quisiera reservar la sesión de Limpieza, Armonización y Protección (${getPrecio('limpieza-armonizacion-50').labelText}). ¿Cómo podemos coordinar?`)}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
-                        >
-                            Quiero Armonizarme (50 min) →
-                        </Link>
+                        <button
+                        type="button"
+                        onClick={() => onReservar?.('limpieza-armonizacion-50', 'Limpieza, Armonización y Protección (50 min)', getPrecio('limpieza-armonizacion-50').labelText)}
+                        className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 cursor-pointer"
+                    >
+                        Quiero Armonizarme (50 min) →
+                    </button>
                     </div>
                 </div>
             </div>
@@ -276,14 +270,13 @@ export const getEnergyServices = (getPrecio: (id: string) => PrecioItemInfo): En
                     <div className="text-xs font-serif font-semibold text-text-dark/80">
                         {getPrecio('limpieza-destrabe-caminos').labelText}
                     </div>
-                    <Link
-                        href={getWhatsAppUrl(`¡Hola Anita! Quisiera consultar y solicitar una sesión de Limpieza, Destrabe y Apertura de Caminos (${getPrecio('limpieza-destrabe-caminos').labelText}). ¿Cómo podemos coordinar?`)}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
+                    <button
+                        type="button"
+                        onClick={() => onReservar?.('limpieza-destrabe-caminos', 'Limpieza, Destrabe y Apertura de Caminos', getPrecio('limpieza-destrabe-caminos').labelText)}
+                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 cursor-pointer"
                     >
                         Quiero Abrir Caminos →
-                    </Link>
+                    </button>
                 </div>
             </div>
         ),
@@ -313,14 +306,13 @@ export const getEnergyServices = (getPrecio: (id: string) => PrecioItemInfo): En
                     <div className="text-xs font-serif font-semibold text-text-dark/80">
                         {getPrecio('limpieza-espacios').labelText}
                     </div>
-                    <Link
-                        href={getWhatsAppUrl(`¡Hola Anita! Quisiera consultar por la Limpieza y Armonización de Espacios (${getPrecio('limpieza-espacios').labelText}). ¿Cómo podemos coordinar?`)}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
+                    <button
+                        type="button"
+                        onClick={() => onReservar?.('limpieza-espacios', 'Limpieza y Armonización de Espacios', getPrecio('limpieza-espacios').labelText)}
+                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 cursor-pointer"
                     >
-                        Consulta Armonizar mi Espacio →
-                    </Link>
+                        Armonizar mi Espacio →
+                    </button>
                 </div>
             </div>
         ),
@@ -347,14 +339,13 @@ export const getEnergyServices = (getPrecio: (id: string) => PrecioItemInfo): En
                     <div className="text-xs font-serif font-semibold text-text-dark/80">
                         {getPrecio('banos-limpias-desbloqueo').labelText}
                     </div>
-                    <Link
-                        href={getWhatsAppUrl(`¡Hola Anita! Quisiera consultar por los Baños y Limpias de Desbloqueo (${getPrecio('banos-limpias-desbloqueo').labelText}). ¿Cómo podemos coordinar?`)}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
+                    <button
+                        type="button"
+                        onClick={() => onReservar?.('banos-limpias-desbloqueo', 'Baños y Limpias de Desbloqueo', getPrecio('banos-limpias-desbloqueo').labelText)}
+                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 cursor-pointer"
                     >
                         Consulta mi Limpia →
-                    </Link>
+                    </button>
                 </div>
             </div>
         ),
@@ -384,14 +375,13 @@ export const getEnergyServices = (getPrecio: (id: string) => PrecioItemInfo): En
                     <div className="text-xs font-serif font-semibold text-text-dark/80">
                         {getPrecio('parapsicologia-integral').labelText}
                     </div>
-                    <Link
-                        href={getWhatsAppUrl(`¡Hola Anita! Quisiera una Consulta Personalizada de Parapsicología Integral (${getPrecio('parapsicologia-integral').labelText}). ¿Cómo podemos coordinar?`)}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
+                    <button
+                        type="button"
+                        onClick={() => onReservar?.('parapsicologia-integral', 'Parapsicología Integral', getPrecio('parapsicologia-integral').labelText)}
+                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 cursor-pointer"
                     >
                         Consulta Personalizada →
-                    </Link>
+                    </button>
                 </div>
             </div>
         ),
@@ -421,14 +411,13 @@ export const getEnergyServices = (getPrecio: (id: string) => PrecioItemInfo): En
                     <div className="text-xs font-serif font-semibold text-text-dark/80">
                         {getPrecio('sanaciones-ancestrales').labelText}
                     </div>
-                    <Link
-                        href={getWhatsAppUrl(`¡Hola Anita! Quisiera agendar una Sesión de Sanación Ancestral (${getPrecio('sanaciones-ancestrales').labelText}). ¿Cómo podemos coordinar?`)}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
+                    <button
+                        type="button"
+                        onClick={() => onReservar?.('sanaciones-ancestrales', 'Sanaciones Ancestrales', getPrecio('sanaciones-ancestrales').labelText)}
+                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 cursor-pointer"
                     >
                         Sesión Sanación Ancestral →
-                    </Link>
+                    </button>
                 </div>
             </div>
         ),
@@ -492,14 +481,13 @@ export const getEnergyServices = (getPrecio: (id: string) => PrecioItemInfo): En
                     <div className="text-xs font-serif font-semibold text-text-dark/80">
                         {getPrecio('alta-magia-ritual').labelText}
                     </div>
-                    <Link
-                        href={getWhatsAppUrl(`¡Hola Anita! Quisiera consultar mi caso para un trabajo de Alta Magia Ritual y Psíquica (${getPrecio('alta-magia-ritual').labelText}). ¿Cómo podemos coordinar?`)}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
+                    <button
+                        type="button"
+                        onClick={() => onReservar?.('alta-magia-ritual', 'Alta Magia Ritual y Psíquica', getPrecio('alta-magia-ritual').labelText)}
+                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 cursor-pointer"
                     >
                         Consultar mi Caso →
-                    </Link>
+                    </button>
                 </div>
             </div>
         ),
@@ -526,14 +514,13 @@ export const getEnergyServices = (getPrecio: (id: string) => PrecioItemInfo): En
                     <div className="text-xs font-serif font-semibold text-text-dark/80">
                         {getPrecio('clarividencia-activa').labelText}
                     </div>
-                    <Link
-                        href={getWhatsAppUrl(`¡Hola Anita! Quisiera agendar una sesión de Clarividencia Activa (${getPrecio('clarividencia-activa').labelText}). ¿Cómo podemos coordinar?`)}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
+                    <button
+                        type="button"
+                        onClick={() => onReservar?.('clarividencia-activa', 'Clarividencia Activa', getPrecio('clarividencia-activa').labelText)}
+                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 cursor-pointer"
                     >
                         Explorar mi Intuición →
-                    </Link>
+                    </button>
                 </div>
             </div>
         ),
@@ -542,7 +529,18 @@ export const getEnergyServices = (getPrecio: (id: string) => PrecioItemInfo): En
 
 export const EnergyServices = () => {
     const { getPrecio, preciosList } = usePrecios();
-    const energyServices = useMemo(() => getEnergyServices(getPrecio), [getPrecio, preciosList]);
+    const { abrirClickwrap } = useClickwrap();
+
+    const handleReservar = (servicioId: string, servicioNombre: string, precioTexto: string) => {
+        setSelectedService(null);
+        abrirClickwrap({
+            servicioId,
+            servicioNombre,
+            precioTexto,
+        });
+    };
+
+    const energyServices = useMemo(() => getEnergyServices(getPrecio, handleReservar), [getPrecio, preciosList, abrirClickwrap]);
     const [selectedService, setSelectedService] = useState<EnergyServiceItem | null>(null);
 
     // Cierre con la tecla Escape y bloqueo del scroll de fondo cuando el modal está abierto

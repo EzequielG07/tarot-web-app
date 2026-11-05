@@ -5,6 +5,7 @@ import { useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { getWhatsAppUrl } from '@/utils/whatsapp';
 import { usePrecios } from '@/context/PreciosContext';
+import { useClickwrap } from '@/context/ClickwrapContext';
 
 export interface MagicServicesExpandidoProps {
     estaAbierto: boolean;
@@ -17,6 +18,7 @@ export const MagicServicesExpandido = ({
 }: MagicServicesExpandidoProps) => {
     const panelRef = useRef<HTMLDivElement>(null);
     const { getPrecio } = usePrecios();
+    const { abrirClickwrap } = useClickwrap();
     const pCuantica = getPrecio('experiencia-cuantica');
 
     // Scroll suave hacia el panel de detalle cuando se despliega
@@ -146,14 +148,19 @@ export const MagicServicesExpandido = ({
                                     </div>
                                 </div>
 
-                                <Link
-                                    href={getWhatsAppUrl(`¡Hola Anita! Me gustaría agendar la Experiencia Cuántica de Armonización (${pCuantica.labelText}). ¿Cómo podemos coordinar?`)}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
+                                <button
+                                    type="button"
+                                    onClick={() =>
+                                        abrirClickwrap({
+                                            servicioId: 'experiencia-cuantica',
+                                            servicioNombre: 'Experiencia Cuántica de Armonización',
+                                            precioTexto: pCuantica.labelText,
+                                        })
+                                    }
                                     className="shrink-0 px-5 py-2.5 rounded-full text-btn-dark bg-btn-light hover:bg-btn-light-hover transition-all uppercase font-bold text-xs tracking-wider shadow-xs hover:scale-105 active:scale-95 cursor-pointer"
                                 >
                                     Experiencia Cuántica →
-                                </Link>
+                                </button>
                             </div>
                         </div>
 

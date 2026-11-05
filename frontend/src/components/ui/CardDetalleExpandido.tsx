@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { getWhatsAppUrl } from '@/utils/whatsapp';
 import { CardData } from '@/types/cards';
 import { usePrecios } from '@/context/PreciosContext';
+import { useClickwrap } from '@/context/ClickwrapContext';
 
 interface CardDetalleExpandidoProps {
     tarjetaActiva: CardData | null;
@@ -19,6 +20,7 @@ export const CardDetalleExpandido = ({
 }: CardDetalleExpandidoProps) => {
     const panelRef = useRef<HTMLDivElement>(null);
     const { getPrecio } = usePrecios();
+    const { abrirClickwrap } = useClickwrap();
 
     // Scroll suave hacia el panel de detalle cuando se despliega
     useEffect(() => {
@@ -123,14 +125,19 @@ export const CardDetalleExpandido = ({
                                             <div className="text-xs font-serif font-bold text-text-dark">
                                                 {displayPrecio}
                                             </div>
-                                            <Link
-                                                href={getWhatsAppUrl(`¡Hola Anita! Me gustaría reservar la opción "${mod.nombre}" de "${tarjetaActiva.titulo}" (${displayPrecio}). ¿Cómo podemos coordinar?`)}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="inline-flex items-center justify-center w-full px-4 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wider shadow-xs"
+                                            <button
+                                                type="button"
+                                                onClick={() =>
+                                                    abrirClickwrap({
+                                                        servicioId: mod.id || tarjetaActiva.id,
+                                                        servicioNombre: `${tarjetaActiva.titulo} - ${mod.nombre}`,
+                                                        precioTexto: displayPrecio,
+                                                    })
+                                                }
+                                                className="inline-flex items-center justify-center w-full px-4 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wider shadow-xs cursor-pointer"
                                             >
                                                 Reservar →
-                                            </Link>
+                                            </button>
                                         </div>
                                     </div>
                                     );

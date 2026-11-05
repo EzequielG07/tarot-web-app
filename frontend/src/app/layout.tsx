@@ -5,6 +5,7 @@ import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { PreciosProvider } from '@/context/PreciosContext';
+import { ClickwrapProvider } from '@/context/ClickwrapContext';
 
 // Configuración de fuente Serif para Títulos (representa Capricho / Serif mística)
 const cormorant = Cormorant_Garamond({
@@ -45,11 +46,13 @@ export default function RootLayout({
         >
             <body className="bg-bg-main text-text-light antialiased min-h-screen flex flex-col">
                 <PreciosProvider>
-                    <Navbar />
-                    <main className="flex-1">
-                        {children}
-                    </main>
-                    <Footer />
+                    <ClickwrapProvider>
+                        <Navbar />
+                        <main className="flex-1">
+                            {children}
+                        </main>
+                        <Footer />
+                    </ClickwrapProvider>
                 </PreciosProvider>
             </body>
         </html>

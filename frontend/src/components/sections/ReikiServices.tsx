@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { getWhatsAppUrl } from '@/utils/whatsapp';
 import { usePrecios, PrecioItemInfo } from '@/context/PreciosContext';
 import { useMemo } from 'react';
+import { useClickwrap } from '@/context/ClickwrapContext';
 
 export interface ReikiServiceItem {
     id: string;
@@ -17,7 +18,7 @@ export interface ReikiServiceItem {
     contenidoCompleto: React.ReactNode;
 }
 
-export const getReikiServices = (getPrecio: (id: string) => PrecioItemInfo): ReikiServiceItem[] => [
+export const getReikiServices = (getPrecio: (id: string) => PrecioItemInfo, onReservar?: (servicioId: string, servicioNombre: string, precioTexto: string) => void): ReikiServiceItem[] => [
     {
         id: 'reiki-usui',
         tag: 'Sistema Tradicional',
@@ -44,27 +45,25 @@ export const getReikiServices = (getPrecio: (id: string) => PrecioItemInfo): Rei
                         <span className="text-xs font-serif font-semibold text-text-dark/80">
                             {getPrecio('reiki-usui-50').labelText}
                         </span>
-                        <Link
-                            href={getWhatsAppUrl(`¡Hola Anita! Me gustaría agendar una sesión de Reiki Usui (${getPrecio('reiki-usui-50').labelText}). ¿Cómo podemos coordinar?`)}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-btn-dark bg-btn-light hover:bg-btn-light-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
-                        >
-                            Agendar Sesión (50 min) →
-                        </Link>
+                        <button
+                        type="button"
+                        onClick={() => onReservar?.('reiki-usui-50', 'Reiki Usui (50 min)', getPrecio('reiki-usui-50').labelText)}
+                        className="inline-flex items-center justify-center px-4 py-2 rounded-full text-btn-dark bg-btn-light hover:bg-btn-light-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 cursor-pointer"
+                    >
+                        Agendar Sesión (50 min) →
+                    </button>
                     </div>
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-3 bg-stone-50 rounded-xl border border-stone-200/50">
                         <span className="text-xs font-serif font-semibold text-text-dark/80">
                             {getPrecio('reiki-usui-80').labelText}
                         </span>
-                        <Link
-                            href={getWhatsAppUrl(`¡Hola Anita! Me gustaría agendar una sesión de Reiki Usui (${getPrecio('reiki-usui-80').labelText}). ¿Cómo podemos coordinar?`)}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-btn-dark bg-btn-light hover:bg-btn-light-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
-                        >
-                            Agendar Sesión (80 min) →
-                        </Link>
+                        <button
+                        type="button"
+                        onClick={() => onReservar?.('reiki-usui-80', 'Reiki Usui (80 min)', getPrecio('reiki-usui-80').labelText)}
+                        className="inline-flex items-center justify-center px-4 py-2 rounded-full text-btn-dark bg-btn-light hover:bg-btn-light-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 cursor-pointer"
+                    >
+                        Agendar Sesión (80 min) →
+                    </button>
                     </div>
                 </div>
             </div>
@@ -94,27 +93,25 @@ export const getReikiServices = (getPrecio: (id: string) => PrecioItemInfo): Rei
                         <span className="text-xs font-serif font-semibold text-text-dark/80">
                             {getPrecio('alineacion-chakras-50').labelText}
                         </span>
-                        <Link
-                            href={getWhatsAppUrl(`¡Hola Anita! Me gustaría agendar una sesión de Alineación de Chakras (${getPrecio('alineacion-chakras-50').labelText}). ¿Cómo podemos coordinar?`)}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
-                        >
-                            Armonizar mis Chakras (50 min) →
-                        </Link>
+                        <button
+                        type="button"
+                        onClick={() => onReservar?.('alineacion-chakras-50', 'Alineación de Chakras (50 min)', getPrecio('alineacion-chakras-50').labelText)}
+                        className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 cursor-pointer"
+                    >
+                        Armonizar mis Chakras (50 min) →
+                    </button>
                     </div>
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-3 bg-stone-50 rounded-xl border border-stone-200/50">
                         <span className="text-xs font-serif font-semibold text-text-dark/80">
                             {getPrecio('alineacion-chakras-80').labelText}
                         </span>
-                        <Link
-                            href={getWhatsAppUrl(`¡Hola Anita! Me gustaría agendar una sesión de Alineación de Chakras (${getPrecio('alineacion-chakras-80').labelText}). ¿Cómo podemos coordinar?`)}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
-                        >
-                            Armonizar mis Chakras (80 min) →
-                        </Link>
+                        <button
+                        type="button"
+                        onClick={() => onReservar?.('alineacion-chakras-80', 'Alineación de Chakras (80 min)', getPrecio('alineacion-chakras-80').labelText)}
+                        className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 cursor-pointer"
+                    >
+                        Armonizar mis Chakras (80 min) →
+                    </button>
                     </div>
                 </div>
             </div>
@@ -144,27 +141,25 @@ export const getReikiServices = (getPrecio: (id: string) => PrecioItemInfo): Rei
                         <span className="text-xs font-serif font-semibold text-text-dark/80">
                             {getPrecio('karmic-reiki-50').labelText}
                         </span>
-                        <Link
-                            href={getWhatsAppUrl(`¡Hola Anita! Me gustaría agendar una sesión de Karmic Reiki (${getPrecio('karmic-reiki-50').labelText}). ¿Cómo podemos coordinar?`)}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
-                        >
-                            Sesión Karmic Reiki (50 min) →
-                        </Link>
+                        <button
+                        type="button"
+                        onClick={() => onReservar?.('karmic-reiki-50', 'Karmic Reiki (50 min)', getPrecio('karmic-reiki-50').labelText)}
+                        className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 cursor-pointer"
+                    >
+                        Sesión Karmic Reiki (50 min) →
+                    </button>
                     </div>
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-3 bg-stone-50 rounded-xl border border-stone-200/50">
                         <span className="text-xs font-serif font-semibold text-text-dark/80">
                             {getPrecio('karmic-reiki-80').labelText}
                         </span>
-                        <Link
-                            href={getWhatsAppUrl(`¡Hola Anita! Me gustaría agendar una sesión de Karmic Reiki (${getPrecio('karmic-reiki-80').labelText}). ¿Cómo podemos coordinar?`)}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
-                        >
-                            Sesión Karmic Reiki (80 min) →
-                        </Link>
+                        <button
+                        type="button"
+                        onClick={() => onReservar?.('karmic-reiki-80', 'Karmic Reiki (80 min)', getPrecio('karmic-reiki-80').labelText)}
+                        className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 cursor-pointer"
+                    >
+                        Sesión Karmic Reiki (80 min) →
+                    </button>
                     </div>
                 </div>
             </div>
@@ -194,27 +189,25 @@ export const getReikiServices = (getPrecio: (id: string) => PrecioItemInfo): Rei
                         <span className="text-xs font-serif font-semibold text-text-dark/80">
                             {getPrecio('karuna-reiki-50').labelText}
                         </span>
-                        <Link
-                            href={getWhatsAppUrl(`¡Hola Anita! Me gustaría agendar una sesión de Karuna Reiki (${getPrecio('karuna-reiki-50').labelText}). ¿Cómo podemos coordinar?`)}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
-                        >
-                            Experimentar Karuna Reiki (50 min) →
-                        </Link>
+                        <button
+                        type="button"
+                        onClick={() => onReservar?.('karuna-reiki-50', 'Karuna Reiki (50 min)', getPrecio('karuna-reiki-50').labelText)}
+                        className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 cursor-pointer"
+                    >
+                        Experimentar Karuna Reiki (50 min) →
+                    </button>
                     </div>
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-3 bg-stone-50 rounded-xl border border-stone-200/50">
                         <span className="text-xs font-serif font-semibold text-text-dark/80">
                             {getPrecio('karuna-reiki-80').labelText}
                         </span>
-                        <Link
-                            href={getWhatsAppUrl(`¡Hola Anita! Me gustaría agendar una sesión de Karuna Reiki (${getPrecio('karuna-reiki-80').labelText}). ¿Cómo podemos coordinar?`)}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
-                        >
-                            Experimentar Karuna Reiki (80 min) →
-                        </Link>
+                        <button
+                        type="button"
+                        onClick={() => onReservar?.('karuna-reiki-80', 'Karuna Reiki (80 min)', getPrecio('karuna-reiki-80').labelText)}
+                        className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 cursor-pointer"
+                    >
+                        Experimentar Karuna Reiki (80 min) →
+                    </button>
                     </div>
                 </div>
             </div>
@@ -244,27 +237,25 @@ export const getReikiServices = (getPrecio: (id: string) => PrecioItemInfo): Rei
                         <span className="text-xs font-serif font-semibold text-text-dark/80">
                             {getPrecio('reiki-jin-kei-do-50').labelText}
                         </span>
-                        <Link
-                            href={getWhatsAppUrl(`¡Hola Anita! Me gustaría agendar una sesión de Reiki Jin Kei Do (${getPrecio('reiki-jin-kei-do-50').labelText}). ¿Cómo podemos coordinar?`)}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
-                        >
-                            Experimentar Jin Kei Do (50 min) →
-                        </Link>
+                        <button
+                        type="button"
+                        onClick={() => onReservar?.('reiki-jin-kei-do-50', 'Reiki Jin Kei Do (50 min)', getPrecio('reiki-jin-kei-do-50').labelText)}
+                        className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 cursor-pointer"
+                    >
+                        Experimentar Jin Kei Do (50 min) →
+                    </button>
                     </div>
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-3 bg-stone-50 rounded-xl border border-stone-200/50">
                         <span className="text-xs font-serif font-semibold text-text-dark/80">
                             {getPrecio('reiki-jin-kei-do-80').labelText}
                         </span>
-                        <Link
-                            href={getWhatsAppUrl(`¡Hola Anita! Me gustaría agendar una sesión de Reiki Jin Kei Do (${getPrecio('reiki-jin-kei-do-80').labelText}). ¿Cómo podemos coordinar?`)}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
-                        >
-                            Experimentar Jin Kei Do (80 min) →
-                        </Link>
+                        <button
+                        type="button"
+                        onClick={() => onReservar?.('reiki-jin-kei-do-80', 'Reiki Jin Kei Do (80 min)', getPrecio('reiki-jin-kei-do-80').labelText)}
+                        className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 cursor-pointer"
+                    >
+                        Experimentar Jin Kei Do (80 min) →
+                    </button>
                     </div>
                 </div>
             </div>
@@ -294,27 +285,25 @@ export const getReikiServices = (getPrecio: (id: string) => PrecioItemInfo): Rei
                         <span className="text-xs font-serif font-semibold text-text-dark/80">
                             {getPrecio('hara-reiki-50').labelText}
                         </span>
-                        <Link
-                            href={getWhatsAppUrl(`¡Hola Anita! Me gustaría agendar una sesión de Hará Reiki (${getPrecio('hara-reiki-50').labelText}). ¿Cómo podemos coordinar?`)}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
-                        >
-                            Volver a mi Centro (50 min) →
-                        </Link>
+                        <button
+                        type="button"
+                        onClick={() => onReservar?.('hara-reiki-50', 'Hara Reiki (50 min)', getPrecio('hara-reiki-50').labelText)}
+                        className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 cursor-pointer"
+                    >
+                        Volver a mi Centro (50 min) →
+                    </button>
                     </div>
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-3 bg-stone-50 rounded-xl border border-stone-200/50">
                         <span className="text-xs font-serif font-semibold text-text-dark/80">
                             {getPrecio('hara-reiki-80').labelText}
                         </span>
-                        <Link
-                            href={getWhatsAppUrl(`¡Hola Anita! Me gustaría agendar una sesión de Hará Reiki (${getPrecio('hara-reiki-80').labelText}). ¿Cómo podemos coordinar?`)}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
-                        >
-                            Volver a mi Centro (80 min) →
-                        </Link>
+                        <button
+                        type="button"
+                        onClick={() => onReservar?.('hara-reiki-80', 'Hara Reiki (80 min)', getPrecio('hara-reiki-80').labelText)}
+                        className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 cursor-pointer"
+                    >
+                        Volver a mi Centro (80 min) →
+                    </button>
                     </div>
                 </div>
             </div>
@@ -344,27 +333,25 @@ export const getReikiServices = (getPrecio: (id: string) => PrecioItemInfo): Rei
                         <span className="text-xs font-serif font-semibold text-text-dark/80">
                             {getPrecio('reiki-arcangeles-50').labelText}
                         </span>
-                        <Link
-                            href={getWhatsAppUrl(`¡Hola Anita! Me gustaría agendar una sesión de Reiki con Arcángeles (${getPrecio('reiki-arcangeles-50').labelText}). ¿Cómo podemos coordinar?`)}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
-                        >
-                            Sesión Arcángeles (50 min) →
-                        </Link>
+                        <button
+                        type="button"
+                        onClick={() => onReservar?.('reiki-arcangeles-50', 'Reiki de los Arcángeles (50 min)', getPrecio('reiki-arcangeles-50').labelText)}
+                        className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 cursor-pointer"
+                    >
+                        Sesión Arcángeles (50 min) →
+                    </button>
                     </div>
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-3 bg-stone-50 rounded-xl border border-stone-200/50">
                         <span className="text-xs font-serif font-semibold text-text-dark/80">
                             {getPrecio('reiki-arcangeles-80').labelText}
                         </span>
-                        <Link
-                            href={getWhatsAppUrl(`¡Hola Anita! Me gustaría agendar una sesión de Reiki con Arcángeles (${getPrecio('reiki-arcangeles-80').labelText}). ¿Cómo podemos coordinar?`)}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
-                        >
-                            Sesión Arcángeles (80 min) →
-                        </Link>
+                        <button
+                        type="button"
+                        onClick={() => onReservar?.('reiki-arcangeles-80', 'Reiki de los Arcángeles (80 min)', getPrecio('reiki-arcangeles-80').labelText)}
+                        className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 cursor-pointer"
+                    >
+                        Sesión Arcángeles (80 min) →
+                    </button>
                     </div>
                 </div>
             </div>
@@ -393,14 +380,13 @@ export const getReikiServices = (getPrecio: (id: string) => PrecioItemInfo): Rei
                     <div className="text-xs font-serif font-semibold text-text-dark/80">
                         {getPrecio('apertura-tercer-ojo').labelText}
                     </div>
-                    <Link
-                        href={getWhatsAppUrl(`¡Hola Anita! Me gustaría agendar la sesión de Apertura del Tercer Ojo (${getPrecio('apertura-tercer-ojo').labelText}). ¿Cómo podemos coordinar?`)}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
+                    <button
+                        type="button"
+                        onClick={() => onReservar?.('apertura-tercer-ojo', 'Apertura del Tercer Ojo', getPrecio('apertura-tercer-ojo').labelText)}
+                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 cursor-pointer"
                     >
                         Despertar mi Intuición →
-                    </Link>
+                    </button>
                 </div>
             </div>
         ),
@@ -429,27 +415,25 @@ export const getReikiServices = (getPrecio: (id: string) => PrecioItemInfo): Rei
                         <span className="text-xs font-serif font-semibold text-text-dark/80">
                             {getPrecio('reiki-ninos-50').labelText}
                         </span>
-                        <Link
-                            href={getWhatsAppUrl(`¡Hola Anita! Me gustaría agendar una sesión de Reiki para Niños y Adolescentes (${getPrecio('reiki-ninos-50').labelText}). ¿Cómo podemos coordinar?`)}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
-                        >
-                            Sesión Reiki Niños (50 min) →
-                        </Link>
+                        <button
+                        type="button"
+                        onClick={() => onReservar?.('reiki-ninos-50', 'Reiki para Niños y Adolescentes (50 min)', getPrecio('reiki-ninos-50').labelText)}
+                        className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 cursor-pointer"
+                    >
+                        Sesión Reiki Niños (50 min) →
+                    </button>
                     </div>
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-3 bg-stone-50 rounded-xl border border-stone-200/50">
                         <span className="text-xs font-serif font-semibold text-text-dark/80">
                             {getPrecio('reiki-ninos-80').labelText}
                         </span>
-                        <Link
-                            href={getWhatsAppUrl(`¡Hola Anita! Me gustaría agendar una sesión de Reiki para Niños y Adolescentes (${getPrecio('reiki-ninos-80').labelText}). ¿Cómo podemos coordinar?`)}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
-                        >
-                            Sesión Reiki Niños (80 min) →
-                        </Link>
+                        <button
+                        type="button"
+                        onClick={() => onReservar?.('reiki-ninos-80', 'Reiki para Niños y Adolescentes (80 min)', getPrecio('reiki-ninos-80').labelText)}
+                        className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 cursor-pointer"
+                    >
+                        Sesión Reiki Niños (80 min) →
+                    </button>
                     </div>
                 </div>
             </div>
@@ -479,27 +463,25 @@ export const getReikiServices = (getPrecio: (id: string) => PrecioItemInfo): Rei
                         <span className="text-xs font-serif font-semibold text-text-dark/80">
                             {getPrecio('reiki-mascotas-30').labelText}
                         </span>
-                        <Link
-                            href={getWhatsAppUrl(`¡Hola Anita! Me gustaría agendar una sesión de Reiki para Mascotas (${getPrecio('reiki-mascotas-30').labelText}). ¿Cómo podemos coordinar?`)}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
-                        >
-                            Sesión Mascotas (30 min) →
-                        </Link>
+                        <button
+                        type="button"
+                        onClick={() => onReservar?.('reiki-mascotas-30', 'Reiki para Mascotas (30 min)', getPrecio('reiki-mascotas-30').labelText)}
+                        className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 cursor-pointer"
+                    >
+                        Sesión Mascotas (30 min) →
+                    </button>
                     </div>
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-3 bg-stone-50 rounded-xl border border-stone-200/50">
                         <span className="text-xs font-serif font-semibold text-text-dark/80">
                             {getPrecio('reiki-mascotas-50').labelText}
                         </span>
-                        <Link
-                            href={getWhatsAppUrl(`¡Hola Anita! Me gustaría agendar una sesión de Reiki para Mascotas (${getPrecio('reiki-mascotas-50').labelText}). ¿Cómo podemos coordinar?`)}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0"
-                        >
-                            Sesión Mascotas (50 min) →
-                        </Link>
+                        <button
+                        type="button"
+                        onClick={() => onReservar?.('reiki-mascotas-50', 'Reiki para Mascotas (50 min)', getPrecio('reiki-mascotas-50').labelText)}
+                        className="inline-flex items-center justify-center px-4 py-2 rounded-full text-text-light bg-btn-dark hover:bg-btn-dark-hover transition-colors font-bold text-xs uppercase tracking-wide shrink-0 cursor-pointer"
+                    >
+                        Sesión Mascotas (50 min) →
+                    </button>
                     </div>
                 </div>
             </div>
@@ -544,7 +526,18 @@ export const getReikiServices = (getPrecio: (id: string) => PrecioItemInfo): Rei
 
 export const ReikiServices = () => {
     const { getPrecio, preciosList } = usePrecios();
-    const reikiServices = useMemo(() => getReikiServices(getPrecio), [getPrecio, preciosList]);
+    const { abrirClickwrap } = useClickwrap();
+
+    const handleReservar = (servicioId: string, servicioNombre: string, precioTexto: string) => {
+        setSelectedService(null);
+        abrirClickwrap({
+            servicioId,
+            servicioNombre,
+            precioTexto,
+        });
+    };
+
+    const reikiServices = useMemo(() => getReikiServices(getPrecio, handleReservar), [getPrecio, preciosList, abrirClickwrap]);
     const [selectedService, setSelectedService] = useState<ReikiServiceItem | null>(null);
 
     // Cierre con la tecla Escape y bloqueo del scroll de fondo cuando el modal está abierto

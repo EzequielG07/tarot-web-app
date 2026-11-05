@@ -4,9 +4,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { getWhatsAppUrl } from '@/utils/whatsapp';
 import { usePrecios } from '@/context/PreciosContext';
+import { useClickwrap } from '@/context/ClickwrapContext';
 
 export const BlogMainContent = () => {
     const { getPrecio } = usePrecios();
+    const { abrirClickwrap } = useClickwrap();
     const precioInfo = getPrecio('blog-sesion-integral');
 
     return (
@@ -52,14 +54,19 @@ export const BlogMainContent = () => {
                         {precioInfo.labelText}
                     </p>
                     <div className="pt-2">
-                        <Link
-                            href={getWhatsAppUrl(`¡Hola Anita! Quisiera elegir la Sesión Integral de Claridad (${precioInfo.labelText}). ¿Cómo podemos coordinar?`)}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-block px-5 py-2.5 rounded-full text-btn-dark bg-btn-light hover:bg-btn-light-hover transition-colors font-bold text-xs shrink-0"
+                        <button
+                            type="button"
+                            onClick={() =>
+                                abrirClickwrap({
+                                    servicioId: 'blog-sesion-integral',
+                                    servicioNombre: 'Sesión Integral de Claridad',
+                                    precioTexto: precioInfo.labelText,
+                                })
+                            }
+                            className="inline-block px-5 py-2.5 rounded-full text-btn-dark bg-btn-light hover:bg-btn-light-hover transition-colors font-bold text-xs shrink-0 cursor-pointer"
                         >
                             ELEGIR SESIÓN INTEGRAL →
-                        </Link>
+                        </button>
                     </div>
                     <p className="text-lg sm:text-xl font-serif">
                         ¿NO SABÉS CUÁL ELEGIR?

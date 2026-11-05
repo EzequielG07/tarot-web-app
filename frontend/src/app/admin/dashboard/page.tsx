@@ -10,6 +10,8 @@ import { usePrecios } from '@/context/PreciosContext';
 import { ServicioPrecio } from '@/types/precios';
 import { Suscriptor } from '@/types/suscriptores';
 import { getWhatsAppUrl } from '@/utils/whatsapp';
+import { TabBajasArrepentimientos } from '@/components/admin/TabBajasArrepentimientos';
+import { TabAuditoriaClickwrap } from '@/components/admin/TabAuditoriaClickwrap';
 
 export default function AdminDashboardPage() {
     const router = useRouter();
@@ -19,7 +21,7 @@ export default function AdminDashboardPage() {
     const [authChecking, setAuthChecking] = useState(true);
 
     // Pestaña Principal activa ('servicios' | 'suscriptores')
-    const [activeMainTab, setActiveMainTab] = useState<'servicios' | 'suscriptores'>('servicios');
+    const [activeMainTab, setActiveMainTab] = useState<'servicios' | 'suscriptores' | 'bajas_arrepentimientos' | 'clickwrap'>('servicios');
 
     // Estado local para los valores editados de servicios
     const [editedValues, setEditedValues] = useState<Record<string, { duracion: string; precio_ars: number; precio_usd: number }>>({});
@@ -341,6 +343,31 @@ export default function AdminDashboardPage() {
                         >
                             {preciosList.length}
                         </span>
+                    </button>
+
+                    <button
+                        onClick={() => setActiveMainTab('bajas_arrepentimientos')}
+                        className={`px-5 py-2.5 rounded-2xl font-serif text-xs uppercase tracking-wider font-bold transition-all flex items-center gap-2.5 cursor-pointer ${
+                            activeMainTab === 'bajas_arrepentimientos'
+                                ? 'bg-amber-400 text-stone-950 shadow-lg shadow-amber-400/20'
+                                : 'bg-white/5 text-text-light/70 hover:bg-white/10 hover:text-text-light border border-white/10'
+                        }`}
+                    >
+                        <span>⚖️ Arrepentimientos y Bajas</span>
+                        <span className="text-[10px] px-2 py-0.5 rounded-full bg-white/10 text-amber-300">
+                            Disp. 954/2025
+                        </span>
+                    </button>
+
+                    <button
+                        onClick={() => setActiveMainTab('clickwrap')}
+                        className={`px-5 py-2.5 rounded-2xl font-serif text-xs uppercase tracking-wider font-bold transition-all flex items-center gap-2.5 cursor-pointer ${
+                            activeMainTab === 'clickwrap'
+                                ? 'bg-amber-400 text-stone-950 shadow-lg shadow-amber-400/20'
+                                : 'bg-white/5 text-text-light/70 hover:bg-white/10 hover:text-text-light border border-white/10'
+                        }`}
+                    >
+                        <span>📋 Auditoría Clickwrap</span>
                     </button>
 
                     <button
@@ -741,6 +768,24 @@ export default function AdminDashboardPage() {
                             )}
                         </div>
                     </div>
+                )}
+
+                {/* ============================================================ */}
+                {/* PESTAÑA 3: ARREPENTIMIENTOS Y BAJAS                           */}
+                {/* ============================================================ */}
+                {activeMainTab === 'bajas_arrepentimientos' && (
+                    <TabBajasArrepentimientos
+                        onShowToast={(text, type) => setToastMessage({ text, type })}
+                    />
+                )}
+
+                {/* ============================================================ */}
+                {/* PESTAÑA 4: AUDITORÍA CLICKWRAP                                */}
+                {/* ============================================================ */}
+                {activeMainTab === 'clickwrap' && (
+                    <TabAuditoriaClickwrap
+                        onShowToast={(text, type) => setToastMessage({ text, type })}
+                    />
                 )}
             </main>
         </div>

@@ -5,10 +5,15 @@ import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { getWhatsAppUrl } from '@/utils/whatsapp';
+import { ModalTerminosYCondiciones } from '@/components/legal/ModalTerminosYCondiciones';
+import { ModalArrepentimientoBaja } from '@/components/legal/ModalArrepentimientoBaja';
 
 export default function Footer() {
     const pathname = usePathname();
     const [isFaqOpen, setIsFaqOpen] = useState(false);
+    const [isTermsOpen, setIsTermsOpen] = useState(false);
+    const [isLegalActionOpen, setIsLegalActionOpen] = useState(false);
+    const [legalModalTipo, setLegalModalTipo] = useState<'arrepentimiento' | 'baja'>('arrepentimiento');
 
     if (pathname?.startsWith('/admin')) return null;
 
@@ -19,7 +24,7 @@ export default function Footer() {
             }
         };
 
-        if (isFaqOpen) {
+        if (isFaqOpen || isTermsOpen) {
             document.body.style.overflow = 'hidden';
             window.addEventListener('keydown', handleKeyDown);
         } else {
@@ -30,7 +35,7 @@ export default function Footer() {
             document.body.style.overflow = 'unset';
             window.removeEventListener('keydown', handleKeyDown);
         };
-    }, [isFaqOpen]);
+    }, [isFaqOpen, isTermsOpen]);
 
     return (
         <footer className="bg-bg-card text-text-light border-t border-border-accent font-sans">
@@ -85,10 +90,38 @@ export default function Footer() {
                         >
                             Preguntas Frecuentes
                         </button>
-                        <Link href="/faq" className="text-sm hover:text-btn-light transition-colors ring-2 ring-red-500 shadow-[0_0_8px_rgba(239,68,68,0.7)] px-1 rounded">
+                        <button
+                            type="button"
+                            onClick={() => setIsTermsOpen(true)}
+                            className="text-sm text-left hover:text-btn-light transition-colors cursor-pointer"
+                        >
                             Términos y condiciones - Política de Privacidad
-                        </Link>
-                    </div>
+                        </button>
+                    
+                        <div className="pt-2 border-t border-gray-500/20 space-y-1.5 flex flex-col items-start">
+                            <button
+                                type="button"
+                                onClick={() => {
+                                    setLegalModalTipo('arrepentimiento');
+                                    setIsLegalActionOpen(true);
+                                }}
+                                className="text-xs text-left text-btn-light hover:underline transition-colors cursor-pointer flex items-center gap-1.5"
+                            >
+                                <span className="w-1.5 h-1.5 rounded-full bg-btn-light shrink-0"></span>
+                                <span>Botón de Arrepentimiento</span>
+                            </button>
+                            <button
+                                type="button"
+                                onClick={() => {
+                                    setLegalModalTipo('baja');
+                                    setIsLegalActionOpen(true);
+                                }}
+                                className="text-xs text-left text-btn-light hover:underline transition-colors cursor-pointer flex items-center gap-1.5"
+                            >
+                                <span className="w-1.5 h-1.5 rounded-full bg-btn-light shrink-0"></span>
+                                <span>Botón de Baja de Servicio</span>
+                            </button>
+                        </div></div>
 
                     {/* Columna 5: Redes + Botón Agendar (3/12 - Ancho extra) */}
                     <div className="lg:col-span-3 flex flex-col justify-start p-6 space-y-3 h-full">
@@ -318,6 +351,19 @@ export default function Footer() {
                     </div>
                 </div>
             )}
+        
+            {/* Modal Términos y Condiciones */}
+            <ModalTerminosYCondiciones
+                isOpen={isTermsOpen}
+                onClose={() => setIsTermsOpen(false)}
+            />
+
+            {/* Modal Arrepentimiento / Baja de Servicio (Disposición 954/2025) */}
+            <ModalArrepentimientoBaja
+                isOpen={isLegalActionOpen}
+                onClose={() => setIsLegalActionOpen(false)}
+                tipo={legalModalTipo}
+            />
         </footer>
     );
 }
