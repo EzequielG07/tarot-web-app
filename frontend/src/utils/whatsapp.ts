@@ -1,6 +1,6 @@
 // src/utils/whatsapp.ts
 
-export const WHATSAPP_PHONE = '5491161658521';
+export const WHATSAPP_PHONE = process.env.NEXT_PUBLIC_WHATSAPP_PHONE || '5491161658521';
 
 /**
  * Genera el enlace directo a WhatsApp con un mensaje pre-cargado.
