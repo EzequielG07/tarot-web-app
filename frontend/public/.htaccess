@@ -22,7 +22,7 @@
     Header always set X-XSS-Protection "1; mode=block"
 
     # 7. Content-Security-Policy (CSP) - Protección estricta contra XSS e inyecciones de código
-    Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://apis.google.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: blob: https://*.supabase.co https://*.googleusercontent.com; media-src 'self' data: blob:; connect-src 'self' https://*.supabase.co https://*.supabase.in https://api.whatsapp.com https://wa.me; frame-ancestors 'none'; object-src 'none'; base-uri 'self';"
+    Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://apis.google.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: blob: https://*.supabase.co https://*.googleusercontent.com; media-src 'self' data: blob:; connect-src 'self' https://*.supabase.co wss://*.supabase.co https://*.supabase.in https://api.whatsapp.com https://wa.me; frame-ancestors 'none'; object-src 'none'; base-uri 'self';"
 </IfModule>
 
 # ========================================================
@@ -36,14 +36,17 @@
     RewriteCond %{HTTPS} off
     RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-    # Prevenir acceso directo a archivos sensibles o de configuración
-    RewriteRule ^(\.env|\.git|\.well-known|schema_legal\.sql|schema\.sql) - [F,L,NC]
+    # Prevenir acceso directo a archivos sensibles o de configuración (.well-known se deja libre para SSL)
+    RewriteRule ^(\.env|\.git|schema_legal\.sql|schema\.sql) - [F,L,NC]
 
     # Soporte para rutas limpias de Next.js export con trailingSlash
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME}/index.html -f
     RewriteRule ^(.*)/?$ $1/index.html [L]
 </IfModule>
+
+# Página de error 404 personalizada de Next.js
+ErrorDocument 404 /404.html
 
 # Bloquear listado de directorios
 Options -Indexes
@@ -54,4 +57,3 @@ Options -Indexes
 <IfModule mod_deflate.c>
     AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/javascript application/json image/svg+xml
 </IfModule>
-
