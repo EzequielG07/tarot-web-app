@@ -41,7 +41,7 @@ export const AboutMeContent = () => {
                 </p>
 
                 <p className="text-xs sm:text-sm font-serif text-text-dark/90 leading-relaxed">
-                    Pero mi trabajo nunca se limitó a leer las cartas. En cada consulta, combino las herramientas que mejor pueden acompañar a esa persona y a su situación. Para mí, lo valioso es mirar más allá de lo evidente: reconocer qué se repite, dónde puede haber un bloqueo y qué necesita ser revisado para abrir nuevas perspectivas.
+                    Mi trabajo nunca se limitó a leer las cartas. En cada consulta, combino las herramientas que mejor pueden acompañar a esa persona y a su situación. Para mí, lo valioso es mirar más allá de lo evidente: reconocer qué se repite, dónde puede haber un bloqueo y qué necesita ser revisado para abrir nuevas perspectivas.
                 </p>
 
                 <p className="text-xs sm:text-sm font-serif text-text-dark/90 leading-relaxed">
@@ -57,7 +57,7 @@ export const AboutMeContent = () => {
                 </p>
 
                 <p className="text-xs sm:text-sm font-serif text-text-dark/90 leading-relaxed">
-                    En una consulta voy a escucharte y a elegir las herramientas más adecuadas para acompañarte. Juntas vamos a explorar lo que estás viviendo y abrir nuevas preguntas y caminos posibles.
+                    En una consulta voy a escucharte y a elegir las herramientas más adecuadas para acompañarte. Juntos vamos a explorar lo que estás viviendo y abrir nuevas preguntas y caminos posibles.
                 </p>
 
                 <p className="text-xs sm:text-sm font-serif text-text-dark/90 leading-relaxed">

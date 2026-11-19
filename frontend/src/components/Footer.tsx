@@ -68,7 +68,7 @@ export default function Footer() {
                     {/* Columna 3: Frecuencia Sacerdotista (2/12) */}
                     <div className="lg:col-span-2 flex flex-col p-6 space-y-3 h-full lg:border-r border-gray-500/40">
                         <h3 className="text-sm font-semibold uppercase tracking-wider text-text-light mb-2">
-                            Frecuencia Sacerdotista
+                            Frecuencia Sacerdotisa
                         </h3>
                         <Link href="/#blog" className="text-sm hover:text-btn-light transition-colors">
                             Encuentros - Rituales - Recursos
@@ -97,7 +97,7 @@ export default function Footer() {
                         >
                             Términos y condiciones - Política de Privacidad
                         </button>
-                    
+
                         <div className="pt-2 border-t border-gray-500/20 space-y-1.5 flex flex-col items-start">
                             <button
                                 type="button"
@@ -351,7 +351,7 @@ export default function Footer() {
                     </div>
                 </div>
             )}
-        
+
             {/* Modal Términos y Condiciones */}
             <ModalTerminosYCondiciones
                 isOpen={isTermsOpen}

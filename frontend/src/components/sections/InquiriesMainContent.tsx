@@ -11,7 +11,7 @@ export const InquiriesMainContent = () => {
                     </h2>
 
                     <p className="text-base sm:text-lg lg:text-xl font-serif leading-relaxed">
-                        A veces sentimos que algo necesita cambiar, aunque todavía no sepamos bien qué. Si estás atravesando un momento de transición o tenés preguntas que te cuesta ordenar, podemos mirar juntas qué está pasando y encontrar un poco más de claridad.
+                        A veces sentimos que algo necesita cambiar, aunque todavía no sepamos bien qué. Si estás atravesando un momento de transición o tenés preguntas que te cuesta ordenar, podemos mirar juntos qué está pasando y encontrar un poco más de claridad.
                         <br className="my-2" />
                         El tarot y el trabajo energético pueden acompañarte a conectar con tu intuición y tomar decisiones con más confianza.
                     </p>

@@ -45,7 +45,7 @@ export const BlogSidebar = ({
             <div className="mt-5 w-full space-y-6 relative z-10 flex flex-col items-center justify-center max-w-sm flex-1 my-auto">
                 {/* Título de la sección */}
                 <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bodoni font-bold tracking-wide uppercase text-white [text-shadow:0_2px_4px_rgba(0,0,0,0.95),0_4px_12px_rgba(0,0,0,0.9),0_8px_24px_rgba(0,0,0,0.75)]">
-                    Frecuencia Sacerdotista
+                    Frecuencia Sacerdotisa
                 </h2>
 
                 {/* Texto descriptivo */}

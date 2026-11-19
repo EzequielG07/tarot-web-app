@@ -27,7 +27,7 @@ export const ServicesMyWork = () => {
                     </h2>
 
                     <p className="text-base sm:text-lg lg:text-xl font-serif text-white/95 leading-relaxed [text-shadow:0_1px_3px_rgba(0,0,0,0.95),0_3px_8px_rgba(0,0,0,0.85)]">
-                        Mi trabajo no consiste en date respuestas predeterminadas. <br className="my-2" />
+                        Mi trabajo no consiste en darte respuestas predeterminadas. <br className="my-2" />
                         Consiste en ayudarte a observar aquello que hoy necesitas comprender, desde una perspectiva
                         diferente.
                     </p>
